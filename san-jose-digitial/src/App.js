@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div>
+      <div class>
         <h1>Our Programs</h1>
         <h2>You will gain access to job, education,<br/>
           healthcare, and service opportuntites!<br/>
@@ -12,23 +12,23 @@ function App() {
         </h2>
       </div>
       <div>
+        <h2>ACCESS PROGRAMS</h2>
         <div>
-          <h2>ACCESS PROGRAMS</h2>
           <img src="./light_blue_circle.jpg" alt="background"/>
           <h3>Get information on<br/>a low-cost internet<br/>package!</h3>
         </div>
+        <h2>DIGITAL LITERACY<br/>TRAININGS</h2>
         <div>
-          <h2>DIGITAL LITERACY<br/>TRAININGS</h2>
           <img src="./dark_blue_circle.jpg" alt="background"/>
           <h3>Learn<br/>how to use a<br/>computer and<br/>explore the<br/>internet!</h3>
         </div>
+        <h2>DEVICE PROGRAMS</h2>
         <div>
-          <h2>DEVICE PROGRAMS</h2>
           <img src="./light_blue_circle.jpg" alt="background"/>
           <h3>Free access<br/>to computers,<br/>laptops, phones,<br/>tablets, and other<br/>devices.*</h3>
         </div>
       </div>
-      <h4>Access to devices are not guarenteed. We oeprate on a first-come first-serve basis.</h4>
+      <h4>*Access to devices are not guarenteed. We oeprate on a first-come first-serve basis.</h4>
     </div>
   );
   /*return (
