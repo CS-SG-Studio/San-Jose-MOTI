@@ -7,9 +7,9 @@ import Questionnaire from "./screens/Questionnaire/Questionnaire";
 function App() {
   return (
     <div className="App">
-      {/* <JourneyMap /> */}
+      <JourneyMap />
       <Step1 />
-      {/* <Questionnaire /> */}
+      <Questionnaire />
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
