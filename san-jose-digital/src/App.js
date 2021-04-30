@@ -1,11 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import JourneyMap from './screens/JourneyMap'
+// import logo from './logo.svg';
+import "./App.css";
+import JourneyMap from "./screens/JourneyMap/JourneyMap";
+import Step1 from "./screens/JourneyMap/Step1/Step1";
+import Questionnaire from "./screens/Questionnaire/Questionnaire";
 
 function App() {
   return (
     <div className="App">
       <JourneyMap />
+      <Step1 />
+      <Questionnaire />
+
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
