@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <JourneyMap />
-      <Step1 />
       <Questionnaire />
 
       {/* <header className="App-header">

@@ -11,8 +11,9 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
   padding: 6.61234px;
-
-  position: relative;
+  top: 25%;
+  left: 15%; /* may have to adjust when you change size of popup window */
+  position: absolute;
   width: 888px;
   height: 655.91px;
 
@@ -203,4 +204,19 @@ body {
   text-align: center;
 
   color: #000000;
+}
+
+.close-icon {
+  content: "x";
+  cursor: pointer;
+  position: relative;
+  background: #ededed;
+  left: 47%; /* may have to update when you change popup size */
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 25px;
 }
