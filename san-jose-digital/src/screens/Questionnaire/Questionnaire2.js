@@ -67,10 +67,8 @@ function Questionnaire2() {
             Do you have a working computing device (such as a desktop, laptop,
             or tablet) at home?
           </label>
-          <br />
           <input type="radio" id="yes" name="device" value="yes" />
           <label for="yes">Yes</label>
-          <br />
           <input type="radio" id="no" name="device" value="no" />
           <label for="no">No</label>
           <br />
@@ -102,7 +100,6 @@ function Questionnaire2() {
         </div>
         <div className="form-control">
           <label htmlFor="smartphone">Do you have a smartphone?</label>
-          <br />
           <input type="radio" id="yes" name="smartphone" value="yes" />
           <label for="yes">Yes</label>
           <input type="radio" id="no" name="smartphone" value="no" />
@@ -111,7 +108,6 @@ function Questionnaire2() {
           <label htmlFor="internet">
             Do you use your smartphone to connect to the Internet?
           </label>
-          <br />
           <input type="radio" id="yes1" name="internet" value="yes" />
           <label for="yes1">Yes</label>
           <input type="radio" id="no1" name="internet" value="no" />
@@ -122,7 +118,6 @@ function Questionnaire2() {
           <label htmlFor="dataplan">
             Do you periodically buy data plans for your smartphone?
           </label>
-          <br />
           <input type="radio" id="yes2" name="dataplan" value="yes" />
           <label for="yes2">Yes</label>
           <input type="radio" id="no2" name="dataplan" value="no" />
@@ -131,7 +126,6 @@ function Questionnaire2() {
             Do you ever use your smartphone as a “hotspot” to connect another
             device to the Internet?
           </label>
-          <br />
           <input type="radio" id="yes3" name="hotspot" value="ye3" />
           <label for="yes3">Yes</label>
           <input type="radio" id="no3" name="hotspot" value="no" />

@@ -13,7 +13,6 @@ function Questionnaire3() {
             Does the school provide a computing device for your child/children
             in class?
           </label>
-          <br />
           <input type="radio" id="yes1" name="school" value="yes" />
           <label for="yes1">Yes</label>
           <input type="radio" id="no1" name="school" value="no" />
@@ -23,7 +22,6 @@ function Questionnaire3() {
             Is your child/children allowed to bring home the device to do
             homework and to be used by the family?
           </label>
-          <br />
           <input type="radio" id="yes2" name="home" value="yes" />
           <label for="yes2">Yes</label>
           <input type="radio" id="no2" name="home" value="no" />
@@ -33,7 +31,6 @@ function Questionnaire3() {
           <label htmlFor="internetaccess">
             Do you access the Internet at home?
           </label>
-          <br />
           <input type="radio" id="yes" name="internetaccess" value="yes" />
           <label for="yes">Yes</label>
           <input type="radio" id="no" name="internetaccess" value="no" />
@@ -65,7 +62,7 @@ function Questionnaire3() {
           <input
             type="radio"
             id="Friend’s Home"
-            name="cost"
+            name="internetuse"
             value="Friend’s Home"
           />
           <label for="Friend’s Home">Friend’s Home</label>
@@ -77,7 +74,7 @@ function Questionnaire3() {
           <input type="radio" id="yes2" name="heardof" value="yes2" />
           <label for="yes2">Yes</label>
           <input type="radio" id="no2" name="heardof" value="no2" />
-          <label for="no2">No</label> <br/>
+          <label for="no2">No</label> <br />
           <label for="learning">
             Are you interested in learning about affordable home Internet
             offers?
@@ -91,7 +88,6 @@ function Questionnaire3() {
           <label htmlFor="experience">
             Do you have experience using a computing device?
           </label>
-          <br />
           <input type="radio" id="yes" name="experience" value="yes" />
           <label for="yes">Yes</label>
           <input type="radio" id="no" name="experience" value="no" />
@@ -119,7 +115,6 @@ function Questionnaire3() {
           <label htmlFor="classes">
             Are you interested in learning about FREE computer classes?
           </label>
-          <br />
           <input type="radio" id="yes" name="classes" value="yes" />
           <label for="yes">Yes</label>
           <input type="radio" id="no" name="classes" value="no" />
