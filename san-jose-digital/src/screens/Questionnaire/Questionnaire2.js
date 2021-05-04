@@ -1,6 +1,6 @@
 function Questionnaire2() {
   return (
-    <>
+    <container>
       <form className="form">
         <div className="form-control">
           <label>
@@ -136,7 +136,7 @@ function Questionnaire2() {
         <button type="submit">BACK</button>
         <button type="submit">NEXT</button>
       </div>
-    </>
+    </container>
   );
 }
 
