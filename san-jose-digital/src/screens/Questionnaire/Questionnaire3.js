@@ -1,6 +1,12 @@
-function Questionnaire3() {
+import React from 'react';
+import { 
+  BrowserRouter as Router,
+  Link 
+} from 'react-router-dom';
+
+const Questionnaire3 = () => {
   return (
-    <>
+    <Router>
       <container>
         <form className="form">
           <div className="form-control">
@@ -29,11 +35,23 @@ function Questionnaire3() {
         </form>
       </container>
       <div>
-        <button type="submit">BACK</button>
-        <button type="submit">SUBMIT</button>
+        <Link type="submit">BACK</Link>
+        <Link type="submit">SUBMIT</Link>
       </div>
-    </>
+    </Router>
   );
 }
+
+const Back = () => {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to='/Questionnaire2'>BACK</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Questionnaire3;

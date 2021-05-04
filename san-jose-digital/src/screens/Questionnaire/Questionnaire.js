@@ -1,6 +1,14 @@
-function Questionnaire() {
+import React from 'react';
+import { 
+  BrowserRouter as Router,
+  Link 
+} from 'react-router-dom';
+
+// function Questionnaire() {
+const Questionnaire = () => {
   return (
-    <>
+    <Router>
+    <div>
       <header> QUESTIONNAIRE </header>
       <p>
         Fill out the following questionnaire to get matched with grantee
@@ -23,10 +31,23 @@ function Questionnaire() {
         </form>
       </container>
       <div>
-        <button type="submit">NEXT</button>
+        <Link to='/Questionnaire2'>NEXT</Link>
       </div>
-    </>
+    </div>
+    </Router>
   );
 }
+
+const Next = () => {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to='/Questionnaire2'>NEXT</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
 export default Questionnaire;
