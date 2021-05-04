@@ -105,7 +105,6 @@ function Questionnaire2() {
           <br />
           <input type="radio" id="yes" name="smartphone" value="yes" />
           <label for="yes">Yes</label>
-          <br />
           <input type="radio" id="no" name="smartphone" value="no" />
           <label for="no">No</label> <br />
           <label>If you have a smartphone: </label> <br />
