@@ -1,4 +1,4 @@
-function Questionnaire() {
+function Questionnaire1() {
   return (
     <>
       <header> QUESTIONNAIRE </header>
@@ -72,4 +72,4 @@ function Questionnaire() {
   );
 }
 
-export default Questionnaire;
+export default Questionnaire1;
