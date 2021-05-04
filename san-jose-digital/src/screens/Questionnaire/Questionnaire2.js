@@ -4,16 +4,69 @@ function Questionnaire2() {
       <container>
         <form className="form">
           <div className="form-control">
-            <label htmlFor="contact"> I am filling this on behalf of : </label>
-            <br />
-            <input type="radio" id="contact" name="contact" value="self" />
-            <label for="contact">Myself</label>
-            <br />
-            <input type="radio" id="someone" name="contact" value="someone" />
-            <label for="someone">
-              Someone else (please specify)
-              <input type="text" id="someone" name="contact"></input>
+            <label>
+              Do you currently qualify for any of the following programs? Please
+              check any that may apply.
             </label>
+            <br />
+            <input
+              type="checkbox"
+              id="childenrolledinNSLP"
+              name="programs"
+              value="childenrolledinNSLP"
+            />
+            <label for="childenrolledinNSLP">
+              Child Enrolled in the NSLP (National School Lunch Program)
+            </label>
+            <br />
+            <input
+              type="checkbox"
+              id="childenrolledinNSLP"
+              name="programs"
+              value="childenrolledinNSLP"
+            />
+            <label for="childenrolledinNSLP">
+              Child Enrolled in the NSLP (National School Lunch Program)
+            </label>
+            <br />
+            <input
+              type="checkbox"
+              id="CalFreshorSNAP"
+              name="programs"
+              value="CalFreshorSNAP"
+            />
+            <label for="CalFreshorSNAP">
+              CalFresh (food stamps) or Supplemental Nutrition Assistance
+              Program (SNAP) Recipient
+            </label>
+            <br />
+            <input
+              type="checkbox"
+              id="SSIorSSDI"
+              name="programs"
+              value="SSIorSSDI"
+            />
+            <label for="SSIorSSDI">
+              Supplemental Security Income (SSI) or Social Security Disability
+              Insurance (SSDI) Recipient
+            </label>
+            <br />
+            <input
+              type="checkbox"
+              id="medical"
+              name="programs"
+              value="medical"
+            />
+            <label for="medical">Medi-Cal Recipient</label>
+            <br />
+            <input
+              type="checkbox"
+              id="lowincome"
+              name="programs"
+              value="lowincome"
+            />
+            <label for="lowincome">Household Income Under $70,000/year</label>
+            <br />
           </div>
         </form>
       </container>
