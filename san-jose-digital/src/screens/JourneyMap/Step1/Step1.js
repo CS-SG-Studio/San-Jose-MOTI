@@ -65,6 +65,14 @@ const Step1 = props =>{
           first-serve basis.
         </h4>
       </div>
+      <button className="btn"
+        // class="close-button"
+        // aria-label="Close alert"
+        // type="button"
+        // data-close
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
   );
 }
