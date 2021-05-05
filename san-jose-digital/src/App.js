@@ -9,11 +9,11 @@ import Questionnaire3 from "./screens/Questionnaire/Questionnaire3";
 function App() {
   return (
     <div className="App">
-      {/* <JourneyMap /> */}
-      {/* <Step1 /> */}
+      <JourneyMap />
       <Questionnaire1 />
       <Questionnaire2 />
       <Questionnaire3 /> 
+
     </div>
   );
 }

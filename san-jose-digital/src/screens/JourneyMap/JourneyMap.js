@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./JourneyMapStyle.css";
+import Step1 from "./Step1/Step1.js";
 
 function JourneyMap() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className="page">
       <h1 className="whiteheader" style={{ fontSize: "3rem" }}>
@@ -13,7 +20,12 @@ function JourneyMap() {
       <div>
         <div className="digit1">1</div>
         <div className="circle1">
-          <span className="text1">EXPLORE OUR PROGRAMS</span>
+          <span
+            className="text1" 
+            onClick={togglePopup}
+          >
+            EXPLORE OUR PROGRAMS
+          </span>
         </div>
         <div className="connect1"></div>
       </div>
@@ -40,7 +52,11 @@ function JourneyMap() {
           <span className="text4">STAY IN THE LOOP</span>
         </div>
       </div>
+      {isOpen && <Step1
+      handleClose={togglePopup}
+      />}
     </div>
+    
   );
 }
 export default JourneyMap;
