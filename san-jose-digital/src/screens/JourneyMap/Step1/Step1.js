@@ -4,57 +4,54 @@ import "./Step1Styling.css";
 const Step1 = props =>{
   return (
     <div className="popup">
-      <div className="box">
-        <span className="close-icon" onClick={props.handleClose}>x</span>
+      <span className="close-icon" onClick={props.handleClose}>&times;</span>
+      <div className="centering-all">
         <div className="header">
           <h1 className="title">Our Programs</h1>
           <h2 className="title2">
-            You will gain access to job, education, healthcare, and service
-            opportunities! The following are included in our bundle package:
+            You will gain access to job, education, <br/>healthcare, and service 
+            opportunities! <br/>The following are included in our bundle package: 
           </h2>
         </div>
-        <div id="body">
-          <div className="tile1">
-            <h2 className="title3">ACCESS PROGRAMS</h2>
+
+        <div className="body"> 
+          {/*Access Programs*/}
+          <div className="program">
+            <h2 className="pillars">ACCESS PROGRAMS</h2>
             <div className="circle">
-              <a href="https://www.everyoneon.org" 
-                target="_blank" 
-                style={{ textDecoration: "none" }}
-              >
-                <h3 className="text">
+              <a href="https://www.everyoneon.org" target="_blank" 
+                style={{ textDecoration: "none" }}>
+                <h3 className="description">
                   Click here to get information on a low-cost internet package!
                 </h3>
               </a>
             </div>
           </div>
-          <div className="tile1">
-            <h2 className="title3">DIGITAL LITERACY TRAININGS</h2>
+
+          {/*Digital Literacy Trainings*/}
+          <div className="program">
+            <h2 className="pillars">DIGITAL LITERACY TRAININGS</h2>
             <div className="circle">
               <a href="https://www.google.com" /* not sure what website we want here */
                 target="_blank" 
-                style={{ textDecoration: "none" }}
-              >
-                <h3 className="text">
-                  Learn
-                  <br />
-                  how to use a computer and explore the 
-                  <br />
-                  internet!
+                style={{ textDecoration: "none" }}>
+                <h3 className="description">
+                  Learn<br/>how to use a computer and explore the<br />internet!
                 </h3>
               </a>
             </div>
           </div>
-          <div className="tile1">
-            <h2 className="title3">DEVICE PROGRAMS</h2>
+
+          {/*Device Programs*/}
+          <div className="program">
+            <h2 className="pillars">DEVICE PROGRAMS</h2>
             <div className="circle">
               <a href="https://www.google.com" /* not sure what website we want here */
                 target="_blank" 
-                style={{ textDecoration: "none" }}
-              >
-                <h3 className="text">
-                  Free access
-                  <br />
-                  to computers, laptops, phones, tablets, and other devices.*
+                style={{ textDecoration: "none" }}>
+                <h3 className="description">
+                  Free access<br />to computers, laptops, phones, 
+                  tablets, and other devices.*
                 </h3>
               </a>
             </div>
@@ -65,14 +62,6 @@ const Step1 = props =>{
           first-serve basis.
         </h4>
       </div>
-      <button className="btn"
-        // class="close-button"
-        // aria-label="Close alert"
-        // type="button"
-        // data-close
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
     </div>
   );
 }

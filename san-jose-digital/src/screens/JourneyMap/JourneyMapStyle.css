@@ -1,54 +1,38 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  font-size: 14px;
-}
-
-.page {
-  padding: 0px;
-  margin: 0px;
-}
-
 .whiteheader {
   color: rgba(255, 255, 255, 1);
   font-family: "Roboto", sans-serif;
   font-weight: Bold;
+  position: relative;
 }
 
-.digit1 {
-  position: absolute;
-  top: 160px;
-  left: 50px;
-  font-size: 96px;
-  color: rgba(255, 255, 255, 1);
+.stack {
+  position: relative;
+}
+
+.digit {
+  position: relative;
+  font-size: 184.485px;
+  color: rgba(213, 240, 248, 1);
   font-family: "Roboto", sans-serif;
   font-weight: Bold;
+  display: inline-block;
+  vertical-align: top;
+  height: 100px;
+  margin-right: 100px;
 }
 
-.circle1 {
-  width: 191px;
-  height: 191px;
-  background: rgba(213, 240, 248, 1);
-  padding: 10px 10px;
-  margin: 8px;
-  opacity: 1;
-  position: absolute;
-  top: 120px;
-  left: 100px;
-  border-top-left-radius: 119px;
-  border-top-right-radius: 119px;
-  border-bottom-left-radius: 119px;
-  border-bottom-right-radius: 119px;
-  overflow: hidden;
+.on-right {
+  display: inline-block;
 }
 
-.text1 {
+/* styling for the instructions/text */
+.instruction {
   width: 171px;
   color: rgba(0, 0, 0, 1);
   position: absolute;
-  top: 68px;
-  left: 11px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: "Roboto", sans-serif;
   font-weight: Bold;
   font-size: 22px;
@@ -57,159 +41,64 @@ body {
   background: transparent;
 }
 
-.text1:hover {
+.instruction:hover {
   cursor: pointer;
   color: rgb(68, 68, 68);
 }
-.connect1 {
-  width: 8px;
-  height: 95px;
-  background: linear-gradient(rgba(213, 240, 248, 1), rgba(159, 210, 225, 1));
+
+/* styling for the circles */
+.circles {
+  width: 200px;
+  height: 200px;
+  padding-left: 80px;
   opacity: 1;
-  position: absolute;
-  top: 318px;
-  left: 197px;
+  position: relative;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
   overflow: hidden;
 }
 
-.digit2 {
-  position: absolute;
-  top: 440px;
-  left: 50px;
-  font-size: 96px;
-  color: rgba(255, 255, 255, 1);
-  font-family: "Roboto", sans-serif;
-  font-weight: Bold;
+.circles.first {
+  background: rgba(213, 240, 248, 1);
 }
 
-.circle2 {
-  width: 191px;
-  height: 191px;
+.circles.second {
   background: #9fd2e1;
-  padding: 10px 10px;
-  margin: 8px;
-  opacity: 1;
-  position: absolute;
-  top: 404px;
-  left: 100px;
-  border-top-left-radius: 119px;
-  border-top-right-radius: 119px;
-  border-bottom-left-radius: 119px;
-  border-bottom-right-radius: 119px;
-  overflow: hidden;
 }
 
-.text2 {
-  width: 171px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 50px;
-  left: 11px;
-  font-family: "Roboto", sans-serif;
-  font-weight: Bold;
-  font-size: 22px;
-  opacity: 1;
-  text-align: center;
-}
-
-.connect2 {
-  width: 6px;
-  height: 95px;
-  background: linear-gradient(rgba(159, 210, 225, 1), rgba(86, 167, 191, 1));
-  opacity: 1;
-  position: absolute;
-  top: 600px;
-  left: 199px;
-  overflow: hidden;
-}
-
-.digit3 {
-  position: absolute;
-  top: 730px;
-  left: 50px;
-  font-size: 96px;
-  color: rgba(255, 255, 255, 1);
-  font-family: "Roboto", sans-serif;
-  font-weight: Bold;
-}
-
-.circle3 {
-  width: 191px;
-  height: 191px;
+.circles.third {
   background: #56a7bf;
-  padding: 10px 10px;
-  margin: 8px;
-  opacity: 1;
-  position: absolute;
-  top: 686px;
-  left: 100px;
-  border-top-left-radius: 119px;
-  border-top-right-radius: 119px;
-  border-bottom-left-radius: 119px;
-  border-bottom-right-radius: 119px;
-  overflow: hidden;
 }
 
-.text3 {
-  width: 171px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 65px;
-  left: 11px;
-  font-weight: Bold;
-  font-size: 21px;
-  opacity: 1;
-  text-align: center;
-  font-family: Condensed, Roboto;
-}
-
-.connect3 {
-  width: 8px;
-  height: 95px;
-  background: linear-gradient(rgba(86, 167, 191, 1), rgba(41, 138, 166, 1));
-  opacity: 1;
-  position: absolute;
-  top: 885px;
-  left: 197px;
-  overflow: hidden;
-}
-
-.digit4 {
-  position: absolute;
-  top: 1020px;
-  left: 50px;
-  font-size: 96px;
-  color: rgba(255, 255, 255, 1);
-  font-family: "Roboto", sans-serif;
-  font-weight: Bold;
-}
-
-.circle4 {
-  width: 191px;
-  height: 191px;
+.circles.fourth {
   background: #298aa7;
-  padding: 10px 10px;
-  margin: 8px;
+}
+
+.circles:hover {
+  cursor: pointer;
+}
+
+/* styling for the connectors */
+/* TODO: figure out how to get rid of that small gap in between connectors and circles */
+.connector {
+  width: 8px;
+  height: 150px;
   opacity: 1;
-  position: absolute;
-  top: 970px;
-  left: 100px;
-  border-top-left-radius: 119px;
-  border-top-right-radius: 119px;
-  border-bottom-left-radius: 119px;
-  border-bottom-right-radius: 119px;
+  position: relative;
+  left: 96px;
   overflow: hidden;
 }
 
-.text4 {
-  width: 171px;
-  color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 65px;
-  left: 11px;
-  font-family: "Roboto", sans-serif;
-  font-weight: Bold;
-  font-size: 22px;
-  opacity: 1;
-  text-align: center;
+.connector.first {
+  background: linear-gradient(rgba(213, 240, 248, 1), rgba(159, 210, 225, 1));
+}
+
+.connector.second {
+  background: linear-gradient(rgba(159, 210, 225, 1), rgba(86, 167, 191, 1));
+}
+
+.connector.third {
+  background: linear-gradient(rgba(86, 167, 191, 1), rgba(41, 138, 166, 1));
 }

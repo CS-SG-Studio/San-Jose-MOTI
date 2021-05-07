@@ -10,10 +10,6 @@ function App() {
   return (
     <div className="App">
       <JourneyMap />
-      <Questionnaire1 />
-      <Questionnaire2 />
-      <Questionnaire3 /> 
-
     </div>
   );
 }
