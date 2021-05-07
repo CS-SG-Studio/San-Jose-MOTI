@@ -1,8 +1,10 @@
+import "./QuestionnaireStyles.css";
+
 function Questionnaire1() {
   return (
-    <container>
-      <header> QUESTIONNAIRE </header>
-      <p>
+    <container className="container">
+      <header className="header"> QUESTIONNAIRE </header>
+      <p className="subheader">
         Fill out the following questionnaire to get matched with grantee
         organization(s).
       </p>

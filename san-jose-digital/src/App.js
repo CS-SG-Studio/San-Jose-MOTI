@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <JourneyMap />
       <Questionnaire1 />
-      <Questionnaire2 />
-      <Questionnaire3 /> 
+      {/* <Questionnaire2 /> */}
+      {/* <Questionnaire3 />  */}
 
     </div>
   );
