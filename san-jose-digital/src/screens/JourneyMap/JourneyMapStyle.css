@@ -54,10 +54,7 @@
   padding-left: 80px;
   opacity: 1;
   position: relative;
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
-  border-bottom-left-radius: 200px;
-  border-bottom-right-radius: 200px;
+  border-radius: 200px;
   overflow: hidden;
 }
 
@@ -82,7 +79,6 @@
 }
 
 /* styling for the connectors */
-/* TODO: figure out how to get rid of that small gap in between connectors and circles */
 .connector {
   width: 8px;
   height: 150px;

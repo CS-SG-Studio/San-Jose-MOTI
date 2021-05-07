@@ -11,16 +11,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
   /* size of the popup window */
-  width: 70%;
-  height: 90%;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
+  padding: 2rem;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -32,8 +29,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 810px;
-  height: 216.68px;
   font-family: "Roboto", sans-serif;
   text-align: center;
   color: #000000;
@@ -43,17 +38,15 @@
   margin: 0px;
   font-weight: bold;
   font-size: 4rem;
-  line-height: 77px;
 }
 
 .title2 {
   font-weight: normal;
   font-size: 1.7rem;
-  line-height: 31px;
   display: flex;
 }
 
-/* stying for the body */
+/* styling for the body */
 .body {
   display: flex;
   flex-direction: row;
@@ -85,7 +78,6 @@
   font-style: normal;
   font-weight: normal;
   font-size: 26.4494px;
-  line-height: 31px;
   text-align: center;
   color: #000000;
 }
@@ -107,8 +99,6 @@
 
 .description {
   position: center;
-  width: 225px;
-  height: 225px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -131,6 +121,7 @@
   cursor: pointer;
   font-size: 3.5rem;
   position: fixed;
+  top: 3%;
   right: 3%;
   z-index: 1;
 }

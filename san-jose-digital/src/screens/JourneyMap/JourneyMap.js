@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./JourneyMapStyle.css";
 import Step1 from "./Step1/Step1.js";
 
@@ -7,7 +7,7 @@ function JourneyMap() {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-  }
+  };
 
   return (
     <div className="page">
@@ -63,11 +63,8 @@ function JourneyMap() {
           </div>
         </div>
       </div>
-      {isOpen && <Step1
-      handleClose={togglePopup}
-      />}
+      {isOpen && <Step1 handleClose={togglePopup} />}
     </div>
-    
   );
 }
 export default JourneyMap;
