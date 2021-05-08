@@ -1,8 +1,11 @@
 import React from 'react';
-import { 
+import {
   BrowserRouter as Router,
-  Link 
-} from 'react-router-dom';
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Questionnaire2 from './Questionnaire2';
 
 // function Questionnaire() {
 const Questionnaire = () => {
@@ -72,23 +75,23 @@ const Questionnaire = () => {
           </div>
         </form>
         <div>
-          <Link to="/Questionnaire2">NEXT</Link>
+          <ul>
+            <li>
+              <Link to="/questionnaire2">NEXT</Link>
+            </li>
+          </ul>
+
+          <hr />
+
+          <Switch>
+            <Route exact path="/questionnaire2">
+              <Questionnaire2 />
+            </Route>
+          </Switch>
         </div>
       </container>
     </Router>
   );
 }
-
-const Next = () => {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to='/Questionnaire2'>NEXT</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};
 
 export default Questionnaire;
