@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   padding: 40px;
   position: absolute;
   background: #f5f5f5;
@@ -20,13 +20,51 @@
   color: rgba(45, 44, 44, 1);
   font-family: "Roboto", sans-serif;
   font-weight: Bold;
-  align-self: center;
 }
 
 .subheader {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
-  text-align: center;
   color: rgba(45, 44, 44, 1);
   position: static;
+}
+
+.form {
+  padding: 0;
+  flex-grow: 1;
+}
+
+.form-control {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: rgba(45, 44, 44, 1);
+  text-align: left;
+  padding: 2px;
+}
+
+input[type="text"],
+select,
+input[type="textarea"],
+select,
+input[type="number"],
+select,
+input[type="email"],
+select {
+  width: 50%;
+  padding: 5px 20px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+select {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin: 4px 
 }
