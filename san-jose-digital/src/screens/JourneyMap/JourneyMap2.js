@@ -23,17 +23,17 @@ function JourneyMap() {
   return (
     <div className="page">
       <div>
-        <h1 className="whiteheader" style={{ fontSize: "4rem" }}>
+        <h1 className="whiteheader" style={{ fontSize: "3.5rem" }}>
           YOUR JOURNEY
         </h1>
-        <h3 className="whiteheader" style={{ fontSize: "2.5rem" }}>
+        <h3 className="whiteheader" style={{ fontSize: "2rem" }}>
           WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?
         </h3>
       </div>
       {data.map((stack) => {
         return (
           <div key={stack.id} className="stack">
-            <div className="digit">{stack.id}</div>
+            <div className={"digit"}>{stack.id}</div>
             <div className="on-right" onClick={() => setValue(stack.popup)}>
               <div className={"circles " + stack.step} onClick={togglePopup}>
                 <span className="instruction">{stack.instruction}</span>
