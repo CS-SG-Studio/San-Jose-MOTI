@@ -23,10 +23,10 @@ function JourneyMap() {
   return (
     <div className="page">
       <div>
-        <h1 className="header" style={{ fontSize: "4rem" }}>
+        <h1 className="whiteheader" style={{ fontSize: "4rem" }}>
           YOUR JOURNEY
         </h1>
-        <h3 className="header" style={{ fontSize: "2.5rem" }}>
+        <h3 className="whiteheader" style={{ fontSize: "2.5rem" }}>
           WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?
         </h3>
       </div>
