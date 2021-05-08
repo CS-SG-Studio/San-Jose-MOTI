@@ -12,7 +12,8 @@
 
 .digit {
   position: relative;
-  font-size: 184.485px;
+  font-size: 11rem;
+
   color: rgba(213, 240, 248, 1);
   font-family: "Roboto", sans-serif;
   font-weight: Bold;

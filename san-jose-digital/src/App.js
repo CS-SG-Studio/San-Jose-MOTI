@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <JourneyMap />
-      {/* <JourneyMap2 /> */}
+      <JourneyMap2 />
       <Questionnaire1 />
     </div>
   );

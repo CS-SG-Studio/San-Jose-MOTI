@@ -17,11 +17,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   /* size of the popup window */
-  border-radius: 30px;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 2rem;
+  padding: 0.5rem;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -48,12 +48,12 @@
 .title {
   margin: 0px;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .title2 {
   font-weight: normal;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
 }
@@ -74,23 +74,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
+  padding: 0.5rem;
   position: relative;
-  width: 250px;
-  height: 310px;
-  left: 0px;
-  top: 0px;
-  margin: 0 10px;
+  margin: 0.5rem;
 }
 
 .pillars {
   position: center;
-  width: 225px;
-  height: 31px;
-  margin: 10px;
+  margin: 0px;
   font-style: normal;
-  font-weight: normal;
-  font-size: 26.4494px;
+  font-weight: bold;
+  font-size: 1.1rem;
   text-align: center;
   color: #000000;
 }
@@ -100,14 +94,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 1rem;
   position: relative;
-  width: 225px;
-  height: 225px;
-  left: 0px;
-  top: 31px;
+  width: 12rem;
+  height: 12rem;
+  top: 1rem;
   background: #d5f0f8;
   border-radius: 225px;
+}
+
+.circle:hover {
+  background: #cae4ec;
 }
 
 .description {
@@ -115,8 +112,7 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 26.4494px;
-  line-height: 31px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   text-align: center;
@@ -128,11 +124,12 @@
   justify-content: center;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .close-icon {
   cursor: pointer;
-  font-size: 3.5rem;
+  font-size: 3rem;
   position: fixed;
   top: 3%;
   right: 3%;
