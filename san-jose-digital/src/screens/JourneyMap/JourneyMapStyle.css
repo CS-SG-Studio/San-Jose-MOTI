@@ -93,8 +93,14 @@
   background: linear-gradient(rgba(213, 240, 248, 1), rgba(159, 210, 225, 1));
 }
 
-.connector.second {
-  background: linear-gradient(rgba(159, 210, 225, 1), rgba(86, 167, 191, 1));
+.connector.second1 {
+   height: 75px;
+  background: linear-gradient(rgba(159, 210, 225, 1), rgba(123, 189, 208, 1));
+}
+
+.connector.second2 {
+  height: 75px;
+  background: linear-gradient(rgba(123, 189, 208, 1), rgba(86, 167, 191, 1));
 }
 
 .connector.third {

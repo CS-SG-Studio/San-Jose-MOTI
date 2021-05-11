@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Questionnaire1 from "../Questionnaire/Questionnaire1";
 import "./JourneyMapStyle.css";
 import Step1 from "./Step1/Step1.js";
 
@@ -7,6 +8,12 @@ function JourneyMap() {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
+  };
+
+  const [openQuestionnaire, setQuestionnaire] = useState(false);
+
+  const questionnaireStep = () => {
+    setQuestionnaire(!openQuestionnaire);
   };
 
   return (
@@ -35,10 +42,14 @@ function JourneyMap() {
         <div className="stack">
           <div className="digit">2</div>
           <div className="on-right">
-            <div className="circles second">
-              <span className="instruction">SEE WHAT YOU ARE ELIGIBLE FOR</span>
+            <div className="circles second" onClick={questionnaireStep}>
+              <span className="instruction" onClick={questionnaireStep}>
+                SEE WHAT YOU ARE ELIGIBLE FOR
+              </span>
             </div>
-            <div className="connector second"></div>
+            <div className="connector second1"></div>
+            {openQuestionnaire && <Questionnaire1 />}
+            <div className="connector second2"></div>
           </div>
         </div>
 
