@@ -48,6 +48,10 @@
   color: rgb(68, 68, 68);
 }
 
+.questionnaire {
+  height: 669px;
+}
+
 /* styling for the circles */
 .circles {
   width: 200px;
@@ -58,7 +62,6 @@
   border-radius: 200px;
   overflow: hidden;
 }
-
 .circles.first {
   background: rgba(213, 240, 248, 1);
 }

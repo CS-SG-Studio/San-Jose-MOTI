@@ -48,7 +48,9 @@ function JourneyMap() {
               </span>
             </div>
             <div className="connector second1"></div>
-            {openQuestionnaire && <Questionnaire1 />}
+            {openQuestionnaire && <div className="questionnaire">
+               <Questionnaire1 />
+            </div>}
             <div className="connector second2"></div>
           </div>
         </div>
