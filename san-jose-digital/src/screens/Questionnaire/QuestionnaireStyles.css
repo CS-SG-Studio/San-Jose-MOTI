@@ -34,7 +34,7 @@
   padding: 0;
   flex-grow: 1;
   border-radius: 5px;
-  background-color: #9FD2E1;
+  background-color: #9fd2e1;
   padding: 20px;
 }
 
@@ -76,4 +76,17 @@ select {
 label {
   padding: 6px 6px 6px 6px;
   display: inline-block;
+}
+
+button {
+  background-color: #9fd2e1; /* Green */
+  border: none;
+  color: rgb(88, 88, 88);
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
 }
