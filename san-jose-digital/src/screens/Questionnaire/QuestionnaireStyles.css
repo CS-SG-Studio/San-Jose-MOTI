@@ -1,11 +1,9 @@
-
-.container { 
+.container {
+  display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: stretch;
   padding: 40px;
   position: absolute;
-  width: 60%;
-  left: 20%;
   background: #f5f5f5;
   border-radius: 2rem;
 
@@ -35,6 +33,9 @@
 .form {
   padding: 0;
   flex-grow: 1;
+  border-radius: 5px;
+  background-color: #9fd2e1;
+  padding: 20px;
 }
 
 .form-control {
@@ -65,9 +66,27 @@ select {
 input[type="radio"],
 select {
   position: relative;
+  align-self: top;
   height: 15px;
   width: 15px;
   background-color: #eee;
   border-radius: 50%;
-  margin: 4px 
+}
+
+label {
+  padding: 6px 6px 6px 6px;
+  display: inline-block;
+}
+
+button {
+  background-color: #9fd2e1; /* Green */
+  border: none;
+  color: rgb(88, 88, 88);
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
 }
