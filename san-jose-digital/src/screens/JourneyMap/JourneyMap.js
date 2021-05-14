@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import ContactForm from "../LastStep/contactus";
 import Questionnaire1 from "../Questionnaire/Questionnaire1";
 import "./JourneyMapStyle.css";
 import Step1 from "./Step1/Step1.js";
+// import ContactForm "../LastStep/contactus";
 
 function JourneyMap() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +16,12 @@ function JourneyMap() {
 
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
+  };
+
+  const [openContactForm, setContactForm] = useState(false);
+
+  const contactStep = () => {
+    setContactForm(!openContactForm);
   };
 
   return (
@@ -48,9 +56,11 @@ function JourneyMap() {
               </span>
             </div>
             <div className="connector second1"></div>
-            {openQuestionnaire && <div className="questionnaire">
-               <Questionnaire1 />
-            </div>}
+            {openQuestionnaire && (
+              <div className="questionnaire">
+                <Questionnaire1 />
+              </div>
+            )}
             <div className="connector second2"></div>
           </div>
         </div>
@@ -68,10 +78,17 @@ function JourneyMap() {
         <div className="stack">
           <div className="digit">4</div>
           <div className="on-right">
-            <div className="circles fourth">
-              <span className="instruction">STAY IN THE LOOP</span>
+            <div className="circles fourth" onClick={contactStep}>
+              <span className="instruction" onClick={contactStep}>
+                STAY IN THE LOOP
+              </span>
             </div>
-            <div className="connector fourth"></div>
+            {openContactForm && (
+              <>
+                <div className="connector fourth"></div>
+                <ContactForm />
+              </>
+            )}
           </div>
         </div>
       </div>
