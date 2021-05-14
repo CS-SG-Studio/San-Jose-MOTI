@@ -3,14 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
-import Questionnaire2 from './Questionnaire2';
 
 // function Questionnaire() {
 const Questionnaire = () => {
   return (
-    <Router>
       <container>
         <header> QUESTIONNAIRE </header>
         <p>
@@ -49,7 +47,7 @@ const Questionnaire = () => {
               Someone else (please specify)
               <input type="text" id="someone" name="contact"></input>
             </label>
-          </div>
+          </div>npm 
           <div className="form-control">
             <label htmlFor="contact"> What is your primary language : </label>
             <br />
@@ -73,24 +71,11 @@ const Questionnaire = () => {
               <input type="text" id="other" name="contact"></input>
             </label>
           </div>
-        </form>
-        <div>
-          <ul>
-            <li>
-              <Link to="/questionnaire2">NEXT</Link>
-            </li>
-          </ul>
-
-          <hr />
-
-          <Switch>
-            <Route exact path="/questionnaire2">
-              <Questionnaire2 />
-            </Route>
-          </Switch>
+          <div>
+        <NavLink to='./questionnaire2'>NEXT</NavLink>
         </div>
-      </container>
-    </Router>
+        </form>
+    </container>
   );
 }
 
