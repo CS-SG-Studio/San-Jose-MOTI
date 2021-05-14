@@ -36,13 +36,11 @@ function Questionnaire1() {
         <div className="form-control">
           <label htmlFor="contact"> I am filling this on behalf of: </label>
           <br />
-          <label htmlFor="contact">
-            <input type="radio" id="contact" name="contact" value="self" />
-            Myself
-          </label>
+          <input type="radio" id="contact" name="contact" value="self" />
+          <label htmlFor="contact">Myself</label>
           <br />
+          <input type="radio" id="someone" name="contact" value="someone" />
           <label htmlFor="someone">
-            <input type="radio" id="someone" name="contact" value="someone" />
             Someone else (please specify)
             <input type="text" id="someone" name="contact"></input>
           </label>
