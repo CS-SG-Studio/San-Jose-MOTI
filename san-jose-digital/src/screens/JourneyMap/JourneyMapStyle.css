@@ -34,7 +34,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   font-family: "Roboto", sans-serif;
   font-weight: Bold;
   font-size: 22px;
@@ -97,7 +97,7 @@
 }
 
 .connector.second1 {
-   height: 75px;
+  height: 75px;
   background: linear-gradient(rgba(159, 210, 225, 1), rgba(123, 189, 208, 1));
 }
 
@@ -108,4 +108,9 @@
 
 .connector.third {
   background: linear-gradient(rgba(86, 167, 191, 1), rgba(41, 138, 166, 1));
+}
+
+.connector.fourth {
+  height: 75px;
+  background: linear-gradient(rgba(41, 138, 166, 1), rgb(201, 211, 214));
 }
