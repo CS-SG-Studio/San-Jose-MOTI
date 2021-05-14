@@ -1,9 +1,9 @@
 .container {
-  display: absolute;
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 40px;
-  position: absolute;
+  position: relative;
   width: 730px;
   height: 875px;
   transform: translate(-50%);
