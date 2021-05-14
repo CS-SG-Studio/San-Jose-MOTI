@@ -49,7 +49,7 @@
 }
 
 .questionnaire {
-  height: 669px;
+  height: 670px;
 }
 
 /* styling for the circles */
@@ -109,3 +109,9 @@
 .connector.third {
   background: linear-gradient(rgba(86, 167, 191, 1), rgba(41, 138, 166, 1));
 }
+
+.connector.fourth {
+  height: 75px;
+  background: linear-gradient(rgba(41, 138, 166, 1), rgb(201, 211, 214));
+}
+
