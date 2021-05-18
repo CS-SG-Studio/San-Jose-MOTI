@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
+  // Switch,
+  // Route,
   Link
 } from "react-router-dom";
-import Questionnaire from './Questionnaire';
-import Questionnaire3 from './Questionnaire3';
+// import Questionnaire from './Questionnaire';
+// import Questionnaire3 from './Questionnaire3';
 
 const Questionnaire2 = () => {
   return (
@@ -159,6 +159,7 @@ const Questionnaire2 = () => {
           </div>
         </form>
         <div>
+        <nav>
           <ul>
             <li>
               <Link to="/questionnaire">BACK</Link>
@@ -167,17 +168,18 @@ const Questionnaire2 = () => {
               <Link to="/questionnaire3">NEXT</Link>
             </li>
           </ul>
+        </nav>
 
-          <hr />
+          {/* <hr /> */}
 
-          <Switch>
+          {/* <Switch>
             <Route exact path="/questionnaire">
               <Questionnaire />
             </Route>
             <Route exact path="/questionnaire3">
               <Questionnaire3 />
             </Route>
-          </Switch>
+          </Switch> */}
         </div>
       </container>
     </Router>
