@@ -1,6 +1,9 @@
 import React from 'react';
 import {
-  NavLink,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink
 } from "react-router-dom";
 
 // function Questionnaire() {
@@ -44,7 +47,7 @@ const Questionnaire = () => {
               Someone else (please specify)
               <input type="text" id="someone" name="contact"></input>
             </label>
-          </div>
+          </div>npm 
           <div className="form-control">
             <label htmlFor="contact"> What is your primary language : </label>
             <br />
@@ -72,7 +75,7 @@ const Questionnaire = () => {
         <NavLink to='./questionnaire2'>NEXT</NavLink>
         </div>
         </form>
-      </container>
+    </container>
   );
 }
 

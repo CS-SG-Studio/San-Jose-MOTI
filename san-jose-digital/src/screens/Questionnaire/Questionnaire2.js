@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {
   BrowserRouter as Router,
   // Switch,
@@ -7,10 +8,13 @@ import {
 } from "react-router-dom";
 // import Questionnaire from './Questionnaire';
 // import Questionnaire3 from './Questionnaire3';
+=======
+import Questionnaire from './Questionnaire';
+import Questionnaire3 from './Questionnaire3';
+>>>>>>> 958331817100503be20a4843831960cb2ff882bf
 
 const Questionnaire2 = () => {
   return (
-    <Router>
       <container>
         <form className="form">
           <div className="form-control">
@@ -158,31 +162,7 @@ const Questionnaire2 = () => {
             <label for="no3">No</label>
           </div>
         </form>
-        <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/questionnaire">BACK</Link>
-            </li>
-            <li>
-              <Link to="/questionnaire3">NEXT</Link>
-            </li>
-          </ul>
-        </nav>
-
-          {/* <hr /> */}
-
-          {/* <Switch>
-            <Route exact path="/questionnaire">
-              <Questionnaire />
-            </Route>
-            <Route exact path="/questionnaire3">
-              <Questionnaire3 />
-            </Route>
-          </Switch> */}
-        </div>
       </container>
-    </Router>
   );
 }
 
