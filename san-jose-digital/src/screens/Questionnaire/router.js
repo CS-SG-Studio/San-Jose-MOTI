@@ -1,12 +1,13 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
   Route
 } 
-from "react-router-dom";
-import Questionnaire from './Questionnaire'
+from 'react-router-dom';
+import Questionnaire from './Questionnaire';
 import Questionnaire2 from './Questionnaire2';
+import Questionnaire3 from './Questionnaire3';
+import Congratulations from './Congratulations';
 
 // function Questionnaire() {
 const router = () => {
@@ -18,7 +19,13 @@ const router = () => {
             <Route path="/questionnaire2">
               <Questionnaire2 />
             </Route>
-          </Switch>
+            <Route path="/questionnaire3">
+              <Questionnaire3 />
+            </Route>
+            <Route path="/congratulations">
+              <Congratulations />
+            </Route>
+        </Switch>
 
   );
 }

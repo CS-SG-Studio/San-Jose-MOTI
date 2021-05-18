@@ -1,16 +1,10 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  // Switch,
-  // Route,
-  Link
-} from "react-router-dom";
-// import Congratulations from './Congratulations';
-// import Questionnaire2 from './Questionnaire2';
+  NavLink
+} from 'react-router-dom';
 
 const Questionnaire3 = () => {
   return (
-    <Router>
       <container>
         <form className="form">
           <div className="form-control">
@@ -138,32 +132,14 @@ const Questionnaire3 = () => {
             <input type="radio" id="no" name="classes" value="no" />
             <label for="no">No</label>
           </div>
-        </form>
         <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/questionnaire2">BACK</Link>
-            </li>
-            <li>
-              <Link to="/congratulations">SUBMIT</Link>
-            </li>
-          </ul>
-        </nav>
-
-          {/* <hr /> */}
-
-          {/* <Switch>
-            <Route exact path="/questionnaire2">
-              <Questionnaire2 />
-            </Route>
-            <Route exact path="/congratulations">
-              <Congratulations />
-            </Route>
-          </Switch> */}
+          <NavLink to='./questionnaire2'>BACK</NavLink>
         </div>
+        <div>
+          <NavLink to='./congratulations'>NEXT</NavLink>
+        </div>
+        </form>
       </container>
-    </Router>
   );
 }
 

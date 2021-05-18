@@ -1,17 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import {
-  BrowserRouter as Router,
-  // Switch,
-  // Route,
-  Link
-} from "react-router-dom";
-// import Questionnaire from './Questionnaire';
-// import Questionnaire3 from './Questionnaire3';
-=======
-import Questionnaire from './Questionnaire';
-import Questionnaire3 from './Questionnaire3';
->>>>>>> 958331817100503be20a4843831960cb2ff882bf
+  NavLink
+} from 'react-router-dom';
 
 const Questionnaire2 = () => {
   return (
@@ -161,6 +151,12 @@ const Questionnaire2 = () => {
             <input type="radio" id="no3" name="hotspot" value="no" />
             <label for="no3">No</label>
           </div>
+        <div>
+          <NavLink to='./questionnaire'>BACK</NavLink>
+        </div>
+        <div>
+          <NavLink to='./questionnaire3'>NEXT</NavLink>
+        </div>
         </form>
       </container>
   );

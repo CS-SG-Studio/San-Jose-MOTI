@@ -1,10 +1,7 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   NavLink
-} from "react-router-dom";
+} from 'react-router-dom';
 
 // function Questionnaire() {
 const Questionnaire = () => {
@@ -71,8 +68,8 @@ const Questionnaire = () => {
               <input type="text" id="other" name="contact"></input>
             </label>
           </div>
-          <div>
-        <NavLink to='./questionnaire2'>NEXT</NavLink>
+        <div>
+          <NavLink to='./questionnaire2'>NEXT</NavLink>
         </div>
         </form>
     </container>

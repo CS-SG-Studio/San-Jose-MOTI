@@ -11,6 +11,8 @@ import JourneyMap from "./screens/JourneyMap/JourneyMap";
 import Step1 from "./screens/JourneyMap/Step1/Step1";
 import Questionnaire from "./screens/Questionnaire/Questionnaire";
 import Questionnaire2 from "./screens/Questionnaire/Questionnaire2";
+import Questionnaire3 from "./screens/Questionnaire/Questionnaire3";
+import Congratulations from "./screens/Questionnaire/Congratulations";
 
 function App() {
   return (
@@ -29,6 +31,12 @@ function App() {
             </Route>
             <Route path="/questionnaire2">
               <Questionnaire2 />
+            </Route>
+            <Route path="/questionnaire3">
+              <Questionnaire3 />
+            </Route>
+            <Route path="/congratulations">
+              <Congratulations />
             </Route>
           </Switch>
         </Router>
