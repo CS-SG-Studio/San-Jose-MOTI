@@ -1,157 +1,91 @@
 * {
   box-sizing: border-box;
 }
-body {
-  font-size: 14px;
+
+/* centers all of the div vertically over the popup */
+.centering-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-top: 2%;
 }
 
 .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* size of the popup window */
+  border-radius: 2rem;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 6.61234px;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0.5rem;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 
-  position: relative;
-  width: 888px;
-  height: 655.91px;
-
+  /* glassmorphism */
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.box {
-  /* Auto Layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-
-  position: static;
-  width: 810px;
-  height: 642.68px;
-  left: 36.25px;
-  top: 6.61px;
-
-  /* Inside Auto Layout
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 6.61234px; */
-}
-
+/* styling for the header */
 .header {
-  /* Auto Layout */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
-
-  position: static;
-  width: 810px;
-  height: 216.68px;
-  left: 0px;
-  top: 0px;
-
-  /* Inside Auto Layout */
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  margin: 15px 0px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #000000;
 }
 
 .title {
-  position: absolute;
-  width: 700.69px;
-  height: 77.36px;
-  left: 78.77px;
-  top: 6.61px;
-  margin: 10px;
-
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
+  margin: 0px;
   font-weight: bold;
-  font-size: 66.1234px;
-  line-height: 77px;
-  /* identical to box height */
-
-  text-align: center;
-  color: #000000;
+  font-size: 2.5rem;
 }
 
 .title2 {
-  position: absolute;
-  width: 725.66px;
-  height: 119.68px;
-  left: 66px;
-  top: 71px;
-
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: normal;
-  font-size: 26.4494px;
-  line-height: 31px;
+  font-size: 1.2rem;
   display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #000000;
+  justify-content: center;
 }
 
-#body {
-  /* Auto Layout */
+/* styling for the body */
+.body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-evenly;
   padding: 0px;
-
+  font-family: "Roboto", sans-serif;
   position: center;
-  width: 810px;
-  height: 353px;
-  left: 0px;
-  top: 231.68px;
-
-  /* Inside Auto Layout */
-  /* flex: none;
-  order: 1;
-  flex-grow: 0; */
-  /* margin: 0px -5px; */
 }
 
-.tile1 {
+/* styling for each of the 3 programs */
+.program {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
-
+  padding: 0.5rem;
   position: relative;
-  width: 250px;
-  height: 310px;
-  left: 0px;
-  top: 0px;
-  margin: 0 10px;
+  margin: 0.5rem;
 }
 
-.title3 {
-  position: static;
-  width: 215px;
-  height: 31px;
-  left: 17.5px;
-  top: 0px;
-  margin: 10px 0px;
-
-  font-family: "Roboto", sans-serif;
+.pillars {
+  position: center;
+  margin: 0px;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 31px;
-  /* identical to box height */
-
+  font-size: 1.1rem;
   text-align: center;
-
   color: #000000;
 }
 
@@ -160,47 +94,44 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-
+  padding: 1rem;
   position: relative;
-  width: 250px;
-  height: 250px;
-  left: 0px;
-  top: 31px;
-
+  width: 12rem;
+  height: 12rem;
+  top: 1rem;
   background: #d5f0f8;
-  border-radius: 10000px;
+  border-radius: 225px;
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px;
-
-  position: static;
-  width: 681px;
-  height: 43px;
-  left: 64.5px;
-  top: 599.68px;
+.circle:hover {
+  background: #cae4ec;
 }
 
-.text {
-  position: static;
-  width: 230px;
-  height: 230px;
-  left: 10px;
-  top: 10px;
-
+.description {
+  position: center;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 26.4494px;
-  line-height: 31px;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #000000;
+}
+
+.footer {
+  position: relative;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 3rem;
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  z-index: 1;
 }

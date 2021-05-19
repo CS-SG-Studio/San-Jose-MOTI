@@ -1,0 +1,17 @@
+.ContactForm{
+  flex-direction: column;
+  align-items: left;
+  padding: 40px;
+  position: absolute;
+  width: 720px;
+  height: 540px;
+  transform: translate(-50%);
+  background: #f5f5f5;
+  border-radius: 2rem;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
