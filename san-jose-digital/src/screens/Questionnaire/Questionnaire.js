@@ -26,8 +26,8 @@ const Questionnaire = () => {
             <input type="number" id="phone" name="phone"></input>
           </div>
           <div className="form-control">
-            <label htmlFor="adress"> Adress : </label>
-            <input type="textarea" id="adress" name="adress"></input>
+            <label htmlFor="address"> Address : </label>
+            <input type="textarea" id="address" name="address"></input>
           </div>
           <div className="form-control">
             <label htmlFor="zip"> Zip Code : </label>
