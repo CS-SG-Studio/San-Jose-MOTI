@@ -10,10 +10,9 @@ import {
 } from "react-router-dom";
 
 import Step1 from "./Step1/Step1"
-import Questionnaire from "../Questionnaire/Questionnaire"
-import Questionnaire2 from "../Questionnaire/Questionnaire2"
-import Questionnaire3 from "../Questionnaire/Questionnaire3"
-import Congratulations from "../Questionnaire/Congratulations";
+import Congratulations from "../Questionnaire/Congratulations"
+import Questionnairee from "../Questionnaire/Questionnaire"; 
+// change
 
 function JourneyMap() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +63,7 @@ function JourneyMap() {
               <div className="circles second" onClick={questionnaireStep}>
                 <span className="instruction" onClick={questionnaireStep}>
                   <div>
-                    <NavLink to="./questionnaire">
+                    <NavLink to="./Questionnaire">
                       SEE WHAT YOU ARE ELIGIBLE FOR
                     </NavLink>
                   </div>
@@ -73,17 +72,8 @@ function JourneyMap() {
               <div className="connector second1"></div>
               {openQuestionnaire && (
                 <Switch>
-                  <Route path="/questionnaire">
-                    <Questionnaire />
-                  </Route>
-                  <Route path="/questionnaire2">
-                    <Questionnaire2 />
-                  </Route>
-                  <Route path="/questionnaire3">
-                    <Questionnaire3 />
-                  </Route>
-                  <Route path="/congratulations">
-                    <Congratulations />
+                  <Route path="/Questionnaire">
+                    <Questionnairee /> 
                   </Route>
                 </Switch>
               )}
