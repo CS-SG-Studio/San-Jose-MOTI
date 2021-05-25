@@ -67,8 +67,8 @@ input[type="radio"],
 select {
   position: relative;
   align-self: top;
-  height: 15px;
-  width: 15px;
+  height: 30px;
+  width: 150px;
   background-color: #eee;
   border-radius: 50%;
 }
