@@ -3,6 +3,7 @@ import Step1 from './step1';
 import Step2 from './step2';
 import Step3 from './step3';
 import './QuestionnaireStyles.css';
+import Congratulations from './Congratulations'
 class Questionnairee extends React.Component {
   constructor(props) {
     super(props);
@@ -68,9 +69,7 @@ class Questionnairee extends React.Component {
 
    
   handleSubmit = event => {
-    event.preventDefault()
-    const { name, email, username, password } = this.state
-    alert()
+    alert('form submitted!')
   }
   
   _next = () => {
