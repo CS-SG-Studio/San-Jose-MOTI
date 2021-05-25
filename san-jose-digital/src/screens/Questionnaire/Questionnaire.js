@@ -1,79 +1,105 @@
-import React, { useState } from 'react';
-import Step1 from './step1';
-import Step2 from './step2';
-import Step3 from './step3';
-import './QuestionnaireStyles.css';
-import Congratulations from './Congratulations'
+import React, { useState } from "react";
+import Step1 from "./step1";
+import Step2 from "./step2";
+import Step3 from "./step3";
+import "./QuestionnaireStyles.css";
+import Congratulations from "./Congratulations";
 
 // rename this!
 const Questionnairee = () => {
   const [data, setData] = useState({
-      // STEP1
-      currentStep: 1,
-      name: "",
-      email: "",
-      phone: "",
-      address: "",
-      zip_code: "",
-      identity: "",
-      language: "",
+    // STEP1
+    currentStep: 1,
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+    zip_code: "",
+    identity: "",
+    language: "",
 
-      // STEP2
-      program1: "",
-      program2: "",
-      device: "",
-      laptop: "",
-      desktop: "",
-      tablet: "",
-      deviceFollowUp: "",
-      deviceAmount: "",
-      smartphone: "",
-      connectsToInternet: "",
-      carrier: "",
-      dataPlans: "",
-      hotspot: "",
+    // STEP2
+    program1: "",
+    program2: "",
+    device: "",
+    laptop: "",
+    desktop: "",
+    tablet: "",
+    deviceFollowUp: "",
+    deviceAmount: "",
+    smartphone: "",
+    connectsToInternet: "",
+    carrier: "",
+    dataPlans: "",
+    hotspot: "",
 
-      // STEP3
-      familySize: "",
-      schoolDevice: "",
-      bringDeviceHome: "",
-      homeInternet: "",
-      costOfInternet: "",
-      schoolDevice: "",
-      internetProvider: "",
-      whereInternetIsAccessed: "",
-      interestedInHomeInternet: "",
-      experienceUsingComputer: "",
-      amountOfExperience: "",
-      interestedInFreeClasses: "",
+    // STEP3
+    familySize: "",
+    schoolDevice: "",
+    bringDeviceHome: "",
+    homeInternet: "",
+    costOfInternet: "",
+    schoolDevice: "",
+    internetProvider: "",
+    whereInternetIsAccessed: "",
+    interestedInHomeInternet: "",
+    experienceUsingComputer: "",
+    amountOfExperience: "",
+    interestedInFreeClasses: "",
   });
 
   const {
-      // STEP1  
-      currentStep, name, email, phone, address, zip_code, identity, language,
+    // STEP1
+    currentStep,
+    name,
+    email,
+    phone,
+    address,
+    zip_code,
+    identity,
+    language,
 
-      // STEP2
-      program1, program2, device, laptop, desktop, tablet, deviceFollowUp, deviceAmount, 
-      smartphone, connectsToInternet, carrier, dataPlans, hotspot,
+    // STEP2
+    program1,
+    program2,
+    device,
+    laptop,
+    desktop,
+    tablet,
+    deviceFollowUp,
+    deviceAmount,
+    smartphone,
+    connectsToInternet,
+    carrier,
+    dataPlans,
+    hotspot,
 
-      // STEP3
-      familySize, schoolDevice, bringDeviceHome, homeInternet, costOfInternet, 
-      internetProvider, whereInternetIsAccessed, interestedInHomeInternet, experienceUsingComputer, 
-      amountOfExperience, interestedInFreeClasses 
-  } = data
+    // STEP3
+    familySize,
+    schoolDevice,
+    bringDeviceHome,
+    homeInternet,
+    costOfInternet,
+    internetProvider,
+    whereInternetIsAccessed,
+    interestedInHomeInternet,
+    experienceUsingComputer,
+    amountOfExperience,
+    interestedInFreeClasses,
+  } = data;
 
   const handleChange = (event) => {
-    setData({...data, [event.target.name]: event.target.value });
-  }
+    setData({ ...data, [event.target.name]: event.target.value });
+  };
 
   const handleSubmit = async (event) => {
-    alert("form submitted!!")
-  }
+    alert("form submitted!!");
+  };
 
   const _next = () => {
     let newStep = currentStep;
     newStep = newStep >= 2 ? 3 : newStep + 1;
-    setData({...data, currentStep: newStep})
+    setData({ ...data, currentStep: newStep });
     // setState({
     //   currentStep: currentStep,
     // });
@@ -81,22 +107,22 @@ const Questionnairee = () => {
 
   const _prev = () => {
     let newStep = currentStep;
-    newStep = newStep <= 1 ? 1 : newStep - 1;    
-    setData({...data, currentStep: newStep})   
+    newStep = newStep <= 1 ? 1 : newStep - 1;
+    setData({ ...data, currentStep: newStep });
     // setState({
     //   currentStep: currentStep,
     // });
   };
 
-   /*
+  /*
    * the functions for our button
-   */ 
+   */
   const previousButton = () => {
     // let currentStep = {currentStep};
     if (currentStep !== 1) {
       return (
         <button className="btn btn-secondary" type="button" onClick={_prev}>
-        Previous
+          Previous
         </button>
       );
     }
@@ -107,8 +133,7 @@ const Questionnairee = () => {
     // let currentStep = this.state.currentStep;
     if (currentStep < 3) {
       return (
-        <button
-          className="btn btn-primary float-right" type="button" onClick={_next}>
+        <button className="btn btn-primary float-right" type="button" onClick={_next}>
           Next
         </button>
       );
@@ -118,62 +143,61 @@ const Questionnairee = () => {
 
   return (
     <div className="form-styling">
-        <React.Fragment>
-          <h1>Welcome to the Questionnaire!</h1>
-          <p>Step {currentStep} </p>
+      <React.Fragment>
+        <h1>Welcome to the Questionnaire!</h1>
+        <p>Step {currentStep} </p>
 
-          <form onSubmit={handleSubmit}>
-            <Step1
-              currentStep={currentStep}
-              handleChange={handleChange}
-              name={name}
-              email={email}
-              phone={phone}
-              address={address}
-              zip_code={zip_code}
-              identity={identity}
-              language={language}
-            />
-            <Step2
-              currentStep={currentStep}
-              handleChange={handleChange}
-              program1={program1}
-              program2={program2}
-              device={device}
-              desktop={desktop}
-              tablet={tablet}
-              laptop={laptop}
-              deviceFollowUp={deviceFollowUp}
-              deviceAmount={deviceAmount}
-              smartphone={smartphone}
-              connectsToInternet={connectsToInternet}
-              carrier={carrier}
-              dataPlans={dataPlans}
-              hotspot={hotspot}
-            />
-            <Step3
-              currentStep={currentStep}
-              handleChange={handleChange}
-              familySize={familySize}
-              schoolDevice={schoolDevice}
-              bringDeviceHome={bringDeviceHome}
-              homeInternet={homeInternet}
-              costOfInternet={costOfInternet}
-              internetProvider={internetProvider}
-              whereInternetIsAccessed={whereInternetIsAccessed}
-              interestedInHomeInternet={interestedInHomeInternet}
-              experienceUsingComputer={experienceUsingComputer}
-              amountOfExperience={amountOfExperience}
-              interestedInFreeClasses={interestedInFreeClasses}
-            />
-            {previousButton()}
-            {nextButton()}
-          </form>
-        </React.Fragment>
-      </div>
-  )
-}
-
+        <form onSubmit={handleSubmit}>
+          <Step1
+            currentStep={currentStep}
+            handleChange={handleChange}
+            name={name}
+            email={email}
+            phone={phone}
+            address={address}
+            zip_code={zip_code}
+            identity={identity}
+            language={language}
+          />
+          <Step2
+            currentStep={currentStep}
+            handleChange={handleChange}
+            program1={program1}
+            program2={program2}
+            device={device}
+            desktop={desktop}
+            tablet={tablet}
+            laptop={laptop}
+            deviceFollowUp={deviceFollowUp}
+            deviceAmount={deviceAmount}
+            smartphone={smartphone}
+            connectsToInternet={connectsToInternet}
+            carrier={carrier}
+            dataPlans={dataPlans}
+            hotspot={hotspot}
+          />
+          <Step3
+            currentStep={currentStep}
+            handleChange={handleChange}
+            familySize={familySize}
+            schoolDevice={schoolDevice}
+            bringDeviceHome={bringDeviceHome}
+            homeInternet={homeInternet}
+            costOfInternet={costOfInternet}
+            internetProvider={internetProvider}
+            whereInternetIsAccessed={whereInternetIsAccessed}
+            interestedInHomeInternet={interestedInHomeInternet}
+            experienceUsingComputer={experienceUsingComputer}
+            amountOfExperience={amountOfExperience}
+            interestedInFreeClasses={interestedInFreeClasses}
+          />
+          {previousButton()}
+          {nextButton()}
+        </form>
+      </React.Fragment>
+    </div>
+  );
+};
 
 // class Questionnairee extends React.Component {
 //   constructor(props) {
