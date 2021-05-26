@@ -34,11 +34,11 @@ function Step1(props) {
             className="form-control"
             id="phone"
             name="phone"
-            type="number" // NOTE: if they do not input a number it wiill not save their input when you go back and next on form
+            type="text"
             placeholder="Enter phone number"
             value={props.phone}
             onChange={props.handleChange}
-            />
+        />
     </div>
     <div className="form-group">
         <label htmlFor="address">Address</label>
@@ -58,7 +58,7 @@ function Step1(props) {
             className="form-control"
             id="zip_code"
             name="zip_code"
-            type="number"
+            type="text"
             placeholder="Enter zip code"
             value={props.zip_code}
             onChange={props.handleChange}
