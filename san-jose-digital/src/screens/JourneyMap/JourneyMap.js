@@ -63,7 +63,7 @@ function JourneyMap() {
               <div className="circles second" onClick={questionnaireStep}>
                 <span className="instruction" onClick={questionnaireStep}>
                   <div>
-                    <NavLink to="./Questionnaire">
+                    <NavLink className="link" to="./Questionnaire">
                       SEE WHAT YOU ARE ELIGIBLE FOR
                     </NavLink>
                   </div>
