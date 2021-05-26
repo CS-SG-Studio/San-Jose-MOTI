@@ -127,7 +127,7 @@ const Questionnairee = () => {
       );
       await response.json();
       setData({ ...data, name:'', email:'', phone:'', address: '', identity: ''});
-      alert("Form submitted!!")
+      alert("Form submitted!!") // add congratulations popup
     } catch(err) {
       console.log(err);
     }
@@ -236,59 +236,6 @@ const Questionnairee = () => {
         </React.Fragment>
       </div>
   )
-}
-
-
-        <form onSubmit={handleSubmit}>
-          <Step1
-            currentStep={currentStep}
-            handleChange={handleChange}
-            name={name}
-            email={email}
-            phone={phone}
-            address={address}
-            zip_code={zip_code}
-            identity={identity}
-            language={language}
-          />
-          <Step2
-            currentStep={currentStep}
-            handleChange={handleChange}
-            program1={program1}
-            program2={program2}
-            device={device}
-            desktop={desktop}
-            tablet={tablet}
-            laptop={laptop}
-            deviceFollowUp={deviceFollowUp}
-            deviceAmount={deviceAmount}
-            smartphone={smartphone}
-            connectsToInternet={connectsToInternet}
-            carrier={carrier}
-            dataPlans={dataPlans}
-            hotspot={hotspot}
-          />
-          <Step3
-            currentStep={currentStep}
-            handleChange={handleChange}
-            familySize={familySize}
-            schoolDevice={schoolDevice}
-            bringDeviceHome={bringDeviceHome}
-            homeInternet={homeInternet}
-            costOfInternet={costOfInternet}
-            internetProvider={internetProvider}
-            whereInternetIsAccessed={whereInternetIsAccessed}
-            interestedInHomeInternet={interestedInHomeInternet}
-            experienceUsingComputer={experienceUsingComputer}
-            amountOfExperience={amountOfExperience}
-            interestedInFreeClasses={interestedInFreeClasses}
-          />
-          {previousButton()}
-          {nextButton()}
-        </form>
-      </React.Fragment>
-    </div>
-  );
 };
 
 // class Questionnairee extends React.Component {

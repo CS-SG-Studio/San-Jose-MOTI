@@ -11,7 +11,7 @@ import {
 
 import Step1 from "./Step1/Step1"
 import Congratulations from "../Questionnaire/Congratulations"
-import Questionnairee from "../Questionnaire/Questionnaire"; 
+import Questionnaire from "../Questionnaire/Questionnaire"; 
 // change
 
 function JourneyMap() {
@@ -73,7 +73,7 @@ function JourneyMap() {
               {openQuestionnaire && (
                 <Switch>
                   <Route path="/Questionnaire">
-                    <Questionnairee /> 
+                    <Questionnaire /> 
                   </Route>
                 </Switch>
               )}
