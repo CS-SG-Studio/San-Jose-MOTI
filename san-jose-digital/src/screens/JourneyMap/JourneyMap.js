@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import ContactForm from "./Step4Contact/contactus";
+import ContactForm from "../Step4Contact/contactus";
 import "./JourneyMapStyle.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import Step1 from "./Step1Programs/Step1";
-import Congratulations from "./Step3Congrats/Congratulations";
-import Questionnaire from "../Questionnaire/Questionnaire";
+import Step1 from "../Step1Programs/program";
+import Congratulations from "../Step3Congrats/Congratulations";
+import Questionnaire from "../Step2Questionnaire/Questionnaire";
 
 // change
 

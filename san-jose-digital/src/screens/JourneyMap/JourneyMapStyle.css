@@ -57,7 +57,6 @@
 
 .circles {
   background: lightblue;
-
   width: min(max(30vw, 130px), 180px);
   height: min(max(30vw, 130px), 180px);
   border-radius: 50%;
@@ -71,28 +70,23 @@
 .circles:hover {
   cursor: pointer;
 }
+
 /* numbering on the page */
 .circles::before {
   content: counter(listCounter);
   display: flex;
   position: absolute;
-  color: rgba(213, 240, 248, 1);
+  color: lightblue;
   font-weight: bold;
   margin-top: -15px;
-  /* distance of number from circle step */
+  /* distance of number from circles */
   right: min(max(30vw, 100px), 160px);
   font-size: min(max(15vw, 150px), 175px);
   height: inherit;
-}
 
-/* .digit {
-  border: 3px dashed white;
-  position: absolute;
-  right: 250px;
-  font-size: 12rem;
-  color: rgba(213, 240, 248, 1);
-  font-weight: Bold;
-} */
+  /* disable opening popups with numbers */
+  pointer-events: none;
+}
 
 /* styling for the instructions/text */
 .instruction {
@@ -112,6 +106,16 @@
   text-decoration: inherit;
   color: inherit;
 }
+
+/* .digit {
+  border: 3px dashed white;
+  position: absolute;
+  right: 250px;
+  font-size: 12rem;
+  color: rgba(213, 240, 248, 1);
+  font-weight: Bold;
+} */
+
 /* styling for the circles */
 /* .circles.first {
   background: rgba(213, 240, 248, 1);
