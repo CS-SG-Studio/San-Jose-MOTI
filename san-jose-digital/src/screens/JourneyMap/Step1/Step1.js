@@ -9,8 +9,8 @@ const Step1 = (props) => {
       </span>
       <div className="centering-all">
         <div className="header">
-          <h1 className="title">Our Programs</h1>
-          <h2 className="title2">
+          <h1 className="steptitle">Our Programs</h1>
+          <h2 className="steptitle2">
             You will gain access to job, education, <br />
             healthcare, and service opportunities! <br />
             The following are included in our bundle package:

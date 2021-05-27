@@ -1,46 +1,106 @@
-.whiteheader {
-  color: rgba(255, 255, 255, 1);
+* {
   font-family: "Roboto", sans-serif;
+}
+
+.title {
+  color: rgba(255, 255, 255, 1);
   font-weight: Bold;
-  position: relative;
+  padding: 50px;
+  font-size: min(7vw, 70px);
+}
+
+.subtitle {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 10px;
+  font-size: 0.55em;
+}
+
+.page {
+  counter-reset: listCounter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .stack {
-  position: relative;
-  margin-top: -4px;
-}
-
-.digit {
-  position: relative;
-  font-size: 11rem;
-
-  color: rgba(213, 240, 248, 1);
-  font-family: "Roboto", sans-serif;
-  font-weight: Bold;
-  display: inline-block;
-  vertical-align: top;
-  height: 100px;
-  margin-right: 100px;
+  counter-increment: listCounter;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  min-height: 300px;
 }
 
 .on-right {
-  display: inline-block;
+  border: 5px solid lightblue;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: center;
+  position: relative;
+  width: 0;
+  flex: 1;
 }
+
+.popups {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+/* make last connector disappear */
+.stack:last-child .on-right {
+  background-color: inherit;
+  border: 0;
+}
+
+.circles {
+  background: lightblue;
+
+  width: min(max(30vw, 130px), 180px);
+  height: min(max(30vw, 130px), 180px);
+  border-radius: 50%;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-top: -10px;
+}
+
+.circles:hover {
+  cursor: pointer;
+}
+/* numbering on the page */
+.circles::before {
+  content: counter(listCounter);
+  display: flex;
+  position: absolute;
+  color: rgba(213, 240, 248, 1);
+  font-weight: bold;
+  margin-top: -15px;
+  /* distance of number from circle step */
+  right: min(max(30vw, 100px), 160px);
+  font-size: min(max(15vw, 150px), 175px);
+  height: inherit;
+}
+
+/* .digit {
+  border: 3px dashed white;
+  position: absolute;
+  right: 250px;
+  font-size: 12rem;
+  color: rgba(213, 240, 248, 1);
+  font-weight: Bold;
+} */
 
 /* styling for the instructions/text */
 .instruction {
-  width: 171px;
   color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Roboto", sans-serif;
   font-weight: Bold;
-  font-size: 22px;
-  opacity: 1;
-  text-align: center;
-  background: transparent;
+  font-size: min(max(3.5vw, 14px), 20px);
+  display: flex;
+  align-items: center;
 }
 
 .instruction:hover {
@@ -53,16 +113,7 @@
   color: inherit;
 }
 /* styling for the circles */
-.circles {
-  width: 200px;
-  height: 200px;
-  padding-left: 80px;
-  opacity: 1;
-  position: relative;
-  border-radius: 200px;
-  overflow: hidden;
-}
-.circles.first {
+/* .circles.first {
   background: rgba(213, 240, 248, 1);
 }
 
@@ -76,20 +127,17 @@
 
 .circles.fourth {
   background: #298aa7;
-}
-
-.circles:hover {
-  cursor: pointer;
-}
+} */
 
 /* styling for the connectors */
-.connector {
+/* .connector {
   width: 8px;
   height: 150px;
   opacity: 1;
   position: relative;
   left: 96px;
   overflow: hidden;
+  justify-self: center;
 }
 
 .connector.first {
@@ -113,4 +161,4 @@
 .connector.fourth {
   height: 75px;
   background: linear-gradient(rgba(41, 138, 166, 1), rgb(201, 211, 214));
-}
+} */

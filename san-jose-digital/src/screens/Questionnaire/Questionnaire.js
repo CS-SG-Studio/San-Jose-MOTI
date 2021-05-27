@@ -183,59 +183,60 @@ const Questionnairee = () => {
 
   return (
     <div className="form-styling">
-        <React.Fragment>
-          <h1>Welcome to the Questionnaire!</h1>
-          <p>Step {currentStep} </p>
+      <React.Fragment>
+        <h1 className="header">Welcome to the Questionnaire!</h1>
+        <p>Step {currentStep} </p>
 
-          <form onSubmit={handleSubmit}>
-            <Step1
-              currentStep={currentStep}
-              handleChange={handleChange}
-              name={name}
-              email={email}
-              phone={phone}
-              address={address}
-              zip_code={zip_code}
-              identity={identity}
-              language={language}
-            />
-            <Step2
-              currentStep={currentStep}
-              handleChange={handleChange}
-              programs={programs}
-              device={device}
-              desktop={desktop}
-              tablet={tablet}
-              laptop={laptop}
-              deviceFollowUp={deviceFollowUp}
-              deviceAmount={deviceAmount}
-              smartphone={smartphone}
-              connectsToInternet={connectsToInternet}
-              carrier={carrier}
-              dataPlans={dataPlans}
-              hotspot={hotspot}
-            />
-            <Step3
-              currentStep={currentStep}
-              handleChange={handleChange}
-              familySize={familySize}
-              schoolDevice={schoolDevice}
-              bringDeviceHome={bringDeviceHome}
-              homeInternet={homeInternet}
-              costOfInternet={costOfInternet}
-              internetProvider={internetProvider}
-              whereInternetIsAccessed={whereInternetIsAccessed}
-              interestedInHomeInternet={interestedInHomeInternet}
-              experienceUsingComputer={experienceUsingComputer}
-              amountOfExperience={amountOfExperience}
-              interestedInFreeClasses={interestedInFreeClasses}
-            />
-            {previousButton()}
-            {nextButton()}
-          </form>
-        </React.Fragment>
-      </div>
-  )
+        <form onSubmit={handleSubmit}>
+          <Step1
+            currentStep={currentStep}
+            handleChange={handleChange}
+            name={name}
+            email={email}
+            phone={phone}
+            address={address}
+            zip_code={zip_code}
+            identity={identity}
+            language={language}
+          />
+          <Step2
+            currentStep={currentStep}
+            handleChange={handleChange}
+            program1={program1}
+            program2={program2}
+            device={device}
+            desktop={desktop}
+            tablet={tablet}
+            laptop={laptop}
+            deviceFollowUp={deviceFollowUp}
+            deviceAmount={deviceAmount}
+            smartphone={smartphone}
+            connectsToInternet={connectsToInternet}
+            carrier={carrier}
+            dataPlans={dataPlans}
+            hotspot={hotspot}
+          />
+          <Step3
+            currentStep={currentStep}
+            handleChange={handleChange}
+            familySize={familySize}
+            schoolDevice={schoolDevice}
+            bringDeviceHome={bringDeviceHome}
+            homeInternet={homeInternet}
+            costOfInternet={costOfInternet}
+            internetProvider={internetProvider}
+            whereInternetIsAccessed={whereInternetIsAccessed}
+            interestedInHomeInternet={interestedInHomeInternet}
+            experienceUsingComputer={experienceUsingComputer}
+            amountOfExperience={amountOfExperience}
+            interestedInFreeClasses={interestedInFreeClasses}
+          />
+          {previousButton()}
+          {nextButton()}
+        </form>
+      </React.Fragment>
+    </div>
+  );
 };
 
 // class Questionnairee extends React.Component {
