@@ -1,22 +1,21 @@
 import React from "react";
+import './CongratulationStyles.css'
 
 function Congratulations() {
   return (
-    <div>
+    <div className="congrats-page-styling">
       <h1 style={{ fontSize: "3rem" }}>
         CONGRATULATIONS!
       </h1>
       <p style={{ fontSize: "1.5rem" }}>
-        THANK YOU FOR FILLING OUT THE QUESIONNAIRE.
+        Thank you for filling out the questionnaire!
         <br />
-        WE WILL BE IN TOUCH WITH YOU SOON. 
+        We will be in touch with you soon!
       </p>
       <p style={{ fontSize: "1.5rem" }}>
         In the meantime, please click 
-        <a href="https://www.sjdigitalinclusion.org/grantees"> here </a>
-        to see the full list of
-        <br />
-        our grantees!
+        <a href="https://www.sjdigitalinclusion.org/grantees" rel="noreferrer" target="_blank" className="link"> here </a>  
+        to see the full list of<br />our grantees!
       </p>
     </div>
   );

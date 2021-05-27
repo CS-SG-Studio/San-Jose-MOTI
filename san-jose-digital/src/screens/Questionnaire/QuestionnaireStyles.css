@@ -47,11 +47,8 @@
 }
 
 input[type="text"],
-select,
 input[type="textarea"],
-select,
 input[type="number"],
-select,
 input[type="email"],
 select {
   width: 50%;
@@ -78,15 +75,23 @@ label {
   display: inline-block;
 }
 
-button {
-  background-color: #9fd2e1; /* Green */
+button,
+input[type="submit"] {
+  background-color: #9fd2e1;
   border: none;
-  color: rgb(88, 88, 88);
+  color: rgb(0, 0, 0);
   padding: 10px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 4px;
   font-family: "Roboto", sans-serif;
   margin: 20px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #87b7c5; /* Green */
 }

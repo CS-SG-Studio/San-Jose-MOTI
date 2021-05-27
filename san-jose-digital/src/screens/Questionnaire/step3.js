@@ -158,7 +158,6 @@ function Step3(props) {
             <option name="no">No</option>    
         </select>  
     </div>
-    <button className="btn btn-success btn-block">Submit</button>
     </container>
   );
 }

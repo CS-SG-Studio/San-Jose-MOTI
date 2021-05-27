@@ -1,4 +1,8 @@
-import Questionnairee from './Questionnaire'
+// import onChangeProgram1 from './Questionnaire'
+// import onChangeProgram2 from './Questionnaire'
+// import onChangeProgram3 from './Questionnaire'
+// import onChangeProgram4 from './Questionnaire'
+// import onChangeProgram5 from './Questionnaire'
 
 function Step2(props) {
   if (props.currentStep !== 2) {
@@ -6,40 +10,78 @@ function Step2(props) {
   } 
   return(
     <container>
-    {/* {this.createCheckboxes()} */}
-    {/* <div className="form-group"> */}
-        {/* TODO: add rest of programs and figure out how to remember 
-        which itmes they selected when it comes to checkboxes (currently the text and select 
-        questions are saving their responses but the checkbox ones aren't) */}
+    {/* TODO: add rest of programs and figure out how to remember 
+    which itmes they selected when it comes to checkboxes (currently the text and select 
+    questions are saving their responses but the checkbox ones aren't) */}
+    <div className="form-group">
         <p>Do you currently qualify for any of the 
         following programs? Please check any that apply.</p>
-        {/* <label htmlFor="program1">
-            Child Enrolled in the NSLP (National School Lunch Program)
-        </label>
         <input 
             className="form-control" 
             id="program1" 
             name="program1" 
             type="checkbox"
+            checked={props.program1}
             value={props.program1}
-            onChange={props.handleChange}
+            onChange={props.onChangeProgram1}
         />
-    </div>
-    <div>
-        <label htmlFor="program2">
-            CalFresh (food stamps) or Supplemental Nutrition Assistance
-            Program (SNAP) Recipient
+        <label htmlFor="program1">
+            Child Enrolled in the NSLP (National School Lunch Program)
         </label>
+        <br/>
         <input 
             className="form-control" 
             id="program2" 
             name="program2" 
             type="checkbox"
-            checked={props.program2.value}
+            checked={props.program2}
             value={props.program2}
-            onChange={props.handleChange}
+            onChange={props.onChangeProgram2}
         />
-    </div> */}
+        <label htmlFor="program2">
+            CalFresh (food stamps) or Supplemental Nutrition Assistance
+            Program (SNAP) Recipient
+        </label>
+        <br/>
+        <input 
+            className="form-control" 
+            id="program3" 
+            name="program3" 
+            type="checkbox"
+            checked={props.program3}
+            value={props.program3}
+            onChange={props.onChangeProgram3}
+        />
+        <label htmlFor="program2">
+            Supplemental Security Income (SSI) or Social Security Disability Insurance (SSDI) Recipient
+        </label>
+        <br/>
+        <input 
+            className="form-control" 
+            id="program4" 
+            name="program4" 
+            type="checkbox"
+            checked={props.program4}
+            value={props.program4}
+            onChange={props.onChangeProgram4}
+        />
+        <label htmlFor="program2">
+            Medi-Cal Recipient
+        </label>
+        <br/>
+        <input 
+            className="form-control" 
+            id="program5" 
+            name="program5" 
+            type="checkbox"
+            checked={props.program5}
+            value={props.program5}
+            onChange={props.onChangeProgram5}
+         />
+        <label htmlFor="program2">
+            Household Income Under $70,000/year
+        </label>
+    </div>
     <div className="form-group">
         <label htmlFor="device">
             Do you have a working computing device (such as a desktop, laptop,
@@ -60,30 +102,44 @@ function Step2(props) {
         <p htmlFor="deviceFollowUp">If you answered yes to the previous question, what kind of device(s)
         do you own?
         </p>
-        <input
+        <input 
+            className="form-control" 
+            id="desktop" 
+            name="desktop" 
             type="checkbox"
-            id="desktop"
-            name="desktop"
+            checked={props.desktop}
             value={props.desktop}
-            onChange={props.handleChange}
+            onChange={props.onChangeDesktop}
         />
-        <label for="desktop">Desktop</label>
-        <input
+        <label htmlFor="desktop">
+            Desktop
+        </label>
+        <br/>
+        <input 
+            className="form-control" 
+            id="laptop" 
+            name="laptop" 
             type="checkbox"
-            id="laptop"
-            name="laptop"
+            checked={props.laptop}
             value={props.laptop}
-            onChange={props.handleChange}
+            onChange={props.onChangeLaptop}
         />
-        <label for="laptop">Laptop</label>
-        <input
+        <label htmlFor="laptop">
+            Laptop
+        </label>
+        <br/>
+        <input 
+            className="form-control" 
+            id="tablet" 
+            name="tablet" 
             type="checkbox"
-            id="tablet"
-            name="tablet"
+            checked={props.tablet}
             value={props.tablet}
-            onChange={props.handleChange}
+            onChange={props.onChangeTablet}
         />
-        <label for="tablet">Tablet</label>
+        <label htmlFor="tablet">
+            Tablet
+        </label>
     </div>
     <div class="form-group">
         <label htmlFor="deviceAmount">How many devices do you have in your home?</label>
