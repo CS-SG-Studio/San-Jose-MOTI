@@ -228,7 +228,7 @@ const Questionnaire = () => {
           </form>
         </React.Fragment>
       </div>
-  )
+  )   
 };
 
 export default Questionnaire;
