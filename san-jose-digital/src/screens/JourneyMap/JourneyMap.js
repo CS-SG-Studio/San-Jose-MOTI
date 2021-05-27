@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ContactForm from "../LastStep/contactus";
+import ContactForm from "./Step4Contact/contactus";
 import "./JourneyMapStyle.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import Step1 from "./Step1/Step1";
-import Congratulations from "../Questionnaire/Congratulations";
+import Step1 from "./Step1Programs/Step1";
+import Congratulations from "./Step3Congrats/Congratulations";
 import Questionnaire from "../Questionnaire/Questionnaire";
 
 // change
@@ -78,11 +78,7 @@ function JourneyMap() {
                 STAY IN THE LOOP
               </span>
             </div>
-            <div className="popups">
-              {openContactForm && (
-                  <ContactForm />
-              )}
-            </div>
+            <div className="popups">{openContactForm && <ContactForm />}</div>
           </div>
         </div>
       </div>
