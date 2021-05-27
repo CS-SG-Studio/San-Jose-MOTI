@@ -77,7 +77,6 @@ function Step1(props) {
             <option name="else">Someone else</option>
         </select>
     </div>
-    
     </container>
   );
 }
