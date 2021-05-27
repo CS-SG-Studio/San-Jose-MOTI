@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactForm from "../LastStep/contactus";
+import ContactForm from "../Step4Contact/contactus";
 import "./JourneyMapStyle.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Step1 from "./Step1/Step1";
