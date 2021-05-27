@@ -1,12 +1,44 @@
-import React, { useState } from "react";
-import Step1 from "./step1";
-import Step2 from "./step2";
-import Step3 from "./step3";
-import "./QuestionnaireStyles.css";
-import Congratulations from "./Congratulations";
+import React, { useState } from 'react';
+import Checkbox from './Checkbox';
+import Step1 from './step1';
+import Step2 from './step2';
+import Step3 from './step3';
+import './QuestionnaireStyles.css';
+import Congratulations from './Congratulations'
+
 
 // rename this!
+// TODO: figure out how to make currentStep based on total number of pages of questionnaire
 const Questionnairee = () => {
+  const programs = [
+    'Child Enrolled in the NSLP (National School Lunch Program)',
+    'CalFresh (food stamps) or Supplemental Nutrition Assistance Program (SNAP) Recipient'
+  ];
+
+  const componentWillMount = () => {
+    this.selectedCheckboxes = new Set();
+  }
+
+  const toggleCheckbox = (label) => {
+    if (this.selectedCheckboxes.has(label)) {
+      this.selectedCheckboxes.delete(label);
+    } else {
+      this.selectedCheckboxes.add(label);
+    }
+  }
+
+  const createCheckbox = (label) => (
+    <Checkbox
+      label={label}
+      handleCheckboxChange={toggleCheckbox}
+      key={label}
+    />
+  )
+
+  const createCheckboxes = () => (
+    programs.map(createCheckbox)
+  )
+
   const [data, setData] = useState({
     // STEP1
     currentStep: 1,
@@ -18,21 +50,19 @@ const Questionnairee = () => {
     identity: "",
     language: "",
 
-    // STEP2
-    program1: "",
-    program2: "",
-    device: "",
-    laptop: "",
-    desktop: "",
-    tablet: "",
-    deviceFollowUp: "",
-    deviceAmount: "",
-    smartphone: "",
-    connectsToInternet: "",
-    carrier: "",
-    dataPlans: "",
-    hotspot: "",
-
+      // STEP2
+      programs,
+      device: "",
+      laptop: "",
+      desktop: "",
+      tablet: "",
+      deviceFollowUp: "",
+      deviceAmount: "",
+      smartphone: "",
+      connectsToInternet: "",
+      carrier: "",
+      dataPlans: "",
+    
     // STEP3
     familySize: "",
     schoolDevice: "",
@@ -59,20 +89,9 @@ const Questionnairee = () => {
     identity,
     language,
 
-    // STEP2
-    program1,
-    program2,
-    device,
-    laptop,
-    desktop,
-    tablet,
-    deviceFollowUp,
-    deviceAmount,
-    smartphone,
-    connectsToInternet,
-    carrier,
-    dataPlans,
-    hotspot,
+      // STEP2
+      device, laptop, desktop, tablet, deviceFollowUp, deviceAmount, 
+      smartphone, connectsToInternet, carrier, dataPlans, hotspot,
 
     // STEP3
     familySize,
@@ -93,8 +112,29 @@ const Questionnairee = () => {
   };
 
   const handleSubmit = async (event) => {
-    alert("form submitted!!");
-  };
+    event.preventDefault();
+    try {
+      const response = await fetch('https://v1.nocodeapi.com/rachelclinton/google_sheets/MfimgcBbjWzzHVku?tabId=Sheet1', 
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([
+          [name, email, phone, address, identity, new Date().toLocaleString()]
+        ]) // content that will be pushed to the Google Sheets
+      }
+      );
+      await response.json();
+      setData({ ...data, name:'', email:'', phone:'', address: '', identity: ''});
+      alert("Form submitted!!") // add congratulations popup
+    } catch(err) {
+      console.log(err);
+    }
+    // for (const checkbox of this.selectedCheckboxes) {
+    //   console.log(checkbox, 'is selected.');
+    // }
+  }
 
   const _next = () => {
     let newStep = currentStep;

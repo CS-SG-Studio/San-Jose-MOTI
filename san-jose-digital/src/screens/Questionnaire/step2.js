@@ -1,16 +1,19 @@
+import Questionnairee from './Questionnaire'
+
 function Step2(props) {
   if (props.currentStep !== 2) {
     return null
   } 
   return(
     <container>
-    <div className="form-group">
+    {/* {this.createCheckboxes()} */}
+    {/* <div className="form-group"> */}
         {/* TODO: add rest of programs and figure out how to remember 
         which itmes they selected when it comes to checkboxes (currently the text and select 
         questions are saving their responses but the checkbox ones aren't) */}
         <p>Do you currently qualify for any of the 
         following programs? Please check any that apply.</p>
-        <label htmlFor="program1">
+        {/* <label htmlFor="program1">
             Child Enrolled in the NSLP (National School Lunch Program)
         </label>
         <input 
@@ -32,10 +35,11 @@ function Step2(props) {
             id="program2" 
             name="program2" 
             type="checkbox"
+            checked={props.program2.value}
             value={props.program2}
             onChange={props.handleChange}
         />
-    </div>
+    </div> */}
     <div className="form-group">
         <label htmlFor="device">
             Do you have a working computing device (such as a desktop, laptop,

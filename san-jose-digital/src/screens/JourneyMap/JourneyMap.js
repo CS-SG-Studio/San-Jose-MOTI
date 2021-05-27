@@ -39,19 +39,16 @@ function JourneyMap() {
 
       <div className="page">
         <div className="stack">
-          {/* <div className="digit">1</div> */}
           <div className="on-right">
             <div className="circles first" onClick={togglePopup}>
               <span className="instruction" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
-            {/* <div className="connector first"></div> */}
           </div>
         </div>
 
         <div className="stack">
-          {/* <div className="digit">2</div> */}
           <div className="on-right">
             <div className="circles second" onClick={questionnaireStep}>
               <span className="instruction" onClick={questionnaireStep}>
@@ -60,7 +57,6 @@ function JourneyMap() {
                 </div>
               </span>
             </div>
-            {/* <div className="connector second1"></div> */}
             <div className="popups">
               {openQuestionnaire && (
                 <Switch>
@@ -70,23 +66,18 @@ function JourneyMap() {
                 </Switch>
               )}
             </div>
-
-            {/* <div className="connector second2"></div> */}
           </div>
         </div>
 
         <div className="stack">
-          {/* <div className="digit">3</div> */}
           <div className="on-right">
             <div className="circles third">
               <span className="instruction">LEARN MORE ABOUT THE GRANTEES</span>
             </div>
-            {/* <div className="connector third"></div> */}
           </div>
         </div>
 
         <div className="stack">
-          {/* <div className="digit">4</div> */}
           <div className="on-right">
             <div className="circles fourth" onClick={contactStep}>
               <span className="instruction" onClick={contactStep}>
