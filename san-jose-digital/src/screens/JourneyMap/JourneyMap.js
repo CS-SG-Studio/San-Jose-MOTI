@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ContactForm from "../Step4Contact/contactus";
 import "./JourneyMapStyle.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import Step1 from "./Step1/Step1";
+import Step1 from "./Step1Program/program";
 import Congratulations from "../Questionnaire/Congratulations";
 import Questionnaire from "../Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
