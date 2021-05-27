@@ -108,6 +108,10 @@
   color: rgb(68, 68, 68);
 }
 
+.link {
+  text-decoration: inherit;
+  color: inherit;
+}
 /* styling for the circles */
 /* .circles.first {
   background: rgba(213, 240, 248, 1);
