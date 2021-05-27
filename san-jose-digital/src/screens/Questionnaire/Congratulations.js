@@ -15,7 +15,7 @@ function Congratulations() {
       <p style={{ fontSize: "1.5rem" }}>
         In the meantime, please click 
         <a href="https://www.sjdigitalinclusion.org/grantees" rel="noreferrer" target="_blank" className="link"> here </a>  
-        to see the full list of<br />our grantees!
+        to see the full list of our grantees!
       </p>
     </div>
   );

@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Step1 from "./Step1/Step1";
 import Congratulations from "../Questionnaire/Congratulations";
 import Questionnaire from "../Questionnaire/Questionnaire";
+import WelcomePage from "../WelcomePage/welcomePage";
 
 // change
 
@@ -30,12 +31,19 @@ function JourneyMap() {
     setContactForm(!openContactForm);
   };
 
+  const [welcomePageOpen, setwelcomePageOpen] = useState(true);
+  const welcomePagePopup = () => {
+    setwelcomePageOpen(false);
+  };
+
   return (
     <Router>
       <div>
         <h1 className="title">
           YOUR JOURNEY
-          <h6 className="subtitle">WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?</h6>
+          <h6 className="subtitle">
+            WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?
+          </h6>
         </h1>
       </div>
       <div className="page">
@@ -56,7 +64,9 @@ function JourneyMap() {
                 SEE WHAT YOU ARE ELIGIBLE FOR
               </span>
             </div>
-            <div className="popups">{openQuestionnaire && <Questionnaire />}</div>
+            <div className="popups">
+              {openQuestionnaire && <Questionnaire />}
+            </div>
           </div>
         </div>
 
@@ -67,7 +77,9 @@ function JourneyMap() {
                 LEARN MORE ABOUT THE GRANTEES
               </span>
             </div>
-            <div className="popups">{openCongratulationsPage && <Congratulations />}</div>
+            <div className="popups">
+              {openCongratulationsPage && <Congratulations />}
+            </div>
           </div>
         </div>
 
@@ -75,18 +87,17 @@ function JourneyMap() {
           <div className="on-right">
             <div className="circles fourth" onClick={contactStep}>
               <span className="instruction" onClick={contactStep}>
-                STAY IN THE LOOP
+                ANY QUESTIONS?
               </span>
             </div>
-            <div className="popups">
-              {openContactForm && (
-                  <ContactForm />
-              )}
-            </div>
+            <div className="popups">{openContactForm && <ContactForm />}</div>
           </div>
         </div>
       </div>
       <div>{isOpen && <Step1 handleClose={togglePopup} />}</div>
+      <div>
+        {welcomePageOpen && <WelcomePage handleClose={welcomePagePopup} />}
+      </div>
     </Router>
   );
 }

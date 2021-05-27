@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+/* centers all of the div vertically over the popup */
+.centering {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin-top: 2%;
+}
+
+.welcomePopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* size of the popup window */
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  /* glassmorphism */
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* styling for the header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #000000;
+}
+
+.steptitle {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.steptitle2 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.steptitle3 {
+  font-weight: normal;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* styling for the body */
+.threecircles {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  position: center;
+}
+
+/* styling for each of the 3 programs */
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  position: relative;
+  margin: 0.5rem;
+}
+
+.pillars {
+  position: center;
+  margin: 0px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #000000;
+}
+
+.circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  top: 1rem;
+  border-radius: 250px;
+}
+
+.circle.first {
+    background: #d5f0f8;
+}
+
+.circle.second {
+    background: #7ebed1;
+}
+
+.circle.third {
+    background: #1f7b97;
+}
+
+.circle:hover {
+  background: #cae4ec;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #000000;
+}
+
+.description.second {
+    font-size: 0.9rem;
+}
+
+.footer {
+  position: relative;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 3rem;
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  z-index: 1;
+}
+
+.button {
+    margin: -10px;
+}
