@@ -61,13 +61,15 @@ function JourneyMap() {
               </span>
             </div>
             {/* <div className="connector second1"></div> */}
-            {openQuestionnaire && (
-              <Switch>
-                <Route path="/Questionnaire">
-                  <Questionnairee />
-                </Route>
-              </Switch>
-            )}
+            <div className="popups">
+              {openQuestionnaire && (
+                <Switch>
+                  <Route path="/Questionnaire">
+                    <Questionnairee />
+                  </Route>
+                </Switch>
+              )}
+            </div>
 
             {/* <div className="connector second2"></div> */}
           </div>
@@ -77,12 +79,7 @@ function JourneyMap() {
           {/* <div className="digit">3</div> */}
           <div className="on-right">
             <div className="circles third">
-            wow
-            <br />
-            omg
-            <br />
-            omg
-            <span className="instruction">LEARN MORE ABOUT THE GRANTEES</span>
+              <span className="instruction">LEARN MORE ABOUT THE GRANTEES</span>
             </div>
             {/* <div className="connector third"></div> */}
           </div>
@@ -96,12 +93,14 @@ function JourneyMap() {
                 STAY IN THE LOOP
               </span>
             </div>
-            {openContactForm && (
-              <>
-                <div className="connector fourth"></div>
-                <ContactForm />
-              </>
-            )}
+            <div className="popups">
+              {openContactForm && (
+                <>
+                  <div className="connector fourth"></div>
+                  <ContactForm />
+                </>
+              )}
+            </div>
           </div>
         </div>
         {isOpen && <Step1 handleClose={togglePopup} />}
