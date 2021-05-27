@@ -144,7 +144,7 @@ const Questionnairee = () => {
   return (
     <div className="form-styling">
       <React.Fragment>
-        <h1>Welcome to the Questionnaire!</h1>
+        <h1 className="header">Welcome to the Questionnaire!</h1>
         <p>Step {currentStep} </p>
 
         <form onSubmit={handleSubmit}>

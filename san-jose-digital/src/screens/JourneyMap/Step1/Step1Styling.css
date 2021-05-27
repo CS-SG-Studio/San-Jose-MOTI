@@ -45,13 +45,13 @@
   color: #000000;
 }
 
-.title {
+.steptitle {
   margin: 0px;
   font-weight: bold;
   font-size: 2.5rem;
 }
 
-.title2 {
+.steptitle2 {
   font-weight: normal;
   font-size: 1.2rem;
   display: flex;
