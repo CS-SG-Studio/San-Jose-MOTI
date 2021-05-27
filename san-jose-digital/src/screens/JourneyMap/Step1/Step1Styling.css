@@ -13,7 +13,7 @@
 
 .popup {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* size of the popup window */
@@ -22,9 +22,6 @@
   flex-direction: column;
   align-items: stretch;
   padding: 0.5rem;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 
   /* glassmorphism */
   background: rgba(255, 255, 255, 0.95);
