@@ -6,8 +6,6 @@ import Step3 from './step3';
 import './QuestionnaireStyles.css';
 import Congratulations from './Congratulations'
 
-
-// rename this!
 // TODO: figure out how to make currentStep based on total number of pages of questionnaire
 const Questionnairee = () => {
   const programs = [
