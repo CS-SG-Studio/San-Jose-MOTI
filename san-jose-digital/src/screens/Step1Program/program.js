@@ -1,5 +1,5 @@
 import React from "react";
-import "./Step1Styling.css";
+import "./programStyles.css";
 
 const Step1 = (props) => {
   return (
