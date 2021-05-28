@@ -10,15 +10,29 @@
   border-radius: 2rem;
 }
 
+.congrats-title {
+  font-size: min(7vw, 50px);
+  margin: 0;
+}
+
+.congrats-detail {
+  font-size: 0.55em;
+  font-weight: normal;
+}
+
 .link {
   text-decoration: inherit;
   color: inherit;
-  background-color: #9fd2e1;
+  background-color: lightblue;
   border: none;
-  color: rgb(0, 0, 0);
   margin-left: 10px;
   margin-right: 10px;
   text-align: center;
-  text-decoration: none;
   border-radius: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.link:hover{
+  background-color: rgb(186, 224, 236);
 }
