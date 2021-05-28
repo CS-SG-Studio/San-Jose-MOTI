@@ -14,15 +14,15 @@
 }
 
 .myBar.first {
-  width: 33.333%
+  width: 1%
 }
 
 .myBar.second {
-  width: 66.666%
+  width: 34%
 }
 
 .myBar.third {
-  width: 100%
+  width: 67%
 }
 
 .form-styling {
