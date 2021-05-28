@@ -7,8 +7,6 @@ import Congratulations from "../Step3Congrats/Congratulations";
 import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
 
-// change
-
 function JourneyMap() {
   // TODO: rename this
   const [isOpen, setIsOpen] = useState(false);

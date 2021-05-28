@@ -4,10 +4,9 @@ import Step1 from './step1';
 import Step2 from './step2';
 import Step3 from './step3';
 import './QuestionnaireStyles.css';
-// import Congratulations from './Congratulations';
 
 // TODO: figure out how to make currentStep based on total number of pages of questionnaire
-const Questionnaire = () => {
+const Questionnaire = (props) => {
   const [data, setData] = useState({
     // STEP1
     currentStep: 0,
@@ -21,10 +20,12 @@ const Questionnaire = () => {
 
     // STEP2
     program1: "", // Child Enrolled in the NSLP (National School Lunch Program)
-    program2: "", // CalFresh (food stamps) or Supplemental Nutrition Assistance Program (SNAP) Recipient
-    program3: "", // Supplemental Security Income (SSI) or Social Security Disability Insurance (SSDI) Recipient
+    program2: "", // CalFresh (food stamps) 
+    program3: "", // Supplemental Security Income (SSI) 
     program4: "", // Medi-Cal Recipient
     program5: "", // Household Income Under $70,000/year
+    program6: "", // Supplemental Nutrition Assistance Program (SNAP) Recipient
+    program7: "", // Social Security Disability Insurance (SSDI) Recipient
     device: "",
     laptop: "",
     desktop: "",
@@ -52,45 +53,15 @@ const Questionnaire = () => {
 
   const {
     // STEP1
-    currentStep,
-    name,
-    email,
-    phone,
-    address,
-    zip_code,
-    identity,
-    language,
+    currentStep, name, email, phone, address, zip_code, identity, language,
 
     // STEP2
-    program1,
-    program2,
-    program3,
-    program4,
-    program5,
-    device,
-    laptop,
-    desktop,
-    tablet,
-    deviceFollowUp,
-    deviceAmount,
-    smartphone,
-    connectsToInternet,
-    carrier,
-    dataPlans,
-    hotspot,
+    program1, program2, program3, program4, program5, program6, program7, device, laptop, desktop, tablet, deviceFollowUp, deviceAmount, 
+    smartphone, connectsToInternet, carrier, dataPlans, hotspot,
 
     // STEP3
-    familySize,
-    schoolDevice,
-    bringDeviceHome,
-    homeInternet,
-    costOfInternet,
-    internetProvider,
-    whereInternetIsAccessed,
-    interestedInHomeInternet,
-    experienceUsingComputer,
-    amountOfExperience,
-    interestedInFreeClasses,
+    familySize, schoolDevice, bringDeviceHome, homeInternet, costOfInternet, internetProvider, whereInternetIsAccessed,
+    interestedInHomeInternet, experienceUsingComputer, amountOfExperience, interestedInFreeClasses, anyOtherComments
   } = data;
 
   const handleChange = (event) => {
@@ -116,6 +87,14 @@ const Questionnaire = () => {
 
   const onChangeProgram5 = () => {
     setData({ ...data, program5: !program5 });
+  };
+
+  const onChangeProgram6 = () => {
+    setData({ ...data, program6: !program6})
+  };
+
+  const onChangeProgram7 = () => {
+    setData({ ...data, program7: !program7})
   };
 
   const onChangeDesktop = () => {
@@ -191,25 +170,36 @@ const Questionnaire = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    props.setQuestionnaire(false);
+    props.setCongratulationsPage(true);
     try {
-      // commenting this out for now because i need to update the google sheets
-      // const response = await fetch('https://v1.nocodeapi.com/rachelclinton/google_sheets/MfimgcBbjWzzHVku?tabId=Sheet1',
+      //commenting this out for now because i need to update the google sheets
+      // const response = await fetch('https://v1.nocodeapi.com/rachelclinton/google_sheets/MfimgcBbjWzzHVku?tabId=Sheet1', 
       // {
       //   method: 'POST',
       //   headers: {
       //     'Content-Type': 'application/json'
       //   },
       //   body: JSON.stringify([
-      //     [name, email, phone, address, identity, new Date().toLocaleString()]
-      //   ]) // content that will be pushed to the Google Sheets
-      // }
+      //     [
+      //       new Date().toLocaleString(),
+      //       // STEP1
+      //       name, email, phone, address, zip_code, identity, language, 
+      //       // STEP2
+      //       // removed desktop
+      //       program1, program2, program3, program4, program5, program6, laptop, desktop, tablet, deviceFollowUp, deviceAmount, 
+      //       smartphone, connectsToInternet, carrier, dataPlans, hotspot,
+      //       // STEP3
+      //       familySize, schoolDevice, bringDeviceHome, homeInternet, costOfInternet, internetProvider, whereInternetIsAccessed,
+      //       interestedInHomeInternet, experienceUsingComputer, amountOfExperience, interestedInFreeClasses, anyOtherComments          
+      //     ]
+      //   ])} // content that will be pushed to the Google Sheets
+      
       // );
       // await response.json();
-      //setData({ ...data, name:'', email:'', phone:'', address: '', identity: ''});
-      alert("Form submitted!");
-      // TODO: close questionnaire. Still don't know how to call the questionnaireStep function in this file
-      // TODO: make the congratulations page appear in step 3
-    } catch (err) {
+      // setData({ ...data, name:'', email:'', phone:'', address: '', identity: ''});
+      alert("Form submitted!")
+    } catch(err) {
       console.log(err);
     }
   };
@@ -238,6 +228,8 @@ const Questionnaire = () => {
             onChangeProgram3={onChangeProgram3}
             onChangeProgram4={onChangeProgram4}
             onChangeProgram5={onChangeProgram5}
+            onChangeProgram6={onChangeProgram6}
+            onChangeProgram7={onChangeProgram7}
             onChangeDesktop={onChangeDesktop}
             onChangeLaptop={onChangeLaptop}
             onChangeTablet={onChangeTablet}
@@ -246,6 +238,8 @@ const Questionnaire = () => {
             program3={program3}
             program4={program4}
             program5={program5}
+            program6={program6}
+            program7={program7}
             device={device}
             desktop={desktop}
             tablet={tablet}
@@ -272,6 +266,7 @@ const Questionnaire = () => {
             experienceUsingComputer={experienceUsingComputer}
             amountOfExperience={amountOfExperience}
             interestedInFreeClasses={interestedInFreeClasses}
+            anyOtherComments={anyOtherComments}
           />
           {previousButton()}
           {nextButton()}
