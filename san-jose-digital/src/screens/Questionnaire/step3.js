@@ -158,6 +158,19 @@ function Step3(props) {
             <option name="no">No</option>    
         </select>  
     </div>
+    <div className="form-group">
+        <label htmlFor="anyOtherComments">Do you have any other questions or comments? Please list them here!</label>
+        <textarea
+            className="form-control"
+            id="anyOtherComments"
+            name="anyOtherComments"
+            type="textarea"
+            value={props.anyOtherComments}
+            onChange={props.handleChange}
+            rows="6"
+            cols="100"
+        />
+    </div>
     </container>
   );
 }

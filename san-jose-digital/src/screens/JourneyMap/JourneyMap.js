@@ -65,7 +65,7 @@ function JourneyMap() {
               </span>
             </div>
             <div className="popups">
-              {openQuestionnaire && <Questionnaire />}
+              {openQuestionnaire && <Questionnaire setQuestionnaire={setQuestionnaire} setCongratulationsPage={setCongratulationsPage}/>}
             </div>
           </div>
         </div>
@@ -82,7 +82,6 @@ function JourneyMap() {
             </div>
           </div>
         </div>
-
         <div className="stack">
           <div className="on-right">
             <div className="circles fourth" onClick={contactStep}>

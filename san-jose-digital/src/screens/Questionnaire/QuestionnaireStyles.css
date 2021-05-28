@@ -13,15 +13,16 @@
 }
 
 .header {
-  font-size: 48px;
+  font-size: 2rem;
   color: rgba(45, 44, 44, 1);
   font-weight: Bold;
 }
 
 .subheader {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: rgba(45, 44, 44, 1);
   position: static;
+  font-weight: Bold;
 }
 
 .form {
@@ -33,7 +34,7 @@
 }
 
 .form-control {
-  font-size: 18px;
+  font-size: 0.5rem;
   color: rgba(45, 44, 44, 1);
   text-align: left;
   padding: 2px;
@@ -53,6 +54,9 @@ select {
   box-sizing: border-box;
 }
 
+textarea {
+  margin: 4px 0;
+}
 input[type="radio"],
 select {
   position: relative;
@@ -60,7 +64,7 @@ select {
   height: 30px;
   width: 150px;
   background-color: #eee;
-  border-radius: 50%;
+  border-radius: 4px;
 }
 
 label {

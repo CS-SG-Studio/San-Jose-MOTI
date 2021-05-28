@@ -1,9 +1,3 @@
-// import onChangeProgram1 from './Questionnaire'
-// import onChangeProgram2 from './Questionnaire'
-// import onChangeProgram3 from './Questionnaire'
-// import onChangeProgram4 from './Questionnaire'
-// import onChangeProgram5 from './Questionnaire'
-
 function Step2(props) {
   if (props.currentStep !== 2) {
     return null
@@ -39,8 +33,7 @@ function Step2(props) {
             onChange={props.onChangeProgram2}
         />
         <label htmlFor="program2">
-            CalFresh (food stamps) or Supplemental Nutrition Assistance
-            Program (SNAP) Recipient
+            CalFresh (food stamps)
         </label>
         <br/>
         <input 
@@ -80,6 +73,19 @@ function Step2(props) {
          />
         <label htmlFor="program2">
             Household Income Under $70,000/year
+        </label>
+        <br />
+        <input 
+            className="form-control" 
+            id="program6" 
+            name="program6" 
+            type="checkbox"
+            checked={props.program6}
+            value={props.program6}
+            onChange={props.onChangeProgram6}
+         />
+        <label htmlFor="program6">
+            Supplemental Nutrition Assistance Program (SNAP) Recipient
         </label>
     </div>
     <div className="form-group">
