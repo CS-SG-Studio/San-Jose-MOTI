@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Step0 from './step0';
 import Step1 from './step1';
 import Step2 from './step2';
 import Step3 from './step3';
@@ -9,7 +10,7 @@ import './QuestionnaireStyles.css';
 const Questionnaire = () => {
   const [data, setData] = useState({
     // STEP1
-    currentStep: 1,
+    currentStep: 0,
     name: "",
     email: "",
     phone: "",
@@ -108,7 +109,7 @@ const Questionnaire = () => {
 
   const _prev = () => {
     let newStep = currentStep;
-    newStep = newStep <= 1 ? 1 : newStep - 1;
+    newStep = newStep <= 0 ? 1 : newStep - 1;
     setData({ ...data, currentStep: newStep });
   };
 
@@ -116,7 +117,7 @@ const Questionnaire = () => {
    * the functions for our button
    */
   const previousButton = () => {
-    if (currentStep !== 1) {
+    if (currentStep !== 0) {
       return (
         <button className="btn btn-secondary" type="button" onClick={_prev}>Previous</button>
       );
@@ -125,7 +126,18 @@ const Questionnaire = () => {
   };
 
   const nextButton = () => {
-    if (currentStep < 3) {
+    if (currentStep === 0) {
+      return (
+        <button
+          className="btn btn-primary float-right"
+          type="button"
+          onClick={_next}
+        >
+          Start
+        </button>
+      );
+    }
+    else if (currentStep < 3) {
       return (
         <button className="btn btn-primary float-right" type="button" onClick={_next}>Next</button>
       ); 
@@ -165,70 +177,69 @@ const Questionnaire = () => {
 
   return (
     <div className="form-styling">
-        <React.Fragment>
-          <h1>Welcome to the Questionnaire!</h1>
-          <p>Step {currentStep} </p>
-          <form onSubmit={handleSubmit}>
-            <Step1
-              currentStep={currentStep}
-              handleChange={handleChange}
-              name={name}
-              email={email}
-              phone={phone}
-              address={address}
-              zip_code={zip_code}
-              identity={identity}
-              language={language}
-              />
-            <Step2
-              currentStep={currentStep}
-              handleChange={handleChange}
-              onChangeProgram1={onChangeProgram1}
-              onChangeProgram2={onChangeProgram2}
-              onChangeProgram3={onChangeProgram3}
-              onChangeProgram4={onChangeProgram4}
-              onChangeProgram5={onChangeProgram5}
-              onChangeDesktop={onChangeDesktop}
-              onChangeLaptop={onChangeLaptop}
-              onChangeTablet={onChangeTablet}
-              program1={program1}
-              program2={program2}
-              program3={program3}
-              program4={program4}
-              program5={program5}
-              device={device}
-              desktop={desktop}
-              tablet={tablet}
-              laptop={laptop}
-              deviceFollowUp={deviceFollowUp}
-              deviceAmount={deviceAmount}
-              smartphone={smartphone}
-              connectsToInternet={connectsToInternet}
-              carrier={carrier}
-              dataPlans={dataPlans}
-              hotspot={hotspot}
-            />
-            <Step3
-              currentStep={currentStep}
-              handleChange={handleChange}
-              familySize={familySize}
-              schoolDevice={schoolDevice}
-              bringDeviceHome={bringDeviceHome}
-              homeInternet={homeInternet}
-              costOfInternet={costOfInternet}
-              internetProvider={internetProvider}
-              whereInternetIsAccessed={whereInternetIsAccessed}
-              interestedInHomeInternet={interestedInHomeInternet}
-              experienceUsingComputer={experienceUsingComputer}
-              amountOfExperience={amountOfExperience}
-              interestedInFreeClasses={interestedInFreeClasses}
-            />
-            {previousButton()}
-            {nextButton()}
-          </form>
-        </React.Fragment>
-      </div>
-  )   
+      <React.Fragment>
+        <form onSubmit={handleSubmit}>
+          <Step0 currentStep={currentStep} />
+          <Step1
+            currentStep={currentStep}
+            handleChange={handleChange}
+            name={name}
+            email={email}
+            phone={phone}
+            address={address}
+            zip_code={zip_code}
+            identity={identity}
+            language={language}
+          />
+          <Step2
+            currentStep={currentStep}
+            handleChange={handleChange}
+            onChangeProgram1={onChangeProgram1}
+            onChangeProgram2={onChangeProgram2}
+            onChangeProgram3={onChangeProgram3}
+            onChangeProgram4={onChangeProgram4}
+            onChangeProgram5={onChangeProgram5}
+            onChangeDesktop={onChangeDesktop}
+            onChangeLaptop={onChangeLaptop}
+            onChangeTablet={onChangeTablet}
+            program1={program1}
+            program2={program2}
+            program3={program3}
+            program4={program4}
+            program5={program5}
+            device={device}
+            desktop={desktop}
+            tablet={tablet}
+            laptop={laptop}
+            deviceFollowUp={deviceFollowUp}
+            deviceAmount={deviceAmount}
+            smartphone={smartphone}
+            connectsToInternet={connectsToInternet}
+            carrier={carrier}
+            dataPlans={dataPlans}
+            hotspot={hotspot}
+          />
+          <Step3
+            currentStep={currentStep}
+            handleChange={handleChange}
+            familySize={familySize}
+            schoolDevice={schoolDevice}
+            bringDeviceHome={bringDeviceHome}
+            homeInternet={homeInternet}
+            costOfInternet={costOfInternet}
+            internetProvider={internetProvider}
+            whereInternetIsAccessed={whereInternetIsAccessed}
+            interestedInHomeInternet={interestedInHomeInternet}
+            experienceUsingComputer={experienceUsingComputer}
+            amountOfExperience={amountOfExperience}
+            interestedInFreeClasses={interestedInFreeClasses}
+          />
+          {previousButton()}
+          {nextButton()}
+        </form>
+      </React.Fragment>
+    </div>
+  );   
 };
 
 export default Questionnaire;
