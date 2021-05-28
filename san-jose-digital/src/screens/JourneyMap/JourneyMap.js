@@ -4,7 +4,7 @@ import "./JourneyMapStyle.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Step1 from "../Step1Program/program";
 import Congratulations from "../Step3Congrats/Congratulations";
-import Questionnaire from "../Questionnaire/Questionnaire";
+import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
 
 // change
