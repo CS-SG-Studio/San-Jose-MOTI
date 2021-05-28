@@ -2,6 +2,29 @@
   font-family: "Roboto", sans-serif;
 }
 
+.myProgress {
+  margin-left: 10%;
+  width: 80%;
+  background-color: rgb(236, 236, 236);
+}
+
+.myBar {
+  height: 20px;
+  background-color: #9fd2e1;
+}
+
+.myBar.first {
+  width: 33.333%
+}
+
+.myBar.second {
+  width: 66.666%
+}
+
+.myBar.third {
+  width: 100%
+}
+
 .form-styling {
   display: flex;
   flex-direction: column;
