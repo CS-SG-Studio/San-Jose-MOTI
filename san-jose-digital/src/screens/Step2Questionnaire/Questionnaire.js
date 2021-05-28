@@ -35,7 +35,7 @@ const Questionnaire = () => {
     connectsToInternet: "",
     carrier: "",
     dataPlans: "",
-    
+
     // STEP3
     familySize: "",
     schoolDevice: "",
@@ -52,53 +52,82 @@ const Questionnaire = () => {
 
   const {
     // STEP1
-    currentStep, name, email, phone, address, zip_code, identity, language,
+    currentStep,
+    name,
+    email,
+    phone,
+    address,
+    zip_code,
+    identity,
+    language,
 
     // STEP2
-    program1, program2, program3, program4, program5, device, laptop, desktop, tablet, deviceFollowUp, deviceAmount, 
-    smartphone, connectsToInternet, carrier, dataPlans, hotspot,
+    program1,
+    program2,
+    program3,
+    program4,
+    program5,
+    device,
+    laptop,
+    desktop,
+    tablet,
+    deviceFollowUp,
+    deviceAmount,
+    smartphone,
+    connectsToInternet,
+    carrier,
+    dataPlans,
+    hotspot,
 
     // STEP3
-    familySize, schoolDevice, bringDeviceHome, homeInternet, costOfInternet, internetProvider, whereInternetIsAccessed,
-    interestedInHomeInternet, experienceUsingComputer, amountOfExperience, interestedInFreeClasses,
+    familySize,
+    schoolDevice,
+    bringDeviceHome,
+    homeInternet,
+    costOfInternet,
+    internetProvider,
+    whereInternetIsAccessed,
+    interestedInHomeInternet,
+    experienceUsingComputer,
+    amountOfExperience,
+    interestedInFreeClasses,
   } = data;
-
 
   const handleChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
-  
+
   // see if there's a way to simplify/condense this
   const onChangeProgram1 = () => {
-    setData({ ...data, program1: !program1})
+    setData({ ...data, program1: !program1 });
   };
 
   const onChangeProgram2 = () => {
-    setData({ ...data, program2: !program2})
+    setData({ ...data, program2: !program2 });
   };
 
   const onChangeProgram3 = () => {
-    setData({ ...data, program3: !program3})
+    setData({ ...data, program3: !program3 });
   };
 
   const onChangeProgram4 = () => {
-    setData({ ...data, program4: !program4})
+    setData({ ...data, program4: !program4 });
   };
 
   const onChangeProgram5 = () => {
-    setData({ ...data, program5: !program5})
+    setData({ ...data, program5: !program5 });
   };
 
   const onChangeDesktop = () => {
-    setData({ ...data, desktop: !desktop})
+    setData({ ...data, desktop: !desktop });
   };
 
   const onChangeLaptop = () => {
-    setData({ ...data, laptop: !laptop})
+    setData({ ...data, laptop: !laptop });
   };
 
   const onChangeTablet = () => {
-    setData({ ...data, tablet: !tablet})
+    setData({ ...data, tablet: !tablet });
   };
 
   const _next = () => {
@@ -119,7 +148,9 @@ const Questionnaire = () => {
   const previousButton = () => {
     if (currentStep !== 0) {
       return (
-        <button className="btn btn-secondary" type="button" onClick={_prev}>Previous</button>
+        <button className="btn btn-secondary" type="button" onClick={_prev}>
+          Previous
+        </button>
       );
     }
     return null;
@@ -136,17 +167,25 @@ const Questionnaire = () => {
           Start
         </button>
       );
-    }
-    else if (currentStep < 3) {
+    } else if (currentStep < 3) {
       return (
-        <button className="btn btn-primary float-right" type="button" onClick={_next}>Next</button>
-      ); 
-    }
-    else if (currentStep === 3) {
+        <button
+          className="btn btn-primary float-right"
+          type="button"
+          onClick={_next}
+        >
+          Next
+        </button>
+      );
+    } else if (currentStep === 3) {
       return (
-        <input className="btn btn-success btn-block" type='submit' value='Submit'/>
-      )
-    };
+        <input
+          className="btn btn-success btn-block"
+          type="submit"
+          value="Submit"
+        />
+      );
+    }
     return null;
   };
 
@@ -154,7 +193,7 @@ const Questionnaire = () => {
     event.preventDefault();
     try {
       // commenting this out for now because i need to update the google sheets
-      // const response = await fetch('https://v1.nocodeapi.com/rachelclinton/google_sheets/MfimgcBbjWzzHVku?tabId=Sheet1', 
+      // const response = await fetch('https://v1.nocodeapi.com/rachelclinton/google_sheets/MfimgcBbjWzzHVku?tabId=Sheet1',
       // {
       //   method: 'POST',
       //   headers: {
@@ -167,13 +206,13 @@ const Questionnaire = () => {
       // );
       // await response.json();
       //setData({ ...data, name:'', email:'', phone:'', address: '', identity: ''});
-      alert("Form submitted!")
+      alert("Form submitted!");
       // TODO: close questionnaire. Still don't know how to call the questionnaireStep function in this file
       // TODO: make the congratulations page appear in step 3
-    } catch(err) {
+    } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   return (
     <div className="form-styling">
@@ -239,7 +278,7 @@ const Questionnaire = () => {
         </form>
       </React.Fragment>
     </div>
-  );   
+  );
 };
 
 export default Questionnaire;
