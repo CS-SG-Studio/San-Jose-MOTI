@@ -83,6 +83,21 @@ function Step1(props) {
           <option name="else">Someone else</option>
         </select>
       </div>
+      <div className="form-group">
+        <label htmlFor="language">My primary language is</label>
+        <select
+          className="form-control"
+          id="language"
+          name="language"
+          value={props.langauge}
+          onChange={props.handleChange}
+        >
+          <option name="english">English</option>
+          <option name="spanish">Spanish</option>
+          <option name="vietnamese">Vietnamese</option>
+          <option type="text" name="other">Other</option>
+        </select>
+      </div>
     </container>
   );
 }
