@@ -21,7 +21,7 @@ function Step3(props) {
           onChange={props.handleChange}
         />
       </div>
-      <p>If you have a child/children in school: </p>
+      <p className="form-group">If you have a child/children in school: </p>
       <div className="form-group">
         <label htmlFor="schoolDevice">
           Does the school provide a computing device for your child/children in
@@ -34,7 +34,7 @@ function Step3(props) {
           value={props.schoolDevice}
           onChange={props.handleChange}
         >
-          <option name="none"> </option>
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
@@ -71,7 +71,7 @@ function Step3(props) {
           <option name="no">No</option>
         </select>
       </div>
-      <p>If you access internet at home:</p>
+      <p className="form-group">If you access internet at home:</p>
       <div className="form-group">
         <label htmlFor="costOfInternet">
           What is the monthly cost of your internet service?
@@ -83,10 +83,12 @@ function Step3(props) {
           value={props.costOfInternet}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="1">$9.99 or less</option>
           <option name="2">$10-14.99</option>
           <option name="3">$15-20.99</option>
           <option name="4">$21 or more</option>
+          <option name="notSure">I do not know</option>
         </select>
       </div>
       <div className="form-group">
@@ -103,7 +105,7 @@ function Step3(props) {
           onChange={props.handleChange}
         />
       </div>
-      <p>If you do not access internet at home:</p>
+      <p className="form-group">If you do not access internet at home:</p>
       <div className="form-group">
         <label htmlFor="whereInternetIsAccessed">
           Do you primarily access internet at
@@ -115,6 +117,7 @@ function Step3(props) {
           value={props.whereInternetIsAccessed}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="work">Work</option>
           <option name="library">Library</option>
           <option name="someoneElsesHouse">Someone else's house</option>
@@ -165,7 +168,7 @@ function Step3(props) {
         >
           <option name="beginner">Beginner User</option>
           <option name="intermediate">Intermediate User</option>
-          <option name="advanced">advanced User</option>
+          <option name="advanced">Advanced User</option>
         </select>
       </div>
       <div className="form-group">
@@ -183,6 +186,19 @@ function Step3(props) {
           <option name="no">No</option>
         </select>
       </div>
+      <div className="form-group">
+        <label htmlFor="anyOtherComments">Do you have other questions or comments for the grantees? Please list them here!</label>
+        <textarea
+            className="form-control"
+            id="anyOtherComments"
+            name="anyOtherComments"
+            type="textarea"
+            value={props.anyOtherComments}
+            onChange={props.handleChange}
+            rows="6"
+            cols="80"
+        />
+    </div>
     </container>
   );
 }

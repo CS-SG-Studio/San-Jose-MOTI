@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+/* .unblurred {
+  filter: blur(0px);
+} */
+
 /* centers all of the div vertically over the popup */
 .centering {
   display: flex;
@@ -29,7 +33,7 @@
   /* glassmorphism */
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(140px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -53,7 +57,7 @@
 
 .steptitle2 {
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   font-weight: bold;
@@ -61,7 +65,7 @@
 
 .steptitle3 {
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -109,22 +113,7 @@
   height: 12rem;
   top: 1rem;
   border-radius: 250px;
-}
-
-.circle.first {
-    background: #d5f0f8;
-}
-
-.circle.second {
-    background: #7ebed1;
-}
-
-.circle.third {
-    background: #1f7b97;
-}
-
-.circle:hover {
-  background: #cae4ec;
+  background: #d5f0f8;
 }
 
 .description {
@@ -134,13 +123,13 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
   color: #000000;
 }
 
 .description.second {
-    font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .footer {
@@ -161,5 +150,19 @@
 }
 
 .button {
-    margin: -10px;
+  /* /margin: -100px; */
+}
+
+.link2 {
+  text-decoration: inherit;
+  color: inherit;
+  font-weight: bold;
+  border: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+  background-color: lightblue;
 }

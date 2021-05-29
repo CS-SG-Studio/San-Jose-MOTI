@@ -1,9 +1,3 @@
-// import onChangeProgram1 from './Questionnaire'
-// import onChangeProgram2 from './Questionnaire'
-// import onChangeProgram3 from './Questionnaire'
-// import onChangeProgram4 from './Questionnaire'
-// import onChangeProgram5 from './Questionnaire'
-
 function Step2(props) {
   if (props.currentStep !== 2) {
     return null
@@ -15,9 +9,6 @@ function Step2(props) {
         <div className="myBar second"></div>
       </div>
       <br />
-      {/* TODO: add rest of programs and figure out how to remember 
-    which itmes they selected when it comes to checkboxes (currently the text and select 
-    questions are saving their responses but the checkbox ones aren't) */}
       <div className="form-group">
         <p>
           Do you currently qualify for any of the following programs? Please
@@ -33,7 +24,7 @@ function Step2(props) {
           onChange={props.onChangeProgram1}
         />
         <label htmlFor="program1">
-          Child Enrolled in the NSLP (National School Lunch Program)
+          Child Enrolled in the National School Lunch Program (NSLP)
         </label>
         <br />
         <input
@@ -46,8 +37,7 @@ function Step2(props) {
           onChange={props.onChangeProgram2}
         />
         <label htmlFor="program2">
-          CalFresh (food stamps) or Supplemental Nutrition Assistance Program
-          (SNAP) Recipient
+          CalFresh (food stamps)
         </label>
         <br />
         <input
@@ -59,9 +49,8 @@ function Step2(props) {
           value={props.program3}
           onChange={props.onChangeProgram3}
         />
-        <label htmlFor="program2">
-          Supplemental Security Income (SSI) or Social Security Disability
-          Insurance (SSDI) Recipient
+        <label htmlFor="program3">
+          Supplemental Security Income (SSI)  
         </label>
         <br />
         <input
@@ -73,7 +62,7 @@ function Step2(props) {
           value={props.program4}
           onChange={props.onChangeProgram4}
         />
-        <label htmlFor="program2">Medi-Cal Recipient</label>
+        <label htmlFor="program4">Medi-Cal Recipient</label>
         <br />
         <input
           className="form-control"
@@ -84,7 +73,33 @@ function Step2(props) {
           value={props.program5}
           onChange={props.onChangeProgram5}
         />
-        <label htmlFor="program2">Household Income Under $70,000/year</label>
+        <label htmlFor="program5">Household Income Under $70,000/year</label>
+        <br />
+        <input
+          className="form-control"
+          id="program6"
+          name="program6"
+          type="checkbox"
+          checked={props.program6}
+          value={props.program6}
+          onChange={props.onChangeProgram6}
+        />
+        <label htmlFor="program6">
+          Supplemental Nutrition Assistance Program (SNAP) 
+        </label>
+        <br />
+        <input
+          className="form-control"
+          id="program7"
+          name="program7"
+          type="checkbox"
+          checked={props.program7}
+          value={props.program7}
+          onChange={props.onChangeProgram7}
+        />
+        <label htmlFor="program7">
+          Social Security Disability Insurance (SSDI) 
+        </label>
       </div>
       <div className="form-group">
         <label htmlFor="device">
@@ -98,12 +113,12 @@ function Step2(props) {
           value={props.device}
           onChange={props.handleChange}
         >
-          <option name="yes">Yes</option>
-          <option name="no">No</option>
+          <option name="y">Yes</option>
+          <option name="n">No</option>
         </select>
       </div>
       <div className="form-group">
-        <p htmlFor="deviceFollowUp">
+        <p >
           If you answered yes to the previous question, what kind of device(s)
           do you own?
         </p>
@@ -117,7 +132,6 @@ function Step2(props) {
           onChange={props.onChangeDesktop}
         />
         <label htmlFor="desktop">Desktop</label>
-        <br />
         <input
           className="form-control"
           id="laptop"
@@ -128,7 +142,6 @@ function Step2(props) {
           onChange={props.onChangeLaptop}
         />
         <label htmlFor="laptop">Laptop</label>
-        <br />
         <input
           className="form-control"
           id="tablet"
@@ -171,7 +184,7 @@ function Step2(props) {
           <option name="no">No</option>
         </select>
       </div>
-      <p>If you answered yes to the previous question:</p>
+      <p className="form-group">If you answered yes to the previous question:</p>
       <div class="form-group">
         <label htmlFor="connectsToInternet">
           Do you use your smartphone to connect to the internet?
@@ -183,6 +196,7 @@ function Step2(props) {
           value={props.connectsToInternet}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
@@ -200,7 +214,7 @@ function Step2(props) {
         />
       </div>
       <div class="form-group">
-        <label htmlFor="">
+        <label htmlFor="deviceAmount">
           Do you periodically buy data plans for your smartphone?
         </label>
         <select
@@ -210,6 +224,7 @@ function Step2(props) {
           value={props.deviceAmount}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
@@ -226,6 +241,7 @@ function Step2(props) {
           value={props.hotspot}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>

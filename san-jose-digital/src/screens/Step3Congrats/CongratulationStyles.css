@@ -1,8 +1,10 @@
+/* TODO: make this (and all popups) the same size */
+/* TODO: make "congratulations" smaller */
 .congrats-page-styling {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 50px;
+  padding: 40px;
   background: rgba(255, 255, 255, 1);
   border-radius: 2rem;
 }
@@ -14,7 +16,7 @@
 }
 
 .congrats-detail {
-  font-size: 0.65em;
+  font-size: 0.4em;
   font-weight: normal;
 }
 

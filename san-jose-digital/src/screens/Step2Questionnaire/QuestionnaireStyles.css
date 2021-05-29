@@ -2,27 +2,42 @@
   font-family: "Roboto", sans-serif;
 }
 
+.step0-title {
+  /* font-size: 2rem; */
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.step0-details {
+  display: flex;
+  font-size: 0.55em;
+  font-weight: normal;
+}
+
 .myProgress {
-  margin-left: 10%;
-  width: 80%;
+  margin-left: 5%;
+  width: 90%;
   background-color: rgb(236, 236, 236);
 }
 
 .myBar {
-  height: 20px;
+  height: 17px;
   background-color: #9fd2e1;
 }
 
 .myBar.first {
-  width: 1%
+  width: 1%;
 }
 
 .myBar.second {
-  width: 34%
+  width: 34%;
 }
 
 .myBar.third {
-  width: 67%
+  width: 67%;
 }
 
 .form-styling {
@@ -30,9 +45,15 @@
   flex-direction: column;
   align-items: stretch;
   padding: 40px;
-  width: 720px;
+  width: max(min(50vw, 800px), 500px);
   background: rgba(255, 255, 255, 1);
   border-radius: 2rem;
+}
+
+.form-group {
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .header {
@@ -57,9 +78,8 @@
 }
 
 .form-control {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   color: rgba(45, 44, 44, 1);
-  text-align: left;
   padding: 2px;
 }
 
@@ -68,24 +88,26 @@ input[type="textarea"],
 input[type="number"],
 input[type="email"],
 select {
-  width: 50%;
   padding: 5px 20px;
   margin: 4px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
+}
+
+input[type="text"] {
+  width: 300px;
 }
 
 textarea {
   margin: 4px 0;
 }
+
 input[type="radio"],
 select {
   position: relative;
   align-self: top;
-  height: 30px;
-  width: 150px;
   background-color: #eee;
   border-radius: 4px;
 }
@@ -104,10 +126,11 @@ input[type="submit"] {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 4px;
   font-family: "Roboto", sans-serif;
   margin: 20px;
+  margin-bottom: 0px;
 }
 
 button:hover,

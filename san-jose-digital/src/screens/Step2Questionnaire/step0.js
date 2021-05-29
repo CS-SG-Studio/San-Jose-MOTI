@@ -1,9 +1,10 @@
+import "./QuestionnaireStyles.css";
+
 function Step0(props) {
-    
   if (props.currentStep !== 0) {
     return null;
   }
- 
+
   return (
     <container>
       <h1>Welcome to the Questionnaire!</h1>

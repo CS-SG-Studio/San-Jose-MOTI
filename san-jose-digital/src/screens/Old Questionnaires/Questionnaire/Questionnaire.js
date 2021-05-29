@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import Step1 from './step1';
 import Step2 from './step2';
 import Step3 from './step3';
-
 import './QuestionnaireStyles.css';
-// import Congratulations from './Congratulations';
 
-// TODO: figure out how to make currentStep based on total number of pages of questionnaire
 const Questionnaire = (props) => {
   const [data, setData] = useState({
     // STEP1
