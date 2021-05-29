@@ -10,7 +10,7 @@ function Step0(props) {
       <p>
         This questionnaire is designed to check your eligibility for the
         programs offered under San Jose Digital Inclusion Fund. The information
-        you proivded will be passed only to organization we work incollaboration
+        you proivded will be passed only to the organizations we work incollaboration
         with, and they will reach out to you!
       </p>
     </container>

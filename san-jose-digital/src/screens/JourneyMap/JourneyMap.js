@@ -42,7 +42,7 @@ function JourneyMap() {
         <h1 className="title">
           YOUR JOURNEY
           <h6 className="subtitle">
-            WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?
+            WHERE ARE YOU ON <br/> THE PATH OF DIGITAL INCLUSION?
           </h6>
         </h1>
       </div>
