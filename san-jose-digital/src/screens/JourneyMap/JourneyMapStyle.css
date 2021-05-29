@@ -24,14 +24,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch; /*or center*/
+  align-items: center; /*or center*/
+  margin-bottom: 100px;
 }
 
 .stack {
   counter-increment: listCounter;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   min-height: 300px;
 }
@@ -40,7 +40,6 @@
   border: 5px solid lightblue;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: center;
   position: relative;
   width: 0;
@@ -51,7 +50,19 @@
   display: flex;
   margin-top: 50px;
   margin-bottom: 75px;
+  justify-content: center;
 }
+
+/* connector only appears for last circle if popup is opened */
+.stack:last-child .popups {
+  display: flex;
+  border: 5px solid lightblue;
+  border-bottom: 0px;
+  padding-top: 50px;
+  margin-top: -4px;
+  width: 0;
+}
+
 /* make last connector disappear */
 .stack:last-child .on-right {
   background-color: inherit;

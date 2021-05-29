@@ -40,15 +40,13 @@ function JourneyMap() {
       <div>
         <h1 className="title">
           YOUR JOURNEY
-          <h6 className="subtitle">
-            WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?
-          </h6>
+          <h6 className="subtitle">WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?</h6>
         </h1>
       </div>
       <div className="page">
         <div className="stack">
           <div className="on-right">
-            <div className="circles first" onClick={togglePopup}>
+            <div className="circles" onClick={togglePopup}>
               <span className="instruction" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
@@ -58,37 +56,41 @@ function JourneyMap() {
 
         <div className="stack">
           <div className="on-right">
-            <div className="circles second" onClick={questionnaireStep}>
+            <div className="circles" onClick={questionnaireStep}>
               <span className="instruction" onClick={questionnaireStep}>
                 SEE WHAT YOU ARE ELIGIBLE FOR
               </span>
             </div>
             <div className="popups">
-              {openQuestionnaire && <Questionnaire setQuestionnaire={setQuestionnaire} setCongratulationsPage={setCongratulationsPage}/>}
+              {openQuestionnaire && (
+                <Questionnaire
+                  setQuestionnaire={setQuestionnaire}
+                  setCongratulationsPage={setCongratulationsPage}
+                />
+              )}
             </div>
           </div>
         </div>
 
         <div className="stack">
           <div className="on-right">
-            <div className="circles third" onClick={congratulationsStep}>
+            <div className="circles" onClick={congratulationsStep}>
               <span className="instruction" onClick={congratulationsStep}>
                 LEARN MORE ABOUT THE GRANTEES
               </span>
             </div>
-            <div className="popups">
-              {openCongratulationsPage && <Congratulations />}
-            </div>
+            <div className="popups">{openCongratulationsPage && <Congratulations />}</div>
           </div>
         </div>
+
         <div className="stack">
           <div className="on-right">
-            <div className="circles fourth" onClick={contactStep}>
+            <div className="circles" onClick={contactStep}>
               <span className="instruction" onClick={contactStep}>
                 ANY QUESTIONS?
               </span>
             </div>
-            <div className="popups">{openContactForm && <ContactForm />}</div>
+            {openContactForm && <div className="popups"><ContactForm /></div>}
           </div>
         </div>
       </div>
