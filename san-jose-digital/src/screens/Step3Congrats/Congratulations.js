@@ -9,7 +9,7 @@ function Congratulations() {
         <p className="congrats-detail">
           Thank you for filling out the questionnaire!
           <br />
-          We will be in touch with you soon!
+          We will be in touch with you soon.
         </p>
         <p className="congrats-detail">
           In the meantime, please click

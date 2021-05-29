@@ -8,15 +8,16 @@ import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
 
 function JourneyMap() {
-  // TODO: rename this
-  const [isOpen, setIsOpen] = useState(false);
+  const [openPoppup, setOpenPoppup] = useState(false);
   const togglePopup = () => {
-    setIsOpen(!isOpen);
+    setOpenPoppup(!openPoppup);
   };
 
   const [openQuestionnaire, setQuestionnaire] = useState(false);
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
+    setCongratulationsPage(false);
+    setOpenPoppup(false);
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
@@ -91,7 +92,7 @@ function JourneyMap() {
           </div>
         </div>
       </div>
-      <div>{isOpen && <Step1 handleClose={togglePopup} />}</div>
+      <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div>
       <div>
         {welcomePageOpen && <WelcomePage handleClose={welcomePagePopup} />}
       </div>

@@ -6,10 +6,8 @@ const ContactForm = () => {
       <form id="contact-form" noValidate>
         {/* Row 1 of form */}
         <p>
-          Questions? We’d love to hear from you! Get in touch with our Program
-          Director, Charlene Tatis, at{" "}
-          <a href="info@sjdigitalinclusion.org">info@sjdigitalinclusion.org</a>{" "}
-          or send us a message below!
+          Questions or comments? We’d love to hear from you! <br/> Fill out the form below to get in touch with our Program
+          Director, Charlene Tatis!
         </p>
         <div className="row formRow">
           <div className="col-6">
@@ -64,6 +62,8 @@ const ContactForm = () => {
         </button>
         <h1>Thank you!</h1>
       </form>
+      {/* TODO: add a "Thank you for contacting us!" page that will appear after they click submit */}
+      {/* TODO: connect this to SJDIF email */}
     </div>
   );
 };
