@@ -4,9 +4,14 @@
 
 .step0-title {
   font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }
 
 .step0-details {
+  display: flex;
   font-size: 0.55em;
   font-weight: normal;
 }
@@ -39,7 +44,7 @@
   flex-direction: column;
   align-items: stretch;
   padding: 40px;
-  width: 720px;
+  width: max(min(50vw, 800px), 500px);
   background: rgba(255, 255, 255, 1);
   border-radius: 2rem;
 }
@@ -117,6 +122,7 @@ input[type="submit"] {
   border-radius: 4px;
   font-family: "Roboto", sans-serif;
   margin: 20px;
+  margin-bottom: 0px;
 }
 
 button:hover,

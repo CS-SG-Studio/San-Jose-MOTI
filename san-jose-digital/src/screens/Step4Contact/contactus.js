@@ -1,11 +1,11 @@
-import "./contactform.css";
+import "./contactus.css";
 
 const ContactForm = () => {
   return (
     <div className="ContactForm">
       <form id="contact-form" noValidate>
         {/* Row 1 of form */}
-        <p>
+        <p className="text">
           Questions? We’d love to hear from you! Get in touch with our Program
           Director, Charlene Tatis, at{" "}
           <a href="info@sjdigitalinclusion.org">info@sjdigitalinclusion.org</a>{" "}
