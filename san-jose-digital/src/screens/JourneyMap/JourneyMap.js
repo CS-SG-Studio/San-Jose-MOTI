@@ -45,8 +45,11 @@ function JourneyMap() {
         </h1>
       </div>
 
-
-      {welcomePageOpen && <div className="welcome"><WelcomePage handleClose={welcomePagePopup} setContactForm={setContactForm}/></div>}
+      {welcomePageOpen && (
+        <div className="welcome">
+          <WelcomePage handleClose={welcomePagePopup} setContactForm={setContactForm} />
+        </div>
+      )}
       <div className="page">
         <div className="stack">
           <div className="on-right">
@@ -56,11 +59,7 @@ function JourneyMap() {
               </span>
             </div>
             <div className="popups">
-              {openPoppup && (
-                <Step1
-                  handleClose={togglePopup} 
-                />
-              )}
+              {openPoppup && <Step1 handleClose={togglePopup} />}
             </div>
           </div>
         </div>
@@ -96,12 +95,16 @@ function JourneyMap() {
 
         <div className="stack">
           <div className="on-right">
-            <div className="circles"  onClick={contactStep}>
+            <div className="circles" onClick={contactStep}>
               <span className="instruction" id="step4" onClick={contactStep}>
                 ANY QUESTIONS?
               </span>
-            </div >
-            {openContactForm && <div className="popups"><ContactForm /></div>}
+            </div>
+            {openContactForm && (
+              <div className="popups">
+                <ContactForm />
+              </div>
+            )}
           </div>
         </div>
       </div>
