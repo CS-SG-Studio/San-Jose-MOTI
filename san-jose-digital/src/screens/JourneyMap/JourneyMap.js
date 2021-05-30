@@ -6,6 +6,7 @@ import Step1 from "../Step1Program/program";
 import Congratulations from "../Step3Congrats/Congratulations";
 import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
+import logo from "../../../src/sjdi-logo.png";
 
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
@@ -90,14 +91,20 @@ function JourneyMap() {
                 ANY QUESTIONS?
               </span>
             </div>
-            {openContactForm && <div className="popups"><ContactForm /></div>}
+            {openContactForm && (
+              <div className="popups">
+                <ContactForm />
+              </div>
+            )}
           </div>
         </div>
       </div>
-      <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div>
-      <div>
-        {welcomePageOpen && <WelcomePage handleClose={welcomePagePopup} />}
-      </div>
+      <a href="https://www.sjdigitalinclusion.org/" target="_blank">
+        <img src={logo} alt="san jose digital inclusion logo" />
+      </a>
+
+      <div>{isOpen && <Step1 handleClose={togglePopup} />}</div>
+      <div>{welcomePageOpen && <WelcomePage handleClose={welcomePagePopup} />}</div>
     </Router>
   );
 }
