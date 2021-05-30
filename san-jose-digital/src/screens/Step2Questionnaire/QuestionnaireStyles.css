@@ -45,7 +45,7 @@
   flex-direction: column;
   align-items: stretch;
   padding: 40px;
-  width: max(min(50vw, 800px), 500px);
+  width: max(min(70vw, 800px), 500px);
   background: rgba(255, 255, 255, 1);
   border-radius: 2rem;
 }
