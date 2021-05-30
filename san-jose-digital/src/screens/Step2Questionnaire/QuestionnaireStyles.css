@@ -97,10 +97,6 @@ select {
   box-sizing: border-box;
 }
 
-input[type="text"] {
-  width: 300px;
-}
-
 textarea {
   margin: 4px 0;
 }
