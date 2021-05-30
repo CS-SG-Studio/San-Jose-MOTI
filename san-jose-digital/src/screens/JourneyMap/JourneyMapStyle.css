@@ -135,6 +135,10 @@ img {
   margin-bottom: 100px;
 }
 
+.img{
+  background-color: white;
+}
+
 /* styling for the circles */
 /* .circles.first {
   background: rgba(213, 240, 248, 1);
