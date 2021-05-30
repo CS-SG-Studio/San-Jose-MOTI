@@ -91,7 +91,6 @@ select {
   padding: 5px 20px;
   margin: 4px 0;
   display: flex;
-  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
