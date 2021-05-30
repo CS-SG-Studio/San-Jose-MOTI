@@ -103,7 +103,7 @@ function JourneyMap() {
         <img src={logo} alt="san jose digital inclusion logo" />
       </a>
 
-      <div>{isOpen && <Step1 handleClose={togglePopup} />}</div>
+      <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div>
       <div>{welcomePageOpen && <WelcomePage handleClose={welcomePagePopup} />}</div>
     </Router>
   );
