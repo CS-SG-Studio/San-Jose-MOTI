@@ -1,5 +1,6 @@
 * {
   font-family: "Roboto", sans-serif;
+  /* border: 1px solid red; */
 }
 
 .title {
@@ -128,6 +129,12 @@
   text-decoration: inherit;
   color: inherit;
 }
+
+img {
+  width: min(50vw, 500px);
+  margin-bottom: 100px;
+}
+
 /* styling for the circles */
 /* .circles.first {
   background: rgba(213, 240, 248, 1);
