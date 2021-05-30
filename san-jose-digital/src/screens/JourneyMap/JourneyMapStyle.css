@@ -2,9 +2,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* body :not(#unblurred) {
-  filter: blur(1px);
-} */
 .title {
   color: rgba(255, 255, 255, 1);
   font-weight: Bold;
@@ -17,6 +14,11 @@
   margin-block-end: 0;
   padding: 10px;
   font-size: 0.55em;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
 }
 
 .page {
@@ -48,8 +50,8 @@
 
 .popups {
   display: flex;
-  margin-top: 50px;
-  margin-bottom: 75px;
+  margin-top: 60px;
+  margin-bottom: 55px;
   justify-content: center;
 }
 

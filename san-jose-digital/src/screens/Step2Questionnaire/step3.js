@@ -196,7 +196,7 @@ function Step3(props) {
             value={props.anyOtherComments}
             onChange={props.handleChange}
             rows="6"
-            cols="80"
+            cols="60"
         />
     </div>
     </container>

@@ -40,9 +40,12 @@ function JourneyMap() {
       <div>
         <h1 className="title">
           YOUR JOURNEY
-          <h6 className="subtitle">WHERE ARE YOU ON THE PATH OF DIGITAL INCLUSION?</h6>
+          <h6 className="subtitle">WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?</h6>
         </h1>
       </div>
+
+
+      {welcomePageOpen && <div className="welcome"><WelcomePage handleClose={welcomePagePopup} setContactForm={setContactForm}/></div>}
       <div className="page">
         <div className="stack">
           <div className="on-right">
@@ -50,6 +53,13 @@ function JourneyMap() {
               <span className="instruction" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
+            </div>
+            <div className="popups">
+              {openPoppup && (
+                <Step1
+                  handleClose={togglePopup} 
+                />
+              )}
             </div>
           </div>
         </div>
@@ -85,19 +95,16 @@ function JourneyMap() {
 
         <div className="stack">
           <div className="on-right">
-            <div className="circles" onClick={contactStep}>
-              <span className="instruction" onClick={contactStep}>
+            <div className="circles"  onClick={contactStep}>
+              <span className="instruction" id="step4" onClick={contactStep}>
                 ANY QUESTIONS?
               </span>
-            </div>
+            </div >
             {openContactForm && <div className="popups"><ContactForm /></div>}
           </div>
         </div>
       </div>
-      <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div>
-      <div>
-        {welcomePageOpen && <WelcomePage handleClose={welcomePagePopup} />}
-      </div>
+      {/* <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div> */}
     </Router>
   );
 }
