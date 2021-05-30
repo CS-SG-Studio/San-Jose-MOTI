@@ -39,7 +39,7 @@ const WelcomePage = (props) => {
             className="link2"
           >CLICK HERE TO VISIT THE SAN JOSÉ DIGITAL INCLUSION FUND WEBSITE!</a>
           <br/>
-          You can also scroll down to Step 4 and reach out to us!
+          You can also scroll down to <a href= "#step4" className="link" rel="noreferrer" onClick={props.setContactForm}>Step 4</a> and reach out to us!
         </h4>
         <button onClick={props.handleClose}> CLOSE </button>
       </div>

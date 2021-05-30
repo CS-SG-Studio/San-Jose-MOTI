@@ -4,7 +4,7 @@ import "./programStyles.css";
 const Step1 = (props) => {
   return (
     <div className="popup">
-      <span className="close-icon" onClick={props.handleClose}>
+      <span className="close-icon2" onClick={props.handleClose}>
         &times;
       </span>
       <div className="centering-all">
@@ -16,7 +16,6 @@ const Step1 = (props) => {
             The following are included in our bundle package:
           </h2>
         </div>
-
         <div className="body">
           {/*Access Programs*/}
           <div className="program">

@@ -6,6 +6,7 @@ import Step1 from "../Step1Program/program";
 import Congratulations from "../Step3Congrats/Congratulations";
 import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
+import logo from "../../../src/sjdi-logo.png";
 
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
@@ -40,11 +41,21 @@ function JourneyMap() {
       <div>
         <h1 className="title">
           YOUR JOURNEY
+<<<<<<< HEAD
           <h6 className="subtitle">
             WHERE ARE YOU ON <br/> THE PATH OF DIGITAL INCLUSION?
           </h6>
+=======
+          <h6 className="subtitle">WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?</h6>
+>>>>>>> 58f3c697b33f636349cfde25ee572cb5b1300749
         </h1>
       </div>
+
+      {welcomePageOpen && (
+        <div className="welcome">
+          <WelcomePage handleClose={welcomePagePopup} setContactForm={setContactForm} />
+        </div>
+      )}
       <div className="page">
         <div className="stack">
           <div className="on-right">
@@ -52,6 +63,9 @@ function JourneyMap() {
               <span className="instruction" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
+            </div>
+            <div className="popups">
+              {openPoppup && <Step1 handleClose={togglePopup} />}
             </div>
           </div>
         </div>
@@ -88,18 +102,22 @@ function JourneyMap() {
         <div className="stack">
           <div className="on-right">
             <div className="circles" onClick={contactStep}>
-              <span className="instruction" onClick={contactStep}>
+              <span className="instruction" id="step4" onClick={contactStep}>
                 ANY QUESTIONS?
               </span>
             </div>
-            {openContactForm && <div className="popups"><ContactForm /></div>}
+            {openContactForm && (
+              <div className="popups">
+                <ContactForm />
+              </div>
+            )}
           </div>
         </div>
       </div>
-      <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div>
-      <div>
-        {welcomePageOpen && <WelcomePage handleClose={welcomePagePopup} />}
-      </div>
+      <a href="https://www.sjdigitalinclusion.org/" target="_blank">
+        <img src={logo} alt="san jose digital inclusion logo" />
+      </a>
+      {/* <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div> */}
     </Router>
   );
 }
