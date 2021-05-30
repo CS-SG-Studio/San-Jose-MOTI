@@ -11,9 +11,9 @@ function Step0(props) {
         Welcome to the Questionnaire!
         <p className="step0-details">
           This questionnaire is designed to check your eligibility for the programs
-          offered under San Jose Digital Inclusion Fund. The information you proivded will
-          be passed only to organization we work incollaboration with, and they will reach
-          out to you!
+          offered by the San José Digital Inclusion Fund. The information you provide will
+          be passed only to grantee organization we work with, and they will reach
+          out to you for further steps!
         </p>
       </h1>
     </container>

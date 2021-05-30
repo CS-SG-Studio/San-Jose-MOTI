@@ -9,9 +9,6 @@ function Step2(props) {
         <div className="myBar second"></div>
       </div>
       <br />
-      {/* TODO: add rest of programs and figure out how to remember 
-    which itmes they selected when it comes to checkboxes (currently the text and select 
-    questions are saving their responses but the checkbox ones aren't) */}
       <div className="form-group">
         <p>
           Do you currently qualify for any of the following programs? Please
@@ -116,12 +113,12 @@ function Step2(props) {
           value={props.device}
           onChange={props.handleChange}
         >
-          <option name="yes">Yes</option>
-          <option name="no">No</option>
+          <option name="y">Yes</option>
+          <option name="n">No</option>
         </select>
       </div>
       <div className="form-group">
-        <p htmlFor="deviceFollowUp">
+        <p >
           If you answered yes to the previous question, what kind of device(s)
           do you own?
         </p>
@@ -187,7 +184,7 @@ function Step2(props) {
           <option name="no">No</option>
         </select>
       </div>
-      <p>If you answered yes to the previous question:</p>
+      <p className="form-group">If you answered yes to the previous question:</p>
       <div class="form-group">
         <label htmlFor="connectsToInternet">
           Do you use your smartphone to connect to the internet?
@@ -199,6 +196,7 @@ function Step2(props) {
           value={props.connectsToInternet}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
@@ -216,7 +214,7 @@ function Step2(props) {
         />
       </div>
       <div class="form-group">
-        <label htmlFor="">
+        <label htmlFor="deviceAmount">
           Do you periodically buy data plans for your smartphone?
         </label>
         <select
@@ -226,6 +224,7 @@ function Step2(props) {
           value={props.deviceAmount}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
@@ -242,6 +241,7 @@ function Step2(props) {
           value={props.hotspot}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>

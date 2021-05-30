@@ -3,6 +3,9 @@
   /* border: 1px solid red; */
 }
 
+/* body :not(#unblurred) {
+  filter: blur(1px);
+} */
 .title {
   color: rgba(255, 255, 255, 1);
   font-weight: Bold;

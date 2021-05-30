@@ -9,15 +9,16 @@ import WelcomePage from "../WelcomePage/welcomePage";
 import logo from "../../../src/sjdi-logo.png";
 
 function JourneyMap() {
-  // TODO: rename this
-  const [isOpen, setIsOpen] = useState(false);
+  const [openPoppup, setOpenPoppup] = useState(false);
   const togglePopup = () => {
-    setIsOpen(!isOpen);
+    setOpenPoppup(!openPoppup);
   };
 
   const [openQuestionnaire, setQuestionnaire] = useState(false);
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
+    setCongratulationsPage(false);
+    setOpenPoppup(false);
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);

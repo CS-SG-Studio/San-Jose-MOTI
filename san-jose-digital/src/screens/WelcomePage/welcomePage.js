@@ -3,39 +3,45 @@ import "./welcomePage.css";
 
 const WelcomePage = (props) => {
   return (
-    <div className="welcomePopup">
+    <div className="welcomePopup unblurred" id="unblurred">
       <div className="centering">
         <div className="header">
           <h1 className="steptitle">ARE YOU LOOKING FOR</h1>
         </div>
 
         <div className="threecircles">
-          <div className="circle first">
+          <div className="circle">
             <h1 className="description">LOW-COST INTERNET PACKAGES?</h1>
           </div>
           
-          <div className="circle second">
+          <div className="circle">
             <h1 className="description">COMPUTER AND INTERNET LESSONS?</h1>
           </div>
-          <div className="circle third">
+          <div className="circle">
             <h1 className="description">FREE ACCESS TO DIGITAL DEVICES?</h1>
           </div>
         </div>
         <br />
         <h2 className="steptitle2">
           YES? THEN YOU ARE IN THE RIGHT PLACE! <br />
-          START YOUR JOURNEY AND FOLLOW THE STEPS
+          START YOUR JOURNEY BY FOLLOWING THE STEPS BELOW
         </h2>
-        <button onClick={props.handleClose}> START NOW! </button>
         <h4 className="description second">
-          No? Then, are you looking for funding, mentorship, collaboration, or
+          No? Then are you looking for funding, mentorship, collaboration, and
           volunteering
           <br />
-          opportunities or ways to donate to impactful digital inclusion
-          programs? <br/>
-        <a href="https://www.sjdigitalinclusion.org/">VISIT OUR WEBSITE!</a>
-          If not, scroll down to the last step and reach out!
+          opportunities, or ways to donate to impactful digital inclusion
+          programs? <br/><br/>
+          <a
+            href="https://www.sjdigitalinclusion.org/"
+            rel="noreferrer"
+            target="_blank"
+            className="link2"
+          >CLICK HERE TO VISIT THE SAN JOSÉ DIGITAL INCLUSION FUND WEBSITE!</a>
+          <br/>
+          You can also scroll down to Step 4 and reach out to us!
         </h4>
+        <button onClick={props.handleClose}> CLOSE </button>
       </div>
     </div>
   );

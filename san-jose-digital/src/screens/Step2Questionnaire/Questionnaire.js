@@ -5,7 +5,6 @@ import Step2 from './step2';
 import Step3 from './step3';
 import './QuestionnaireStyles.css';
 
-// TODO: figure out how to make currentStep based on total number of pages of questionnaire
 const Questionnaire = (props) => {
   const [data, setData] = useState({
     // STEP1
@@ -15,40 +14,41 @@ const Questionnaire = (props) => {
     phone: "",
     address: "",
     zip_code: "",
-    identity: "",
-    language: "",
+    identity: "Myself",
+    language: "English",
 
     // STEP2
-    program1: "", // Child Enrolled in the NSLP (National School Lunch Program)
-    program2: "", // CalFresh (food stamps) 
-    program3: "", // Supplemental Security Income (SSI) 
-    program4: "", // Medi-Cal Recipient
-    program5: "", // Household Income Under $70,000/year
-    program6: "", // Supplemental Nutrition Assistance Program (SNAP) Recipient
-    program7: "", // Social Security Disability Insurance (SSDI) Recipient
-    device: "",
-    laptop: "",
-    desktop: "",
-    tablet: "",
-    deviceFollowUp: "",
-    deviceAmount: "",
-    smartphone: "",
+    program1: false, // Child Enrolled in the NSLP (National School Lunch Program)
+    program2: false, // CalFresh (food stamps) 
+    program3: false, // Supplemental Security Income (SSI) 
+    program4: false, // Medi-Cal Recipient
+    program5: false, // Household Income Under $70,000/year
+    program6: false, // Supplemental Nutrition Assistance Program (SNAP) Recipient
+    program7: false, // Social Security Disability Insurance (SSDI) Recipient
+    device: "Yes",
+    desktop: false,
+    laptop: false,
+    tablet: false,
+    deviceAmount: 1,
+    smartphone: "Yes",
     connectsToInternet: "",
     carrier: "",
     dataPlans: "",
+    hotspot: "",
 
     // STEP3
     familySize: "",
     schoolDevice: "",
     bringDeviceHome: "",
-    homeInternet: "",
+    homeInternet: "Yes",
     costOfInternet: "",
     internetProvider: "",
     whereInternetIsAccessed: "",
-    interestedInHomeInternet: "",
-    experienceUsingComputer: "",
-    amountOfExperience: "",
-    interestedInFreeClasses: "",
+    interestedInHomeInternet: "Yes",
+    experienceUsingComputer: "Yes",
+    amountOfExperience: "Beginner",
+    interestedInFreeClasses: "Yes",
+    anyOtherComments: "",
   });
 
   const {
@@ -56,7 +56,7 @@ const Questionnaire = (props) => {
     currentStep, name, email, phone, address, zip_code, identity, language,
 
     // STEP2
-    program1, program2, program3, program4, program5, program6, program7, device, laptop, desktop, tablet, deviceFollowUp, deviceAmount, 
+    program1, program2, program3, program4, program5, program6, program7, device, desktop, laptop, tablet, deviceAmount, 
     smartphone, connectsToInternet, carrier, dataPlans, hotspot,
 
     // STEP3
@@ -90,11 +90,11 @@ const Questionnaire = (props) => {
   };
 
   const onChangeProgram6 = () => {
-    setData({ ...data, program6: !program6})
+    setData({ ...data, program6: !program6 })
   };
 
   const onChangeProgram7 = () => {
-    setData({ ...data, program7: !program7})
+    setData({ ...data, program7: !program7 })
   };
 
   const onChangeDesktop = () => {
@@ -170,10 +170,8 @@ const Questionnaire = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    props.setQuestionnaire(false);
-    props.setCongratulationsPage(true);
     try {
-      //commenting this out for now because i need to update the google sheets
+      // commenting out backend part so we can submit the sheet w/o filling up the backend
       // const response = await fetch('https://v1.nocodeapi.com/rachelclinton/google_sheets/MfimgcBbjWzzHVku?tabId=Sheet1', 
       // {
       //   method: 'POST',
@@ -186,8 +184,7 @@ const Questionnaire = (props) => {
       //       // STEP1
       //       name, email, phone, address, zip_code, identity, language, 
       //       // STEP2
-      //       // removed desktop
-      //       program1, program2, program3, program4, program5, program6, laptop, desktop, tablet, deviceFollowUp, deviceAmount, 
+      //       program1, program2, program3, program4, program5, program6, program7, device, desktop, laptop, tablet, deviceAmount, 
       //       smartphone, connectsToInternet, carrier, dataPlans, hotspot,
       //       // STEP3
       //       familySize, schoolDevice, bringDeviceHome, homeInternet, costOfInternet, internetProvider, whereInternetIsAccessed,
@@ -198,7 +195,8 @@ const Questionnaire = (props) => {
       // );
       // await response.json();
       // setData({ ...data, name:'', email:'', phone:'', address: '', identity: ''});
-      alert("Form submitted!")
+      props.setQuestionnaire(false);
+      props.setCongratulationsPage(true);
     } catch(err) {
       console.log(err);
     }
@@ -244,7 +242,6 @@ const Questionnaire = (props) => {
             desktop={desktop}
             tablet={tablet}
             laptop={laptop}
-            deviceFollowUp={deviceFollowUp}
             deviceAmount={deviceAmount}
             smartphone={smartphone}
             connectsToInternet={connectsToInternet}
