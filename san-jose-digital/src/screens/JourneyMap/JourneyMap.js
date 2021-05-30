@@ -41,13 +41,7 @@ function JourneyMap() {
       <div>
         <h1 className="title">
           YOUR JOURNEY
-<<<<<<< HEAD
-          <h6 className="subtitle">
-            WHERE ARE YOU ON <br/> THE PATH OF DIGITAL INCLUSION?
-          </h6>
-=======
           <h6 className="subtitle">WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?</h6>
->>>>>>> 58f3c697b33f636349cfde25ee572cb5b1300749
         </h1>
       </div>
 
@@ -114,7 +108,7 @@ function JourneyMap() {
           </div>
         </div>
       </div>
-      <a href="https://www.sjdigitalinclusion.org/" target="_blank">
+      <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
         <img src={logo} alt="san jose digital inclusion logo" />
       </a>
       {/* <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div> */}
