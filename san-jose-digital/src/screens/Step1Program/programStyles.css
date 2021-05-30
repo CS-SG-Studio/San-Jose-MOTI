@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  
 }
 
 /* centers all of the div vertically over the popup */
@@ -9,27 +8,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: stretch;
-  margin-top: 2%;
 }
 
 .popup {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* size of the popup window */
   border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   padding: 0.5rem;
-
   /* glassmorphism */
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 1);
 }
 
 /* styling for the header */
@@ -44,7 +29,6 @@
 }
 
 .steptitle {
-  margin: 0px;
   font-weight: bold;
   font-size: 2.5rem;
 }
@@ -125,11 +109,10 @@
   font-weight: bold;
 }
 
-.close-icon {
+.close-icon2 {
+  position: relative;
   cursor: pointer;
   font-size: 3rem;
-  position: fixed;
-  top: 3%;
-  right: 3%;
+  right: -46%;
   z-index: 1;
 }
