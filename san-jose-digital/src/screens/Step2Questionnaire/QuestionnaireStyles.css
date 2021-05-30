@@ -1,4 +1,5 @@
 * {
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
 }
 
@@ -87,13 +88,14 @@ input[type="text"],
 input[type="textarea"],
 input[type="number"],
 input[type="email"],
-select {
+textarea select {
   padding: 5px 20px;
   margin: 4px 0;
   display: flex;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 textarea {
