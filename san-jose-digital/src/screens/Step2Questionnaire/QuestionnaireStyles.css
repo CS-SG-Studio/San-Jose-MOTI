@@ -1,4 +1,5 @@
 * {
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
 }
 
@@ -45,7 +46,7 @@
   flex-direction: column;
   align-items: stretch;
   padding: 40px;
-  width: max(min(50vw, 800px), 500px);
+  width: max(min(70vw, 800px), 500px);
   background: rgba(255, 255, 255, 1);
   border-radius: 2rem;
 }
@@ -87,17 +88,14 @@ input[type="text"],
 input[type="textarea"],
 input[type="number"],
 input[type="email"],
-select {
+textarea select {
   padding: 5px 20px;
   margin: 4px 0;
-  display: inline-block;
+  display: flex;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-}
-
-input[type="text"] {
-  width: 300px;
+  width: 100%;
 }
 
 textarea {

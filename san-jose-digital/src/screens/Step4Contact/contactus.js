@@ -5,14 +5,14 @@ const ContactForm = () => {
     <div className="ContactForm">
       <form id="contact-form" noValidate>
         {/* Row 1 of form */}
-        <p>
+        <p className="text">
           Questions or comments? We’d love to hear from you! <br/> Fill out the form below to get in touch with our Program
           Director, Charlene Tatis!
         </p>
         <div className="row formRow">
           <div className="col-6">
             <input
-              type="text"
+              type="email"
               name="name"
               className="form-control formInput"
               placeholder="Name"

@@ -1,3 +1,4 @@
+
 .ContactForm {
   display: flex;
   flex-direction: column;
@@ -7,10 +8,17 @@
   /* height: 540px; */
   background: #f5f5f5;
   border-radius: 2rem;
-  /* width: max(min(50vw, 800px), 500px); */
 }
 
-.text{
+.row {
+  display: flex;
+  flex-direction: column;
   width: max(min(50vw, 600px), 360px);
+}
 
+.col-6,
+.col-2,
+.col {
+  display: flex;
+  flex-direction: column;
 }

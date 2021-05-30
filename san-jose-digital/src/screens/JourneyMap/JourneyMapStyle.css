@@ -1,6 +1,5 @@
 * {
   font-family: "Roboto", sans-serif;
-  /* border: 1px solid red; */
 }
 
 .title {
@@ -131,67 +130,12 @@
 }
 
 img {
-  width: min(50vw, 500px);
+  width: max(min(50vw, 500px), 300px);
   margin-bottom: 100px;
+  border-radius: 1rem;
 }
 
-.img{
-  background-color: white;
+img:hover {
+  transform: scale(0.995);
+  filter: opacity(95%);
 }
-
-/* styling for the circles */
-/* .circles.first {
-  background: rgba(213, 240, 248, 1);
-}
-
-.circles.second {
-  background: #9fd2e1;
-}
-
-.circles.third {
-  background: #56a7bf;
-}
-
-.circles.fourth {
-  background: #298aa7;
-} */
-
-/* styling for the connectors */
-/* .connector {
-  width: 8px;
-  height: 150px;
-  opacity: 1;
-  position: relative;
-  left: 96px;
-  overflow: hidden;
-  justify-self: center;
-}
-
-.connector.first {
-  background: linear-gradient(rgba(213, 240, 248, 1), rgba(159, 210, 225, 1));
-}
-
-.connector.second1 {
-  height: 75px;
-  background: linear-gradient(rgba(159, 210, 225, 1), rgba(123, 189, 208, 1));
-}
-
-.connector.second2 {
-  height: 75px;
-  background: linear-gradient(rgba(123, 189, 208, 1), rgba(86, 167, 191, 1));
-}
-
-.connector.third1 {
-  height: 75px;
-  background: linear-gradient(rgba(86, 167, 191, 1), rgb(62, 141, 163));
-}
-
-.connector.third2 {
-  height: 75px;
-  background: linear-gradient(rgba(62, 141, 163), rgba(41, 138, 166, 1));
-}
-
-.connector.fourth {
-  height: 75px;
-  background: linear-gradient(rgba(41, 138, 166, 1), rgb(201, 211, 214));
-} */
