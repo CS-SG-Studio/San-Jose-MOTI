@@ -49,6 +49,7 @@
   margin: 0px;
   font-weight: bold;
   font-size: 2.5rem;
+  margin-top: -5%;
 }
 
 .title2 {
@@ -106,6 +107,36 @@
 .circle:hover {
   background: #cae4ec;
 }
+
+.title1:after {
+  content: "INTERNET PACKAGES";
+}
+
+.title1:hover:after {
+  content: "after";
+}
+
+.title1 {
+  transition: 0.3s;
+}
+
+/* .title1,
+.title2 {
+  position: absolute;
+  transition: 0.3s;
+}
+
+.title1:hover {
+  opacity: 0;
+}
+
+.title2 {
+  opacity: 0;
+}
+
+.title2:hover {
+  opacity: 1;
+} */
 
 .description {
   position: center;
