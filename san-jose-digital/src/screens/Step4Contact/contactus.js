@@ -28,7 +28,7 @@ const ContactForm = () => {
               type="email"
               name="name"
               className="form-control formInput"
-              placeholder="Name"
+              placeholder="Enter name"
             ></input>
           </div>
           <div className="col-6">
@@ -36,7 +36,7 @@ const ContactForm = () => {
               type="email"
               name="email"
               className="form-control formInput"
-              placeholder="Email address"
+              placeholder="Enter email address"
             ></input>
           </div>
           <div className="col-6">
@@ -44,7 +44,7 @@ const ContactForm = () => {
               type="number"
               name="Phone Number"
               className="form-control formInput"
-              placeholder="Phone number"
+              placeholder="Enter phone number"
             ></input>
           </div>
         </div>
@@ -55,7 +55,7 @@ const ContactForm = () => {
               type="text"
               name="subject"
               className="form-control formInput"
-              placeholder="Subject"
+              placeholder="Enter subject"
             ></input>
           </div>
         </div>
@@ -66,7 +66,7 @@ const ContactForm = () => {
               rows={5}
               name="message"
               className="form-control formInput"
-              placeholder="Message"
+              placeholder="     Message"
             ></textarea>
           </div>
         </div>
