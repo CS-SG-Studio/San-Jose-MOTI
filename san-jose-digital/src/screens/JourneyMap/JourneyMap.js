@@ -7,6 +7,7 @@ import Congratulations from "../Step3Congrats/Congratulations";
 import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
 import logo from "../../../src/sjdi-logo.png";
+import { Link } from "react-scroll";
 
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
@@ -31,25 +32,25 @@ function JourneyMap() {
     setContactForm(!openContactForm);
   };
 
-  const [welcomePageOpen, setwelcomePageOpen] = useState(true);
-  const welcomePagePopup = () => {
-    setwelcomePageOpen(false);
-  };
-
   return (
     <Router>
+      <li>
+        <Link to="scroll" spy={true} smooth={true}>
+          <div className="welcome">
+            <WelcomePage
+              setContactForm={setContactForm}
+            />
+          </div>
+        </Link>
+      </li>
       <div>
-        <h1 className="title">
+        <h1 id="scroll" className="title">
           YOUR JOURNEY
-          <h6 className="subtitle">WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?</h6>
+          <h6 className="subtitle">
+            WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
+          </h6>
         </h1>
       </div>
-
-      {welcomePageOpen && (
-        <div className="welcome">
-          <WelcomePage handleClose={welcomePagePopup} setContactForm={setContactForm} />
-        </div>
-      )}
       <div className="page">
         <div className="stack">
           <div className="on-right">
@@ -89,7 +90,9 @@ function JourneyMap() {
                 LEARN MORE ABOUT THE GRANTEES
               </span>
             </div>
-            <div className="popups">{openCongratulationsPage && <Congratulations />}</div>
+            <div className="popups">
+              {openCongratulationsPage && <Congratulations />}
+            </div>
           </div>
         </div>
 
@@ -108,7 +111,11 @@ function JourneyMap() {
           </div>
         </div>
       </div>
-      <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
+      <a
+        href="https://www.sjdigitalinclusion.org/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img src={logo} alt="san jose digital inclusion logo" />
       </a>
       {/* <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div> */}
