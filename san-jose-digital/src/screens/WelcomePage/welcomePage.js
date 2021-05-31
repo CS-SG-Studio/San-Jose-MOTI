@@ -1,47 +1,48 @@
 import React from "react";
 import "./welcomePage.css";
+import { Link } from "react-scroll";
+
 
 const WelcomePage = (props) => {
   return (
-    <div className="welcomePopup unblurred" id="unblurred">
+    <div className="welcomePopup">
       <div className="centering">
-        <div className="header">
-          <h1 className="steptitle">ARE YOU LOOKING FOR</h1>
-        </div>
-
+        <h1 className="welcometitle">ARE YOU LOOKING FOR</h1>
         <div className="threecircles">
-          <div className="circle">
-            <h1 className="description">LOW-COST INTERNET PACKAGES?</h1>
+          <div className="welcomecircle">
+            <h1 className="welcomedescription">LOW-COST INTERNET PACKAGES?</h1>
           </div>
-          
-          <div className="circle">
-            <h1 className="description">COMPUTER AND INTERNET LESSONS?</h1>
+
+          <div className="welcomecircle">
+            <h1 className="welcomedescription">COMPUTER AND INTERNET LESSONS?</h1>
           </div>
-          <div className="circle">
-            <h1 className="description">FREE ACCESS TO DIGITAL DEVICES?</h1>
+          <div className="welcomecircle">
+            <h1 className="welcomedescription">FREE ACCESS TO DIGITAL DEVICES?</h1>
           </div>
         </div>
         <br />
-        <h2 className="steptitle2">
-          YES? THEN YOU ARE IN THE RIGHT PLACE! <br />
-          START YOUR JOURNEY BY FOLLOWING THE STEPS BELOW
+        <br />
+        <h2 className="welcometitle two">
+          YES? You are in the right place! <br />
+          <Link to={props.to} spy={props.spy} smooth={props.smooth}>
+            <button className="startNow" onClick={props.handleClose}>
+              {" "}
+              START YOUR JOURNEY AND FOLLOW THE STEPS{" "}
+            </button>
+          </Link>
         </h2>
-        <h4 className="description second">
-          No? Then are you looking for funding, mentorship, collaboration, and
-          volunteering
-          <br />
-          opportunities, or ways to donate to impactful digital inclusion
-          programs? <br/><br/>
+        <h2 className="welcometitle two">
+          NO? Scroll down to{" "}
           <a
-            href="https://www.sjdigitalinclusion.org/"
+            href="#step4"
+            className="link"
             rel="noreferrer"
-            target="_blank"
-            className="link2"
-          >CLICK HERE TO VISIT THE SAN JOSÉ DIGITAL INCLUSION FUND WEBSITE!</a>
-          <br/>
-          You can also scroll down to <a href= "#step4" className="link" rel="noreferrer" onClick={props.setContactForm}>Step 4</a> and reach out to us!
-        </h4>
-        <button onClick={props.handleClose}> CLOSE </button>
+            onClick={props.setContactForm}
+          >
+            Step 4
+          </a>{" "}
+          and reach out to us!
+        </h2>
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import Congratulations from "../Step3Congrats/Congratulations";
 import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import WelcomePage from "../WelcomePage/welcomePage";
 import logo from "../../../src/sjdi-logo.png";
-import { Link } from "react-scroll";
 
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
@@ -34,15 +33,23 @@ function JourneyMap() {
 
   return (
     <Router>
-      <li>
-        <Link to="scroll" spy={true} smooth={true}>
-          <div className="welcome">
-            <WelcomePage
-              setContactForm={setContactForm}
-            />
-          </div>
-        </Link>
-      </li>
+      <div className="menu">
+        <a
+          href="https://www.sjdigitalinclusion.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={logo} alt="san jose digital inclusion logo" />
+        </a>
+      </div>
+      <div className="welcome">
+        <WelcomePage
+          setContactForm={setContactForm}
+          to="scroll"
+          spy={true}
+          smooth={true}
+        />
+      </div>
       <div>
         <h1 id="scroll" className="title">
           YOUR JOURNEY
@@ -111,13 +118,6 @@ function JourneyMap() {
           </div>
         </div>
       </div>
-      <a
-        href="https://www.sjdigitalinclusion.org/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src={logo} alt="san jose digital inclusion logo" />
-      </a>
       {/* <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div> */}
     </Router>
   );
