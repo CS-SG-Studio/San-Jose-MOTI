@@ -26,44 +26,23 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   /* margin-top: 100px; */
 
   /* glassmorphism */
-  background: rgba(255, 255, 255, 0.95);
+  /* background: rgba(255, 255, 255, 0.95); */
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03); */
 }
 
-/* styling for the header */
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  color: #000000;
-}
-
-.steptitle {
+.welcometitle {
   margin: 0px;
-  font-weight: bold;
-  font-size: 2rem;
+  color: rgba(255, 255, 255, 1);
+  padding: 25px;
+  font-size: min(4vw, 40px);
 }
 
-.steptitle2 {
-  font-weight: normal;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.steptitle3 {
-  font-weight: normal;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
+.welcometitle.two {
+  font-size: min(2.5vw, 25px);
 }
 
 /* styling for the body */
@@ -77,79 +56,48 @@
   position: center;
 }
 
-/* styling for each of the 3 programs */
-.program {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem;
-  position: relative;
-  margin: 0.5rem;
-}
-
-.pillars {
-  position: center;
-  margin: 0px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-align: center;
-  color: #000000;
-}
-
-.circle {
+.welcomecircle {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin: 1rem;
+  /* margin: 2rem; */
   position: relative;
-  width: 12rem;
-  height: 12rem;
+  width: 17rem;
+  height: 17rem;
   top: 1rem;
   border-radius: 250px;
   background: #d5f0f8;
 }
 
-.description {
+.welcomedescription {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 1.4rem;
+  font-weight: bold;
+  font-size: 1.6rem;
   text-align: center;
   color: #000000;
 }
 
-.description.second {
+.welcomedescription.second {
   font-size: 1rem;
 }
 
-.footer {
-  position: relative;
-  justify-content: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
+.startNow {
+  padding: 20px 28px;
+  font-size: 25px;
   font-weight: bold;
 }
 
-.close-icon {
-  cursor: pointer;
-  font-size: 3rem;
-  position: fixed;
-  top: 3%;
-  right: 3%;
-  z-index: 1;
+.welcomecircle:hover {
+  background: #dbecf1;
 }
 
-.button {
-  /* /margin: -100px; */
-}
-
-.link2 {
+.link {
   text-decoration: inherit;
   color: inherit;
   font-weight: bold;
@@ -160,5 +108,6 @@
   border-radius: 4px;
   padding-right: 6px;
   padding-left: 6px;
-  background-color: lightblue;
+  color: #000000;
+  background: #d5f0f8;
 }
