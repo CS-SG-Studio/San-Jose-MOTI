@@ -17,8 +17,8 @@ function JourneyMap() {
   const [openQuestionnaire, setQuestionnaire] = useState(false);
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
-    setCongratulationsPage(false);
-    setOpenPoppup(false);
+    // setCongratulationsPage(false);
+    // setOpenPoppup(false);
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
