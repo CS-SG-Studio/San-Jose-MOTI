@@ -6,14 +6,14 @@
   color: rgba(255, 255, 255, 1);
   font-weight: Bold;
   padding: 25px;
-  font-size: min(7vw, 70px);
+  font-size: min(6vw, 60px);
 }
 
 .subtitle {
   margin-block-start: 0;
   margin-block-end: 0;
   padding: 10px;
-  font-size: 0.55em;
+  font-size: 0.47em;
 }
 
 .welcome {
