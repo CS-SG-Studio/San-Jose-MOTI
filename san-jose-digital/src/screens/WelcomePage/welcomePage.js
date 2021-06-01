@@ -1,7 +1,6 @@
 import React from "react";
 import "./welcomePage.css";
 
-
 const WelcomePage = (props) => {
   return (
     <div className="welcomePopup">
@@ -14,16 +13,21 @@ const WelcomePage = (props) => {
             <li>FREE ACCESS TO DIGITAL DEVICES</li>
           </ul>
         </h1> */}
+        <br />
         <div className="threecircles">
           <div className="welcomecircle">
             <h1 className="welcomedescription">LOW-COST INTERNET PACKAGES?</h1>
           </div>
 
           <div className="welcomecircle">
-            <h1 className="welcomedescription">COMPUTER AND INTERNET LESSONS?</h1>
+            <h1 className="welcomedescription">
+              COMPUTER AND INTERNET LESSONS?
+            </h1>
           </div>
           <div className="welcomecircle">
-            <h1 className="welcomedescription">FREE ACCESS TO DIGITAL DEVICES?</h1>
+            <h1 className="welcomedescription">
+              FREE ACCESS TO DIGITAL DEVICES?
+            </h1>
           </div>
         </div>
         <br />

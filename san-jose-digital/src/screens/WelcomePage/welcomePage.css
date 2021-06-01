@@ -15,10 +15,6 @@
 }
 
 .welcomePopup {
-  /* position: relative; */
-  /* left: 50%;
-  transform: translate(-50%, -50%); */
-  /* size of the popup window */
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -27,12 +23,7 @@
   order: 0;
   margin-top: 5%;
   flex-grow: 0;
-  /* margin-bottom: 100px; */
-  /* margin-top: 100px; */
-
-  /* glassmorphism */
   /* background: rgba(255, 255, 255, 0.95); */
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03); */
 }
 
 .welcometitle {
@@ -49,9 +40,8 @@
 /* styling for the body */
 .threecircles {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0px;
   font-family: "Roboto", sans-serif;
   position: center;
@@ -63,25 +53,24 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  /* margin: 2rem; */
+  margin-left: 2rem;
+  margin-right: 2rem;
   position: relative;
-  width: 17rem;
-  height: 17rem;
-  top: 1rem;
-  border-radius: 250px;
-  background: #d5f0f8;
+  width: min(max(30vw, 130px), 200px);
+  height: min(max(30vw, 130px), 200px);
+  border-radius: 50%;
+  background: lightblue;
 }
 
 .welcomedescription {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: min(max(1.3em, 10px), 50px);
   text-align: center;
-  color: #000000;
+  color: inherit;
 }
 
 .welcomedescription.second {
