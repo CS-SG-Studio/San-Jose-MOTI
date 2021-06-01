@@ -12,33 +12,27 @@
 .main {
   display: flex;
   flex-direction: row;
-  /* align-items: flex-start; */
-  /* justify-content: space-evenly; */
-  /* padding: 0px; */
 }
 
 /* styling for each of the 3 programs */
 .program {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
-  /* position: relative; */
+  padding: 0.2rem;
+  justify-content: space-between;
 }
 
 .circle-heading {
   margin: 0px;
+  font-size: max(min(2vw, 18px), 10px);
 }
 
 .circle-program {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
   align-items: center;
   padding: 1rem;
-  /* position: relative; */
-  width: max(min(20vw, 180px), 150px);
-  height: max(min(20vw, 180px), 150px);
-  top: 1rem;
+  width: max(min(20vw, 170px), 90px);
+  height: max(min(20vw, 170px), 90px);
   background: #d5f0f8;
   border-radius: 225px;
 }
@@ -50,12 +44,13 @@
 .description {
   position: center;
   display: flex;
-  /* color: black; */
+  font-size: max(min(2vw, 18px), 9px);
 }
 
 .footer {
   display: flex;
   flex-direction: column;
+  font-size: max(min(1.8vw, 18px), 9px);
 }
 
 /* .popup-title {

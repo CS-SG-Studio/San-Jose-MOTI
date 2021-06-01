@@ -9,8 +9,10 @@ const Step1 = (props) => {
       </span> */}
       <h3 className="popup-title">Our Programs</h3>
       <p className="popup-subtitle">
-        You will gain access to job, education,
-        healthcare, and service opportunities! <br />
+        You will gain access to job,
+        <br />
+        education, healthcare, and service opportunities!
+        <br />
         The following are included in our bundle package:
       </p>
       <div className="main">
@@ -19,6 +21,7 @@ const Step1 = (props) => {
           <h4 className="circle-heading">ACCESS PROGRAMS</h4>
           <div className="circle-program">
             <a
+              className="description"
               href="https://www.everyoneon.org"
               target="_blank"
               rel="noreferrer"
