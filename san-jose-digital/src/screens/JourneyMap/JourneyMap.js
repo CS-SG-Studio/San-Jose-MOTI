@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContactForm from "../Step4Contact/contactus";
 import "./JourneyMapStyle.css";
-import { BrowserRouter as Router } from "react-router-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
 import Step1 from "../Step1Program/program";
 import Congratulations from "../Step3Congrats/Congratulations";
 import Questionnaire from "../Step2Questionnaire/Questionnaire";
@@ -11,43 +11,49 @@ import logo from "../../../src/sjdi-logo.png";
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
   const togglePopup = () => {
+    welcomeStep();
     setOpenPoppup(!openPoppup);
   };
 
   const [openQuestionnaire, setQuestionnaire] = useState(false);
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
-    // setCongratulationsPage(false);
-    // setOpenPoppup(false);
+    setCongratulationsPage(false);
+    welcomeStep();
+    togglePopup();
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
   const congratulationsStep = () => {
+    welcomeStep();
     setCongratulationsPage(!openCongratulationsPage);
   };
 
   const [openContactForm, setContactForm] = useState(false);
   const contactStep = () => {
+    welcomeStep();
     setContactForm(!openContactForm);
   };
 
+  const [openWelcomePage, setOpenWelcomePage] = useState(true);
+  const welcomeStep = () => {
+    setOpenWelcomePage(false);
+  };
+
   return (
-    <Router>
+    <>
       <header className="menu">
         <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
       </header>
       <div className="welcome">
-        <WelcomePage
-          setContactForm={setContactForm}
-          to="scroll"
-          spy={true}
-          smooth={true}
-        />
+        {openWelcomePage && (
+          <WelcomePage setContactForm={setContactForm} handleClose={welcomeStep} />
+        )}
       </div>
       <div>
-        <h1 id="scroll" className="title">
+        <h1 className="title">
           YOUR JOURNEY
           <h6 className="subtitle">WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?</h6>
         </h1>
@@ -108,7 +114,7 @@ function JourneyMap() {
           </div>
         </div>
       </div>
-    </Router>
+    </>
   );
 }
 export default JourneyMap;

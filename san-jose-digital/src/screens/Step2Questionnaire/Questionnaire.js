@@ -5,6 +5,25 @@ import Step2 from './step2';
 import Step3 from './step3';
 import './QuestionnaireStyles.css';
 
+// INSTRUCTIONS FOR ADDING QUETSIONS - 
+// PART 1: 
+// There are 4 "ADD SPOT"s that have been marked on this document. Follow the 
+// directions on each of the ADD SPOT's to add the question variable to the
+// questionnaire variables. The easiest to locate all of the ADD SPOT's
+// is by searching for the term "ADD SPOT" in the file.
+// Once you have added the question variable to each of the
+// add spots, you should be able to look up the question variable and see
+// it appears in exactly FIVE spots.
+// 
+// PART 2: 
+// Navigate to step3.js and follow instructions to add a question there, 
+// using the quetsion variable you have just initialized.
+// 
+// NOTE: Checkbox questions are slightly more complicated and require
+// their own additional functions and variables, so please
+// reach out to the Stanford team (Ricky, Habeeb, Senem, Rachel)
+// if you want to add a checkbox question.
+
 const Questionnaire = (props) => {
   const [data, setData] = useState({
     // STEP1
@@ -37,6 +56,7 @@ const Questionnaire = (props) => {
     hotspot: "",
 
     // STEP3
+    // ADD SPOT #1: INITIALIZE NEW QUESTION VARIABLE HERE WITH FORMAT -  variableName: "",
     familySize: "",
     schoolDevice: "",
     bringDeviceHome: "",
@@ -52,14 +72,15 @@ const Questionnaire = (props) => {
   });
 
   const {
-    // STEP1
+    // STEP1 variables
     currentStep, name, email, phone, address, zip_code, identity, language,
 
-    // STEP2
+    // STEP2 variables
     program1, program2, program3, program4, program5, program6, program7, device, desktop, laptop, tablet, deviceAmount, 
     smartphone, connectsToInternet, carrier, dataPlans, hotspot,
 
-    // STEP3
+    // STEP3 variables
+    // ADD SPOT #2: TYPE NEW QUESTION VARIABLE HERE
     familySize, schoolDevice, bringDeviceHome, homeInternet, costOfInternet, internetProvider, whereInternetIsAccessed,
     interestedInHomeInternet, experienceUsingComputer, amountOfExperience, interestedInFreeClasses, anyOtherComments
   } = data;
@@ -68,7 +89,7 @@ const Questionnaire = (props) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
-  // see if there's a way to simplify/condense this
+  // Code for checking/unchecking the checkbox questions
   const onChangeProgram1 = () => {
     setData({ ...data, program1: !program1 });
   };
@@ -187,6 +208,7 @@ const Questionnaire = (props) => {
       //       program1, program2, program3, program4, program5, program6, program7, device, desktop, laptop, tablet, deviceAmount, 
       //       smartphone, connectsToInternet, carrier, dataPlans, hotspot,
       //       // STEP3
+      //       // ADD SPOT #3: TYPE NEW QUESTION VARIABLE HERE
       //       familySize, schoolDevice, bringDeviceHome, homeInternet, costOfInternet, internetProvider, whereInternetIsAccessed,
       //       interestedInHomeInternet, experienceUsingComputer, amountOfExperience, interestedInFreeClasses, anyOtherComments          
       //     ]
@@ -250,6 +272,7 @@ const Questionnaire = (props) => {
             hotspot={hotspot}
           />
           <Step3
+            // ADD SPOT #4: ADD NEW QUESTION VARIABLE HERE WITH FORMAT variableName={variableName}
             currentStep={currentStep}
             handleChange={handleChange}
             familySize={familySize}
