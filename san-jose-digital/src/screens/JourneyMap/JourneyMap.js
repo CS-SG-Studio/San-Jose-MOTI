@@ -20,7 +20,7 @@ function JourneyMap() {
     setQuestionnaire(!openQuestionnaire);
     setCongratulationsPage(false);
     welcomeStep();
-    togglePopup();
+    // togglePopup();
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
@@ -84,7 +84,7 @@ function JourneyMap() {
           <div className="on-right">
             <div className="circles" onClick={questionnaireStep}>
               <span className="instruction" onClick={questionnaireStep}>
-                SEE WHAT YOU ARE ELIGIBLE FOR
+                FILL OUT ELIGIBILITY QUESTIONNAIRE
               </span>
             </div>
             <div className="popups">
@@ -115,7 +115,7 @@ function JourneyMap() {
           <div className="on-right">
             <div className="circles" onClick={contactStep}>
               <span className="instruction" id="step4" onClick={contactStep}>
-                ANY QUESTIONS?
+                GET IN TOUCH WITH US
               </span>
             </div>
             {openContactForm && (

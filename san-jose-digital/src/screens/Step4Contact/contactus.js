@@ -25,9 +25,9 @@ const ContactForm = () => {
   };
   return (
     <div className="ContactForm">
+      <h1>Contact Us</h1>
       <p>
-        Are you looking for funding, mentorship, collaboration, and volunteering
-        opportunities, or ways to donate to impactful digital inclusion
+        Are you looking for ways to get involved with our digital inclusion
         programs? <br />
         <br />
         <a
@@ -36,18 +36,17 @@ const ContactForm = () => {
           target="_blank"
           className="link"
         >
-          CLICK HERE TO VISIT THE SAN JOSÉ DIGITAL INCLUSION FUND WEBSITE!
+          VISIT THE SAN JOSÉ DIGITAL INCLUSION FUND WEBSITE!
         </a>
       </p>
       <form id="contact-form" noValidate onSubmit={handleSubmit}>
         {/* Row 1 of form */}
         <p className="text">
-          Questions or comments? We’d love to hear from you! <br /> Fill out the
-          form below to get in touch with our Program Director, Charlene Tatis!
+          You can also fill out the form below to get in touch with our Program Director, Charlene Tatis!
         </p>
         <div className="row formRow">
           <div className="col-6">
-            <label htmlFor="name">Name</label>
+            {/* <label htmlFor="name">Name</label> */}
             <input
               type="text"
               name="name"
@@ -56,7 +55,7 @@ const ContactForm = () => {
             input/>
           </div>
           <div className="col-6">
-            <label htmlFor="email">Email</label>
+            {/* <label htmlFor="email">Email</label> */}
             <input
               type="email"
               name="email"
@@ -66,22 +65,10 @@ const ContactForm = () => {
               required
             input/>
           </div>
-          <div className="col-6">
-            <label htmlFor="phone">Phone number</label>
-            <input
-              type="number"
-              name="Phone Number"
-              className="form-control formInput"
-              placeholder="Enter phone number"
-              required
-              id="phone" 
-            input/>
-          </div> 
         </div>
         {/* Row 2 of form */}
         <div className="row formRow">
-          <div className="col">
-            <label htmlFor="subject">Subject</label>
+            {/* <label htmlFor="subject">Subject</label> */}
           <div className="col">
             <input
               type="text"
@@ -98,7 +85,7 @@ const ContactForm = () => {
         {/* Row 3 of form */}
         <div className="row formRow">
           <div className="col">
-            <label htmlFor="message">Message</label><br/>
+            {/* <label htmlFor="message">Message</label><br/> */}
             <textarea
               rows={5}
               name="message"
@@ -110,7 +97,6 @@ const ContactForm = () => {
         <button className="submit-btn" type="submit">
           {status} 
         </button>
-        </div>
       </form>
       {/* TODO: add a "Thank you for contacting us!" page that will appear after they click submit */}
       {/* TODO: connect this to SJDIF email */}
