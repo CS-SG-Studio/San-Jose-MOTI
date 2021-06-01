@@ -1,4 +1,3 @@
-
 .ContactForm {
   display: flex;
   flex-direction: column;
@@ -16,9 +15,9 @@
   width: max(min(50vw, 600px), 360px);
 }
 
-.col-6,
+/* .col-6,
 .col-2,
 .col {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: row;
+} */

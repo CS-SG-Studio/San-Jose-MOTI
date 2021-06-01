@@ -47,39 +47,43 @@ const ContactForm = () => {
         </p>
         <div className="row formRow">
           <div className="col-6">
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
               className="form-control formInput"
               placeholder="Enter name"
-              id="name"
-              required
-            ></input>
+            input/>
           </div>
           <div className="col-6">
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               name="email"
               className="form-control formInput"
-              placeholder="Enter email address"
+              placeholder="Enter email"
               id="email"
               required
-            ></input>
+            input/>
           </div>
-          {/* <div className="col-6">
+          <div className="col-6">
+            <label htmlFor="phone">Phone number</label>
             <input
               type="number"
               name="Phone Number"
               className="form-control formInput"
               placeholder="Enter phone number"
               required
-              id="phone" required
-            ></input>
-          </div> */}
+              id="phone" 
+              required
+            input/>
+          </div> 
         </div>
         {/* Row 2 of form */}
         <div className="row formRow">
-          {/* <div className="col">
+          <div className="col">
+            <label htmlFor="subject">Subject</label>
+          <div className="col">
             <input
               type="text"
               name="subject"
@@ -88,18 +92,18 @@ const ContactForm = () => {
               required
               value={subject}
               onChange={onSubjectChange}
-            ></input>
-          </div> */}
+            input/>
+          </div> 
         </div>
         {/* Row 3 of form */}
         <div className="row formRow">
           <div className="col">
+            <label htmlFor="message">Message</label><br/>
             <textarea
               rows={5}
               name="message"
               className="form-control formInput"
-              placeholder="     Message"
-              id="message" required
+              placeholder="Type message"
             ></textarea>
           </div>
         </div>

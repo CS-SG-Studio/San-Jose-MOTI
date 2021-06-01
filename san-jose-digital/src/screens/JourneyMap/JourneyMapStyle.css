@@ -4,6 +4,7 @@
 
 .title {
   color: rgba(255, 255, 255, 1);
+  margin-top: 10%;
   font-weight: Bold;
   padding: 25px;
   font-size: min(6vw, 60px);
@@ -19,6 +20,7 @@
 .welcome {
   display: flex;
   flex-direction: column;
+  background: #2d2c2c;
 }
 
 .page {
@@ -73,7 +75,6 @@
 
 .circles {
   background: lightblue;
-
   width: min(max(30vw, 130px), 180px);
   height: min(max(30vw, 130px), 180px);
   border-radius: 50%;
@@ -131,6 +132,8 @@
 
 .menu {
   width: 100%;
+  position: fixed;
+  z-index: 1;
   align-items: flex-start;
   background-color: rgb(255, 255, 255);
 }
