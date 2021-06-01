@@ -75,7 +75,6 @@ const ContactForm = () => {
               placeholder="Enter phone number"
               required
               id="phone" 
-              required
             input/>
           </div> 
         </div>
@@ -90,8 +89,9 @@ const ContactForm = () => {
               className="form-control formInput"
               placeholder="Enter subject"
               required
-              value={subject}
-              onChange={onSubjectChange}
+              // TODO
+              // value={subject}
+              // onChange={onSubjectChange}
             input/>
           </div> 
         </div>
@@ -108,8 +108,9 @@ const ContactForm = () => {
           </div>
         </div>
         <button className="submit-btn" type="submit">
-          {status}
+          {status} 
         </button>
+        </div>
       </form>
       {/* TODO: add a "Thank you for contacting us!" page that will appear after they click submit */}
       {/* TODO: connect this to SJDIF email */}
