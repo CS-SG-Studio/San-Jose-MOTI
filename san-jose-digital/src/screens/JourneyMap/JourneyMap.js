@@ -42,21 +42,21 @@ function JourneyMap() {
 
   return (
     <>
-      <header className="menu">
+      <div className="menu">
         <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
-      </header>
+      </div>
       <div className="welcome">
         {openWelcomePage && (
           <WelcomePage setContactForm={setContactForm} handleClose={welcomeStep} />
         )}
       </div>
-      <div>
-        <h1 className="title">
-          YOUR JOURNEY
-          <h6 className="subtitle">WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?</h6>
-        </h1>
+      <div className="header">
+        <h1 className="header-title">YOUR JOURNEY</h1>
+        <h2 className="header-subtitle">
+          WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
+        </h2>
       </div>
       <div className="page">
         <div className="stack">

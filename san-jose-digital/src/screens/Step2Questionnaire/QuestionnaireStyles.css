@@ -44,19 +44,6 @@
   margin-right: 5%;
 }
 
-.header {
-  font-size: 2rem;
-  color: rgba(45, 44, 44, 1);
-  font-weight: Bold;
-}
-
-.subheader {
-  font-size: 1.5rem;
-  color: rgba(45, 44, 44, 1);
-  position: static;
-  font-weight: Bold;
-}
-
 .form {
   padding: 0;
   flex-grow: 1;
@@ -138,3 +125,16 @@ input[type="submit"]:hover {
   cursor: pointer;
   background-color: #87b7c5; /* Green */
 }
+
+/* .header {
+  font-size: 2rem;
+  color: rgba(45, 44, 44, 1);
+  font-weight: Bold;
+} */
+/* 
+.subheader {
+  font-size: 1.5rem;
+  color: rgba(45, 44, 44, 1);
+  position: static;
+  font-weight: Bold;
+} */

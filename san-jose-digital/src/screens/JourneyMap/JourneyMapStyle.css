@@ -1,25 +1,31 @@
 .menu {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  /* TODO: maybe try and find the bug so we don't have to hard code position */
+  left: 0;
+  top: 0;
   background-color: rgb(255, 255, 255);
 }
 
-.title {
-  color: white;
-  /* font-weight: Bold; */
+.header {
   padding: 25px;
-  /* font-size: min(7vw, 70px); */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.subtitle {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding: 10px;
-  font-size: 0.47em;
+.header-title {
+  color: white;
+  margin-bottom: 0;
+}
+
+.header-subtitle {
+  color: white;
 }
 
 .welcome {
   display: flex;
   flex-direction: column;
-  background: #2d2c2c;
 }
 
 .page {
@@ -28,7 +34,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; /*or center*/
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 .stack {
@@ -129,20 +135,9 @@
   color: inherit;
 }
 
-<<<<<<< HEAD ======= .menu {
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  /* align-items: flex-start; */
-  background-color: rgb(255, 255, 255);
-}
->>>>>>>main img {
-  width: max(min(30vw, 300px), 300px);
+img {
+  width: max(min(30vw, 300px), 100px);
   border-radius: 1rem;
-  /* margin-bottom: 100px; */
-  /* margin-top: 100px; */
 }
 
 img:hover {
