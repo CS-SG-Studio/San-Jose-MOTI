@@ -98,6 +98,10 @@ textarea select {
   width: 100%;
 }
 
+/* input[type="text"]:focus {
+  border: 3px solid #555;
+} */
+
 textarea {
   margin: 4px 0;
 }

@@ -19,7 +19,7 @@ const Step1 = (props) => {
         <div className="body">
           {/*Access Programs*/}
           <div className="program">
-            <h2 className="pillars">ACCESS PROGRAMS</h2>
+            {/* <h2 className="pillars">ACCESS PROGRAMS</h2> */}
             <div className="circle">
               <a
                 href="https://www.everyoneon.org"
@@ -36,7 +36,7 @@ const Step1 = (props) => {
 
           {/*Digital Literacy Trainings*/}
           <div className="program">
-            <h2 className="pillars">DIGITAL LITERACY TRAININGS</h2>
+            {/* <h2 className="pillars">DIGITAL LITERACY TRAININGS</h2> */}
             <div className="circle">
               <a
                 href="https://www.google.com" /* not sure what website we want here */
@@ -57,7 +57,7 @@ const Step1 = (props) => {
 
           {/*Device Programs*/}
           <div className="program">
-            <h2 className="pillars">DEVICE PROGRAMS</h2>
+            {/* <h2 className="pillars">DEVICE PROGRAMS</h2> */}
             <div className="circle">
               <a
                 href="https://www.google.com" /* not sure what website we want here */

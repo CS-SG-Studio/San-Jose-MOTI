@@ -25,6 +25,7 @@
   padding: 2rem;
   flex: none;
   order: 0;
+  margin-top: 5%;
   flex-grow: 0;
   /* margin-bottom: 100px; */
   /* margin-top: 100px; */
@@ -91,10 +92,6 @@
   padding: 20px 28px;
   font-size: 25px;
   font-weight: bold;
-}
-
-.welcomecircle:hover {
-  background: #dbecf1;
 }
 
 .link {
