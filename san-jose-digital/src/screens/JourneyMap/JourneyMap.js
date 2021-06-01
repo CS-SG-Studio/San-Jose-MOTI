@@ -33,11 +33,11 @@ function JourneyMap() {
 
   return (
     <Router>
-      <div className="menu">
+      <header className="menu">
         <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
-      </div>
+      </header>
       <div className="welcome">
         <WelcomePage
           setContactForm={setContactForm}

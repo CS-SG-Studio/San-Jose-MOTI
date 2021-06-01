@@ -1,8 +1,13 @@
+.menu {
+  background-color: rgb(255, 255, 255);
+}
+
+
 .title {
   color: white;
   /* font-weight: Bold; */
   padding: 25px;
-  font-size: min(7vw, 70px);
+  /* font-size: min(7vw, 70px); */
 }
 
 .subtitle {
@@ -125,11 +130,6 @@
   color: inherit;
 }
 
-.menu {
-  width: 100%;
-  align-items: flex-start;
-  background-color: rgb(255, 255, 255);
-}
 
 img {
   width: max(min(30vw, 300px), 300px);
