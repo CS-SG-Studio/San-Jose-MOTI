@@ -9,6 +9,50 @@ function Step3(props) {
         <div className="myBar third"></div>
       </div>
       <br />
+      {/* 
+        ADD NEW QUESTION HERE
+      */} 
+      
+      {/* Instructions on adding questions:
+          
+          Note: Replace "variableName" with the name of the new question variable that you initialized in Questionnaire.js
+          
+          For TEXT INPUT questions, use this format:
+            <div className="form-group">
+              <label htmlFor="variableName">[TYPE THE QUETSION HERE]</label>
+              <input
+                className="form-control"
+                id="variableName"
+                name="variableName"
+                type="text"
+                placeholder="Enter ___ here"
+                value={props.variableName}
+                onChange={props.handleChange}
+              />
+            </div> 
+          
+            For questions where user should SELECT AN OPTION, use this format:
+            <div className="form-group">
+              <label htmlFor="variableName">[TYPE THE QUESTION HERE]</label>
+              <select
+                className="form-control"
+                id="variableName"
+                name="variableName"
+                value={props.variableName}
+                onChange={props.handleChange}
+              >
+                <option name="first">[The first option]</option>
+                <option name="second">[The second option]</option>
+                <option name="third">[The third option]</option>
+                ... repeat if you want more options
+              </select>
+            </div>
+
+            Checkbox questions are slightly more complicated and require
+            their own additional functions in Questionnaire.js, so please
+            reach out to the Stanford team (Ricky, Habeeb, Senem, Rachel)
+            if you want to add a checkbox question.
+       */}
       <div className="form-group">
         <label htmlFor="familySize">How many people live in your home?</label>
         <input

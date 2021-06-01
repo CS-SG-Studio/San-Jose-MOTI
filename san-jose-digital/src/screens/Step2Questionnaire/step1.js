@@ -20,6 +20,7 @@ function Step1(props) {
           placeholder="Enter name"
           value={props.name}
           onChange={props.handleChange}
+          required
         />
       </div>
       <div className="form-group">
