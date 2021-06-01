@@ -4,9 +4,9 @@ import "./programStyles.css";
 const Step1 = (props) => {
   return (
     <div className="popup">
-      <span className="close-icon2" onClick={props.handleClose}>
+      {/* <span className="close-icon2" onClick={props.handleClose}>
         &times;
-      </span>
+      </span> */}
       <div className="centering-all">
         <div className="header">
           <h1 className="steptitle">Our Programs</h1>
