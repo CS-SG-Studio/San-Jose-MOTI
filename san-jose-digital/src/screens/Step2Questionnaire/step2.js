@@ -118,10 +118,10 @@ function Step2(props) {
         </select>
       </div>
       <div className="form-group">
-        <p >
-          If you answered yes to the previous question, what kind of device(s)
-          do you own?
-        </p>
+        <p style={{fontWeight:"bold"}}>If you answered yes to the previous question:</p>
+        <label>
+          What kind of device(s) do you own?
+        </label>
         <input
           className="form-control"
           id="desktop"
@@ -184,7 +184,7 @@ function Step2(props) {
           <option name="no">No</option>
         </select>
       </div>
-      <p className="form-group">If you answered yes to the previous question:</p>
+      <p className="form-group" style={{fontWeight:"bold"}}>If you answered yes to the previous question:</p>
       <div class="form-group">
         <label htmlFor="connectsToInternet">
           Do you use your smartphone to connect to the internet?

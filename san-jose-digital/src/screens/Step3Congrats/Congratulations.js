@@ -5,7 +5,7 @@ function Congratulations() {
   return (
     <div className="congrats-page-styling">
       <h1 className="congrats-title">
-        CONGRATULATIONS!
+        Congratulations!
         <p className="congrats-detail">
           Thank you for filling out the questionnaire!
           <br />

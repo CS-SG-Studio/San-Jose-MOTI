@@ -65,7 +65,7 @@ function Step3(props) {
           onChange={props.handleChange}
         />
       </div>
-      <p className="form-group">If you have a child/children in school: </p>
+      <p className="form-group" style={{fontWeight:"bold"}}>If you have a child/children in school: </p>
       <div className="form-group">
         <label htmlFor="schoolDevice">
           Does the school provide a computing device for your child/children in
@@ -115,7 +115,7 @@ function Step3(props) {
           <option name="no">No</option>
         </select>
       </div>
-      <p className="form-group">If you access internet at home:</p>
+      <p className="form-group" style={{fontWeight:"bold"}}>If you access internet at home:</p>
       <div className="form-group">
         <label htmlFor="costOfInternet">
           What is the monthly cost of your internet service?
@@ -143,13 +143,13 @@ function Step3(props) {
           className="form-control"
           id="internetProvider"
           name="internetProvider"
-          placeholder="Enter name of internet service provider"
+          placeholder="Enter name of provider"
           type="text"
           value={props.internetProvider}
           onChange={props.handleChange}
         />
       </div>
-      <p className="form-group">If you do not access internet at home:</p>
+      <p className="form-group" style={{fontWeight:"bold"}}>If you do not access internet at home:</p>
       <div className="form-group">
         <label htmlFor="whereInternetIsAccessed">
           Do you primarily access internet at

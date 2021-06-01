@@ -59,13 +59,13 @@
 
 .header {
   font-size: 2rem;
-  color: rgba(45, 44, 44, 1);
+  color: rgb(0, 0, 0);
   font-weight: Bold;
 }
 
 .subheader {
   font-size: 1.5rem;
-  color: rgba(45, 44, 44, 1);
+  color: rgb(0, 0, 0);
   position: static;
   font-weight: Bold;
 }

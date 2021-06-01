@@ -138,6 +138,7 @@
   top: 0;
   /* align-items: flex-start; */
   background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #2d2c2c;
 }
 
 img {

@@ -4,16 +4,15 @@ import "./programStyles.css";
 const Step1 = (props) => {
   return (
     <div className="popup">
-      {/* <span className="close-icon2" onClick={props.handleClose}>
+      <span className="close-icon2" onClick={props.handleClose}>
         &times;
-      </span> */}
+      </span>
       <div className="centering-all">
         <div className="header">
           <h1 className="steptitle">Our Programs</h1>
           <h2 className="steptitle2">
-            You will gain access to job, education, <br />
-            healthcare, and service opportunities! <br />
-            The following are included in our bundle package:
+            Our bundle package includes low-cose internet packages, digital literacy classes, and access
+            to free devices. <br/>Click on the circles below for more information!
           </h2>
         </div>
         <div className="body">
@@ -28,7 +27,7 @@ const Step1 = (props) => {
                 style={{ textDecoration: "none" }}
               >
                 <h3 className="description">
-                  Click here to get information on a low-cost internet package!
+                  Low-cost internet packages
                 </h3>
               </a>
             </div>
@@ -45,11 +44,7 @@ const Step1 = (props) => {
                 style={{ textDecoration: "none" }}
               >
                 <h3 className="description">
-                  Learn
-                  <br />
-                  how to use a computer and explore the
-                  <br />
-                  internet!
+                  Computer classes and digital literacy trainings
                 </h3>
               </a>
             </div>
@@ -66,16 +61,14 @@ const Step1 = (props) => {
                 style={{ textDecoration: "none" }}
               >
                 <h3 className="description">
-                  Free access
-                  <br />
-                  to computers, laptops, phones, tablets, and other devices.*
+                  Free access to computers, phones, and other devices.*
                 </h3>
               </a>
             </div>
           </div>
         </div>
         <h4 className="footer">
-          *Access to devices are not guaranteed. We operate on a first-come first-serve
+          *Access to devices is not guaranteed. We operate on a first-come first-serve
           basis.
         </h4>
       </div>
