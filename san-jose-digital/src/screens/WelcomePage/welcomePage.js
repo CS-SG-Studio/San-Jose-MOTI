@@ -7,16 +7,21 @@ const WelcomePage = (props) => {
     <div className="welcomePopup">
       <div className="centering">
         <h1 className="welcometitle">ARE YOU LOOKING FOR</h1>
+        <br />
         <div className="threecircles">
           <div className="welcomecircle">
             <h1 className="welcomedescription">LOW-COST INTERNET PACKAGES?</h1>
           </div>
 
           <div className="welcomecircle">
-            <h1 className="welcomedescription">COMPUTER AND INTERNET LESSONS?</h1>
+            <h1 className="welcomedescription">
+              COMPUTER AND INTERNET LESSONS?
+            </h1>
           </div>
           <div className="welcomecircle">
-            <h1 className="welcomedescription">FREE ACCESS TO DIGITAL DEVICES?</h1>
+            <h1 className="welcomedescription">
+              FREE ACCESS TO DIGITAL DEVICES?
+            </h1>
           </div>
         </div>
         <br />
