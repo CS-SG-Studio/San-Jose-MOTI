@@ -203,7 +203,7 @@ const Questionnaire = (props) => {
   };
 
   return (
-    <div className="form-styling">
+    <div className="popup form-styling">
       <React.Fragment>
         <form onSubmit={handleSubmit}>
           <Step0 currentStep={currentStep} />

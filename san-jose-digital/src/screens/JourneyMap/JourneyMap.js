@@ -34,11 +34,7 @@ function JourneyMap() {
   return (
     <Router>
       <div className="menu">
-        <a
-          href="https://www.sjdigitalinclusion.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
       </div>
@@ -53,9 +49,7 @@ function JourneyMap() {
       <div>
         <h1 id="scroll" className="title">
           YOUR JOURNEY
-          <h6 className="subtitle">
-            WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
-          </h6>
+          <h6 className="subtitle">WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?</h6>
         </h1>
       </div>
       <div className="page">
@@ -66,9 +60,7 @@ function JourneyMap() {
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
-            <div className="popups">
-              {openPoppup && <Step1 handleClose={togglePopup} />}
-            </div>
+            <div className="pop">{openPoppup && <Step1 handleClose={togglePopup} />}</div>
           </div>
         </div>
 
@@ -79,7 +71,7 @@ function JourneyMap() {
                 SEE WHAT YOU ARE ELIGIBLE FOR
               </span>
             </div>
-            <div className="popups">
+            <div className="pop">
               {openQuestionnaire && (
                 <Questionnaire
                   setQuestionnaire={setQuestionnaire}
@@ -97,9 +89,7 @@ function JourneyMap() {
                 LEARN MORE ABOUT THE GRANTEES
               </span>
             </div>
-            <div className="popups">
-              {openCongratulationsPage && <Congratulations />}
-            </div>
+            <div className="pop">{openCongratulationsPage && <Congratulations />}</div>
           </div>
         </div>
 
@@ -111,14 +101,13 @@ function JourneyMap() {
               </span>
             </div>
             {openContactForm && (
-              <div className="popups">
+              <div className="pop">
                 <ContactForm />
               </div>
             )}
           </div>
         </div>
       </div>
-      {/* <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div> */}
     </Router>
   );
 }

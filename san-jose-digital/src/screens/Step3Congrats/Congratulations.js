@@ -3,7 +3,7 @@ import "./CongratulationStyles.css";
 
 function Congratulations() {
   return (
-    <div className="congrats-page-styling">
+    <div className="popup congrats-page-styling">
       <h1 className="congrats-title">
         CONGRATULATIONS!
         <p className="congrats-detail">

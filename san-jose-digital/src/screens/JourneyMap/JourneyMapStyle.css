@@ -1,10 +1,6 @@
-* {
-  font-family: "Roboto", sans-serif;
-}
-
 .title {
-  color: rgba(255, 255, 255, 1);
-  font-weight: Bold;
+  color: white;
+  /* font-weight: Bold; */
   padding: 25px;
   font-size: min(7vw, 70px);
 }
@@ -48,7 +44,7 @@
   flex: 1;
 }
 
-.popups {
+.pop {
   display: flex;
   margin-top: 60px;
   margin-bottom: 55px;
@@ -56,7 +52,7 @@
 }
 
 /* connector only appears for last circle if popup is opened */
-.stack:last-child .popups {
+.stack:last-child .pop {
   display: flex;
   border: 5px solid lightblue;
   border-bottom: 0px;

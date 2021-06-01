@@ -23,12 +23,12 @@ const ContactForm = () => {
     let result = await response.json();
     alert(result.status);
   };
+
   return (
-    <div className="ContactForm">
+    <div className="popup ContactForm">
       <p>
         Are you looking for funding, mentorship, collaboration, and volunteering
-        opportunities, or ways to donate to impactful digital inclusion
-        programs? <br />
+        opportunities, or ways to donate to impactful digital inclusion programs? <br />
         <br />
         <a
           href="https://www.sjdigitalinclusion.org/"
@@ -42,8 +42,8 @@ const ContactForm = () => {
       <form id="contact-form" noValidate onSubmit={handleSubmit}>
         {/* Row 1 of form */}
         <p className="text">
-          Questions or comments? We’d love to hear from you! <br /> Fill out the
-          form below to get in touch with our Program Director, Charlene Tatis!
+          Questions or comments? We’d love to hear from you! <br /> Fill out the form
+          below to get in touch with our Program Director, Charlene Tatis!
         </p>
         <div className="row formRow">
           <div className="col-6">
@@ -99,7 +99,8 @@ const ContactForm = () => {
               name="message"
               className="form-control formInput"
               placeholder="     Message"
-              id="message" required
+              id="message"
+              required
             ></textarea>
           </div>
         </div>
@@ -111,6 +112,6 @@ const ContactForm = () => {
       {/* TODO: connect this to SJDIF email */}
     </div>
   );
-}
+};
 
 export default ContactForm;
