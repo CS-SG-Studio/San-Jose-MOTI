@@ -2,7 +2,6 @@ import React from "react";
 import "./welcomePage.css";
 import { Link } from "react-scroll";
 
-
 const WelcomePage = (props) => {
   return (
     <div className="welcomePopup">
@@ -26,8 +25,7 @@ const WelcomePage = (props) => {
           YES? You are in the right place! <br />
           <Link to={props.to} spy={props.spy} smooth={props.smooth}>
             <button className="startNow" onClick={props.handleClose}>
-              {" "}
-              START YOUR JOURNEY AND FOLLOW THE STEPS{" "}
+              START YOUR JOURNEY AND FOLLOW THE STEPS
             </button>
           </Link>
         </h2>
