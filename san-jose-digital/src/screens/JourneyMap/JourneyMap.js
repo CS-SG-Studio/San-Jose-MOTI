@@ -11,7 +11,7 @@ import logo from "../../../src/sjdi-logo.png";
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
   const togglePopup = () => {
-    welcomeStep();
+    // welcomeStep();
     setOpenPoppup(!openPoppup);
   };
 
@@ -19,26 +19,26 @@ function JourneyMap() {
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
     setCongratulationsPage(false);
-    welcomeStep();
+    // welcomeStep();
     // togglePopup();
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
   const congratulationsStep = () => {
-    welcomeStep();
+    // welcomeStep();
     setCongratulationsPage(!openCongratulationsPage);
   };
 
   const [openContactForm, setContactForm] = useState(false);
   const contactStep = () => {
-    welcomeStep();
+    // welcomeStep();
     setContactForm(!openContactForm);
   };
 
-  const [openWelcomePage, setOpenWelcomePage] = useState(true);
-  const welcomeStep = () => {
-    setOpenWelcomePage(false);
-  }
+  // const [openWelcomePage, setOpenWelcomePage] = useState(true);
+  // const welcomeStep = () => {
+  //   setOpenWelcomePage(false);
+  // }
 
   return (
     <div>
@@ -53,10 +53,17 @@ function JourneyMap() {
       </div>
       <div id="step1"></div>
       <div className="welcome">
+        <WelcomePage
+          setContactForm={setContactForm}
+          to="scroll"
+          spy={true}
+          smooth={true}
+        />
+      {/* <div className="welcome">
         {openWelcomePage && <WelcomePage
           setContactForm={setContactForm}
           handleClose={welcomeStep}
-        />}
+        />} */}
       </div>
       <div>
         <h1 className="title">
