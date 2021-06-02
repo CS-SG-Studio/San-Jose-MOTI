@@ -11,7 +11,6 @@ import logo from "../../../src/sjdi-logo.png";
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
   const togglePopup = () => {
-    welcomeStep();
     setOpenPoppup(!openPoppup);
   };
 
@@ -19,26 +18,23 @@ function JourneyMap() {
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
     setCongratulationsPage(false);
-    welcomeStep();
     // togglePopup();
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
   const congratulationsStep = () => {
-    welcomeStep();
     setCongratulationsPage(!openCongratulationsPage);
   };
 
   const [openContactForm, setContactForm] = useState(false);
   const contactStep = () => {
-    welcomeStep();
     setContactForm(!openContactForm);
   };
 
-  const [openWelcomePage, setOpenWelcomePage] = useState(true);
-  const welcomeStep = () => {
-    setOpenWelcomePage(false);
-  }
+  // const [openWelcomePage, setOpenWelcomePage] = useState(true);
+  // const welcomeStep = () => {
+  //   setOpenWelcomePage(false);
+  // }
 
   return (
     <div>
@@ -51,13 +47,13 @@ function JourneyMap() {
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
       </div>
-      <div id="step1"></div>
       <div className="welcome">
-        {openWelcomePage && <WelcomePage
+        <WelcomePage
           setContactForm={setContactForm}
-          handleClose={welcomeStep}
-        />}
+          setPoppup={setOpenPoppup}
+        />
       </div>
+      <div className="line-divider"></div>
       <div>
         <h1 className="title">
           YOUR JOURNEY
@@ -70,7 +66,7 @@ function JourneyMap() {
         <div className="stack">
           <div className="on-right">
             <div className="circles" onClick={togglePopup}>
-              <span className="instruction" onClick={togglePopup}>
+              <span className="instruction" id="step1" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
