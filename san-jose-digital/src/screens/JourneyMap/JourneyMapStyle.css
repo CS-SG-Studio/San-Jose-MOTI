@@ -2,6 +2,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .line{
   margin-top: 1%;
   border: 1px solid lightblue;
