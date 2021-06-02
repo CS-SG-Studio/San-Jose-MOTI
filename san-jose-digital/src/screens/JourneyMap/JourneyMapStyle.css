@@ -10,11 +10,11 @@ html {
   margin-top: 1%;
   border: 1px solid lightblue;
   width: 70%;
-
 }
 
 .title {
   color: rgba(255, 255, 255, 1);
+  margin-top: 0%;
   font-weight: Bold;
   margin-top: 5%;
   padding: 25px;
@@ -150,6 +150,10 @@ html {
   /* align-items: flex-start; */
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #2d2c2c;
+}
+
+.line-divider {
+  border-bottom: 3px solid lightblue;
 }
 
 img {

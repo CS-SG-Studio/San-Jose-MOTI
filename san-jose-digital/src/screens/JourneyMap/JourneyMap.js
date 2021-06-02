@@ -54,7 +54,17 @@ function JourneyMap() {
       <div className="welcome">
         <WelcomePage
           setContactForm={setContactForm}
+          setPoppup={setOpenPoppup}
         />
+      </div>
+      <div className="line-divider"></div>
+      <div>
+        <h1 className="title">
+          YOUR JOURNEY
+          <h6 className="subtitle">
+            WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
+          </h6>
+        </h1>
       </div>
       <hr className="line" id="step1" ></hr>
       <h1 className="title">
@@ -67,7 +77,7 @@ function JourneyMap() {
         <div className="stack">
           <div className="on-right">
             <div className="circles" onClick={togglePopup}>
-              <span className="instruction" onClick={togglePopup}>
+              <span className="instruction" id="step1" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
