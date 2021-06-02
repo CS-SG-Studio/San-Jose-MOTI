@@ -51,21 +51,12 @@ function JourneyMap() {
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
       </div>
-      <div id="step1"></div>
       <div className="welcome">
         <WelcomePage
           setContactForm={setContactForm}
-          to="scroll"
-          spy={true}
-          smooth={true}
         />
-        {/* <div className="welcome">
-        {openWelcomePage && <WelcomePage
-          setContactForm={setContactForm}
-          handleClose={welcomeStep}
-        />} */}
       </div>
-      <hr id="scroll" className="line" ></hr>
+      <hr className="line" id="step1" ></hr>
       <h1 className="title">
         YOUR JOURNEY
         <h6 className="subtitle">

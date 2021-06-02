@@ -34,17 +34,15 @@ const WelcomePage = (props) => {
         <br />
         <h2 className="welcometitle two">
           YES? You are in the right place! <br />
-          <Link to={props.to} spy={props.spy} smooth={props.smooth}>
-            <button className="startNow" onClick={props.handleClose}>
-              <a
+          <a
                 href="#step1"
                 rel="noreferrer"
                 style={{ textDecoration: "none", color: "black" }}
               >
+            <button className="startNow" onClick={props.handleClose}>
                 START YOUR JOURNEY AND FOLLOW THE STEPS
-              </a>
             </button>
-          </Link>
+          </a>
         </h2>
         <h2 className="welcometitle two">
           NO? Scroll down to{" "}
