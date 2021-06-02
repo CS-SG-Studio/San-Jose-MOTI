@@ -13,7 +13,7 @@
   font-weight: normal;
 }
 
-.link {
+/* .link {
   text-decoration: inherit;
   color: inherit;
   background-color: lightblue;
@@ -24,7 +24,7 @@
   border-radius: 4px;
   padding-right: 6px;
   padding-left: 6px;
-}
+} */
 
 .link:hover {
   background-color: rgb(186, 224, 236);

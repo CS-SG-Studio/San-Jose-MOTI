@@ -1,9 +1,11 @@
-@import "../styles.css";
+@import "../styles.css"; /* imports form styling */
 
 * {
   /* border: 0.1px solid red; */
 }
 
+/* progress bar */
+/* TODO: see if we can make it dynamic */
 .myProgress {
   display: flex;
   border-radius: 100px;
@@ -29,73 +31,3 @@
   width: 67%;
 }
 
-.form-group {
-  text-align: left;
-  margin: 10px;
-}
-
-input[type="text"],
-input[type="textarea"],
-input[type="number"],
-input[type="email"],
-textarea,
-select {
-  display: flex;
-  padding: 5px 10px;
-  margin: 4px 0;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-  width: 100%;
-}
-
-input[type="text"]:focus,
-input[type="textarea"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="checkbox"]:focus,
-textarea:focus,
-select:focus {
-  box-shadow: 0 0 8px lightblue;
-  border: 2px solid lightblue;
-  outline: lightblue;
-}
-
-input[type="checkbox"] {
-  margin: 5px;
-}
-
-select {
-  display: inline;
-  width: auto;
-  margin: 5px 0 0 5px;
-  padding: 3px 8px;
-}
-
-input[type="radio"],
-select {
-  position: relative;
-  align-self: top;
-  background-color: #eee;
-  border-radius: 4px;
-}
-
-button,
-input[type="submit"] {
-  background-color: lightblue;
-  padding: 10px 28px;
-  border: none;
-  font-size: 1rem;
-  border-radius: 4px;
-  margin: 20px 40px 0 40px;
-  width: 120px;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  cursor: pointer;
-  background-color: #87b7c5; /* Green */
-}
-
-select:hover {
-  cursor: pointer;
-}

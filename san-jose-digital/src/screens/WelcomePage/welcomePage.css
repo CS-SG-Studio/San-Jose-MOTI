@@ -73,22 +73,8 @@
 }
 
 .startNow {
-  padding: 20px 28px;
-  font-size: 25px;
+  /* padding: 20px 28px; */
+  /* font-size: 25px; */
   font-weight: bold;
 }
 
-.link {
-  text-decoration: inherit;
-  color: inherit;
-  font-weight: bold;
-  border: none;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  border-radius: 4px;
-  padding-right: 6px;
-  padding-left: 6px;
-  color: #000000;
-  background: #d5f0f8;
-}

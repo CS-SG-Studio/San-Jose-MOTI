@@ -20,22 +20,22 @@ const WelcomePage = (props) => {
           </div>
 
           <div className="welcomecircle">
-            <h1 className="welcomedescription">
-              COMPUTER AND INTERNET LESSONS?
-            </h1>
+            <h1 className="welcomedescription">COMPUTER AND INTERNET LESSONS?</h1>
           </div>
           <div className="welcomecircle">
-            <h1 className="welcomedescription">
-              FREE ACCESS TO DIGITAL DEVICES?
-            </h1>
+            <h1 className="welcomedescription">FREE ACCESS TO DIGITAL DEVICES?</h1>
           </div>
         </div>
         <br />
         <h2 className="welcometitle two">
           YES? You are in the right place! <br />
           <button className="startNow" onClick={props.handleClose}>
-            <a href="#step1" rel="noreferrer" style={{textDecoration:"none", color: "black"}} >
-              START YOUR JOURNEY AND FOLLOW THE STEPS
+            <a
+              href="#step1"
+              rel="noreferrer"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <p style={{ margin: "0" }}>START YOUR JOURNEY AND FOLLOW THE STEPS</p>
             </a>
           </button>
           {/* </a> */}

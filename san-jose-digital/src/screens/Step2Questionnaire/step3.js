@@ -40,6 +40,7 @@ function Step3(props) {
                 value={props.variableName}
                 onChange={props.handleChange}
               >
+                <option name="blank"> </option>
                 <option name="first">[The first option]</option>
                 <option name="second">[The second option]</option>
                 <option name="third">[The third option]</option>
@@ -53,7 +54,9 @@ function Step3(props) {
             if you want to add a checkbox question.
        */}
       <div className="form-group">
-        <label htmlFor="familySize">How many people live in your home?</label>
+        <label htmlFor="familySize">
+          <b>How many people live in your home?</b>
+        </label>
         <input
           className="form-control"
           id="familySize"
@@ -64,122 +67,150 @@ function Step3(props) {
           onChange={props.handleChange}
         />
       </div>
-      <p className="form-group">If you have a child/children in school: </p>
+
       <div className="form-group">
-        <label htmlFor="schoolDevice">
-          Does the school provide a computing device for your child/children in class?
+        <label>
+          <b>
+            <u>If you have a child/children in school: </u>
+          </b>
         </label>
-        <select
-          className="form-control"
-          id="schoolDevice"
-          name="schoolDevice"
-          value={props.schoolDevice}
-          onChange={props.handleChange}
-        >
-          <option name="blank"> </option>
-          <option name="yes">Yes</option>
-          <option name="no">No</option>
-        </select>
+      </div>
+      <div style={{ padding: "0 0 0 20px" }}>
+        <div className="form-group">
+          <label htmlFor="schoolDevice">
+            Does the school provide a computing device for your child/children in class?
+          </label>
+          <select
+            className="form-control"
+            id="schoolDevice"
+            name="schoolDevice"
+            value={props.schoolDevice}
+            onChange={props.handleChange}
+          >
+            <option name="blank"> </option>
+            <option name="yes">Yes</option>
+            <option name="no">No</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="bringDeviceHome">
+            Is your child/children allowed to bring home the device to do homework and to
+            be used by the family?
+          </label>
+          <select
+            className="form-control"
+            id="bringDeviceHome"
+            name="bringDeviceHome"
+            value={props.bringDeviceHome}
+            onChange={props.handleChange}
+          >
+            <option name="blank"> </option>
+            <option name="yes">Yes</option>
+            <option name="no">No</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="homeInternet">Do you have internet access at home?</label>
+          <select
+            className="form-control"
+            id="homeInternet"
+            name="homeInternet"
+            value={props.homeInternet}
+            onChange={props.handleChange}
+          >
+            <option name="blank"> </option>
+            <option name="yes">Yes</option>
+            <option name="no">No</option>
+          </select>
+        </div>
       </div>
       <div className="form-group">
-        <label htmlFor="bringDeviceHome">
-          Is your child/children allowed to bring home the device to do homework and to be
-          used by the family?
+        <label>
+          <b>
+            <u>If you access internet at home:</u>
+          </b>
         </label>
-        <select
-          className="form-control"
-          id="bringDeviceHome"
-          name="bringDeviceHome"
-          value={props.bringDeviceHome}
-          onChange={props.handleChange}
-        >
-          <option name="none"> </option>
-          <option name="yes">Yes</option>
-          <option name="no">No</option>
-        </select>
+      </div>
+      <div style={{ padding: "0 0 0 20px" }}>
+        <div className="form-group">
+          <label htmlFor="costOfInternet">
+            What is the monthly cost of your internet service?
+          </label>
+          <select
+            className="form-control"
+            id="costOfInternet"
+            name="costOfInternet"
+            value={props.costOfInternet}
+            onChange={props.handleChange}
+          >
+            <option name="blank"> </option>
+            <option name="1">$9.99 or less</option>
+            <option name="2">$10-14.99</option>
+            <option name="3">$15-20.99</option>
+            <option name="4">$21 or more</option>
+            <option name="notSure">I do not know</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="internetProvider">Who is your internet service provider?</label>
+          <input
+            className="form-control"
+            id="internetProvider"
+            name="internetProvider"
+            placeholder="Enter name of internet service provider"
+            type="text"
+            value={props.internetProvider}
+            onChange={props.handleChange}
+          />
+        </div>
       </div>
       <div className="form-group">
-        <label htmlFor="homeInternet">Do you have internet access at home?</label>
-        <select
-          className="form-control"
-          id="homeInternet"
-          name="homeInternet"
-          value={props.homeInternet}
-          onChange={props.handleChange}
-        >
-          <option name="yes">Yes</option>
-          <option name="no">No</option>
-        </select>
-      </div>
-      <p className="form-group">If you access internet at home:</p>
-      <div className="form-group">
-        <label htmlFor="costOfInternet">
-          What is the monthly cost of your internet service?
+        <label>
+          <b>
+            <u>If you do not access internet at home:</u>
+          </b>
         </label>
-        <select
-          className="form-control"
-          id="costOfInternet"
-          name="costOfInternet"
-          value={props.costOfInternet}
-          onChange={props.handleChange}
-        >
-          <option name="blank"> </option>
-          <option name="1">$9.99 or less</option>
-          <option name="2">$10-14.99</option>
-          <option name="3">$15-20.99</option>
-          <option name="4">$21 or more</option>
-          <option name="notSure">I do not know</option>
-        </select>
       </div>
-      <div className="form-group">
-        <label htmlFor="internetProvider">Who is your internet service provider?</label>
-        <input
-          className="form-control"
-          id="internetProvider"
-          name="internetProvider"
-          placeholder="Enter name of internet service provider"
-          type="text"
-          value={props.internetProvider}
-          onChange={props.handleChange}
-        />
+      <div style={{ padding: "0 0 0 20px" }}>
+        <div className="form-group">
+          <label htmlFor="whereInternetIsAccessed">
+            Do you primarily access internet at
+          </label>
+          <select
+            className="form-control"
+            id="whereInternetIsAccessed"
+            name="whereInternetIsAccessed"
+            value={props.whereInternetIsAccessed}
+            onChange={props.handleChange}
+          >
+            <option name="blank"> </option>
+            <option name="work">Work</option>
+            <option name="library">Library</option>
+            <option name="someoneElsesHouse">Someone else's house</option>
+            <option name="other">Other</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="interestedInHomeInternet">
+            Are you interested in learning about affordable home internet offers?
+          </label>
+          <select
+            className="form-control"
+            id="interestedInHomeInternet"
+            name="interestedInHomeInternet"
+            value={props.interestedInHomeInternet}
+            onChange={props.handleChange}
+          >
+            <option name="blank"> </option>
+            <option name="yes">Yes</option>
+            <option name="no">No</option>
+          </select>
+        </div>
       </div>
-      <p className="form-group">If you do not access internet at home:</p>
-      <div className="form-group">
-        <label htmlFor="whereInternetIsAccessed">
-          Do you primarily access internet at
-        </label>
-        <select
-          className="form-control"
-          id="whereInternetIsAccessed"
-          name="whereInternetIsAccessed"
-          value={props.whereInternetIsAccessed}
-          onChange={props.handleChange}
-        >
-          <option name="blank"> </option>
-          <option name="work">Work</option>
-          <option name="library">Library</option>
-          <option name="someoneElsesHouse">Someone else's house</option>
-          <option name="other">Other</option>
-        </select>
-      </div>
-      <div className="form-group">
-        <label htmlFor="interestedInHomeInternet">
-          Are you interested in learning about affordable home internet offers?
-        </label>
-        <select
-          className="form-control"
-          id="interestedInHomeInternet"
-          name="interestedInHomeInternet"
-          value={props.interestedInHomeInternet}
-          onChange={props.handleChange}
-        >
-          <option name="yes">Yes</option>
-          <option name="no">No</option>
-        </select>
-      </div>
+
       <div className="form-group">
         <label htmlFor="experienceUsingComputer">
-          Do you have experience using a computing device?
+          <b>Do you have experience using a computing device?</b>
         </label>
         <select
           className="form-control"
@@ -188,30 +219,33 @@ function Step3(props) {
           value={props.experienceUsingComputer}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="amountOfExperience">
-          If you have experience using a computing device, do you consider yourself to be
-          a:
-        </label>
-        <select
-          className="form-control"
-          id="amountOfExperience"
-          name="amountOfExperience"
-          value={props.amountOfExperience}
-          onChange={props.handleChange}
-        >
-          <option name="beginner">Beginner User</option>
-          <option name="intermediate">Intermediate User</option>
-          <option name="advanced">Advanced User</option>
-        </select>
+        <div style={{ padding: "0 0 0 20px" }}>
+          <label htmlFor="amountOfExperience">
+            If you have experience using a computing device, do you consider yourself to
+            be a:
+          </label>
+          <select
+            className="form-control"
+            id="amountOfExperience"
+            name="amountOfExperience"
+            value={props.amountOfExperience}
+            onChange={props.handleChange}
+          >
+            <option name="beginner">Beginner User</option>
+            <option name="intermediate">Intermediate User</option>
+            <option name="advanced">Advanced User</option>
+          </select>
+        </div>
       </div>
       <div className="form-group">
         <label htmlFor="interestedInFreeClasses">
-          Are you interested in learning about FREE computer classes?
+          <b>Are you interested in learning about FREE computer classes?</b>
         </label>
         <select
           className="form-control"
@@ -220,13 +254,17 @@ function Step3(props) {
           value={props.interestedInFreeClasses}
           onChange={props.handleChange}
         >
+          <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
       </div>
       <div className="form-group">
         <label htmlFor="anyOtherComments">
-          Do you have other questions or comments for the grantees? Please list them here!
+          <b>
+            Do you have other questions or comments for the grantees? Please list them
+            here!
+          </b>
         </label>
         <textarea
           className="form-control"

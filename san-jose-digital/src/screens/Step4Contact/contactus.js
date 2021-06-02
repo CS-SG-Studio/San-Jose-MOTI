@@ -41,12 +41,12 @@ const ContactForm = () => {
       </p>
       <form id="contact-form" noValidate onSubmit={handleSubmit}>
         {/* Row 1 of form */}
-        <p className="text">
+        <p>
           Questions or comments? We’d love to hear from you! <br /> Fill out the form
           below to get in touch with our Program Director, Charlene Tatis!
         </p>
-        <div className="row formRow">
-          <div className="col-6">
+        {/* <div className="row formRow"> */}
+          <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -56,7 +56,7 @@ const ContactForm = () => {
               input
             />
           </div>
-          <div className="col-6">
+          <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -68,7 +68,7 @@ const ContactForm = () => {
               input
             />
           </div>
-          <div className="col-6">
+          <div className="form-group">
             <label htmlFor="phone">Phone number</label>
             <input
               type="number"
@@ -80,44 +80,38 @@ const ContactForm = () => {
               input
             />
           </div>
-        </div>
+        {/* </div> */}
         {/* Row 2 of form */}
-        <div className="row formRow">
-          <div className="col">
-            <label htmlFor="subject">Subject</label>
-            <div className="col">
-              <input
-                type="text"
-                name="subject"
-                className="form-control formInput"
-                placeholder="Enter subject"
-                required
-                // TODO
-                // value={subject}
-                // onChange={onSubjectChange}
-                input
-              />
-            </div>
-          </div>
-          {/* Row 3 of form */}
-          <div className="row formRow">
-            <div className="col">
-              <label htmlFor="message">Message</label>
-              <br />
-              <textarea
-                rows={5}
-                name="message"
-                className="form-control formInput"
-                placeholder="     Message"
-                id="message"
-                required
-              ></textarea>
-            </div>
-          </div>
-          <button className="submit-btn" type="submit">
-            {status}
-          </button>
+        <div className="form-group">
+          <label htmlFor="subject">Subject</label>
+          <input
+            type="text"
+            name="subject"
+            className="form-control formInput"
+            placeholder="Enter subject"
+            required
+            // TODO
+            // value={subject}
+            // onChange={onSubjectChange}
+            input
+          />
         </div>
+        {/* Row 3 of form */}
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <br />
+          <textarea
+            rows={5}
+            name="message"
+            className="form-control formInput"
+            placeholder="     Message"
+            id="message"
+            required
+          ></textarea>
+        </div>
+        <button className="submit-btn" type="submit">
+          {status}
+        </button>
       </form>
       {/* TODO: add a "Thank you for contacting us!" page that will appear after they click submit */}
       {/* TODO: connect this to SJDIF email */}
