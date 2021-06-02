@@ -1,15 +1,14 @@
 function Step1(props) {
   console.log(props.currentStep);
   if (props.currentStep !== 1) {
-    return null
-  } 
+    return null;
+  }
   return (
-    <container>
-      <h1>Step 1</h1>
+    <>
+      <h3 className="popup-title">Step 1</h3>
       <div className="myProgress">
         <div className="myBar first"></div>
       </div>
-      <br />
       <div className="form-group">
         <label htmlFor="name">Name</label>
         <input
@@ -96,10 +95,12 @@ function Step1(props) {
           <option name="english">English</option>
           <option name="spanish">Spanish</option>
           <option name="vietnamese">Vietnamese</option>
-          <option type="text" name="other">Other</option>
+          <option type="text" name="other">
+            Other
+          </option>
         </select>
       </div>
-    </container>
+    </>
   );
 }
 

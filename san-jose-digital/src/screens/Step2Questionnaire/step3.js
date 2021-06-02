@@ -1,25 +1,24 @@
 function Step3(props) {
   if (props.currentStep !== 3) {
-    return null
-  } 
+    return null;
+  }
   return (
-    <container>
-      <h1>Step 3</h1>
+    <>
+      <h3 className="popup-title">Step 3</h3>
       <div className="myProgress">
         <div className="myBar third"></div>
       </div>
-      <br />
       {/* 
         ADD NEW QUESTION HERE
-      */} 
-      
+      */}
+
       {/* Instructions on adding questions:
           
           Note: Replace "variableName" with the name of the new question variable that you initialized in Questionnaire.js
           
           For TEXT INPUT questions, use this format:
             <div className="form-group">
-              <label htmlFor="variableName">[TYPE THE QUETSION HERE]</label>
+              <label htmlFor="variableName">[TYPE THE QUESTION HERE]</label>
               <input
                 className="form-control"
                 id="variableName"
@@ -68,8 +67,7 @@ function Step3(props) {
       <p className="form-group">If you have a child/children in school: </p>
       <div className="form-group">
         <label htmlFor="schoolDevice">
-          Does the school provide a computing device for your child/children in
-          class?
+          Does the school provide a computing device for your child/children in class?
         </label>
         <select
           className="form-control"
@@ -85,8 +83,8 @@ function Step3(props) {
       </div>
       <div className="form-group">
         <label htmlFor="bringDeviceHome">
-          Is your child/children allowed to bring home the device to do homework
-          and to be used by the family?
+          Is your child/children allowed to bring home the device to do homework and to be
+          used by the family?
         </label>
         <select
           className="form-control"
@@ -101,9 +99,7 @@ function Step3(props) {
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="homeInternet">
-          Do you have internet access at home?
-        </label>
+        <label htmlFor="homeInternet">Do you have internet access at home?</label>
         <select
           className="form-control"
           id="homeInternet"
@@ -136,9 +132,7 @@ function Step3(props) {
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="internetProvider">
-          Who is your internet service provider?
-        </label>
+        <label htmlFor="internetProvider">Who is your internet service provider?</label>
         <input
           className="form-control"
           id="internetProvider"
@@ -200,8 +194,8 @@ function Step3(props) {
       </div>
       <div className="form-group">
         <label htmlFor="amountOfExperience">
-          If you have experience using a computing device, do you consider
-          yourself to be a:
+          If you have experience using a computing device, do you consider yourself to be
+          a:
         </label>
         <select
           className="form-control"
@@ -231,19 +225,21 @@ function Step3(props) {
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="anyOtherComments">Do you have other questions or comments for the grantees? Please list them here!</label>
+        <label htmlFor="anyOtherComments">
+          Do you have other questions or comments for the grantees? Please list them here!
+        </label>
         <textarea
-            className="form-control"
-            id="anyOtherComments"
-            name="anyOtherComments"
-            type="textarea"
-            value={props.anyOtherComments}
-            onChange={props.handleChange}
-            rows="6"
-            cols="60"
+          className="form-control"
+          id="anyOtherComments"
+          name="anyOtherComments"
+          type="textarea"
+          value={props.anyOtherComments}
+          onChange={props.handleChange}
+          rows="6"
+          cols="60"
         />
-    </div>
-    </container>
+      </div>
+    </>
   );
 }
 

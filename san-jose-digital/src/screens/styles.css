@@ -1,13 +1,13 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  border: 0.1px solid red;
+  /* border: 0.1px solid red; */
 }
 
 .popup-title {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0;
+  margin:0;
 }
 
 .popup-subtitle {
@@ -17,11 +17,26 @@
 
 /* font sizing */
 /* font-size: max(min(changing size, largest it can get), smallest it can get) */
-a {color: black;}
-h1 {font-size: max(min(8vw, 80px), 50px);}  
-h2 {font-size: max(min(4vw, 40px), 30px);}
-h3 {font-size: max(min(3.5vw, 35px), 25px);}
-p {font-size: max(min(2vw, 20px), 14px);};
+a {
+  color: black;
+}
+h1 {
+  font-size: max(min(7vw, 70px), 50px);
+}
+h2 {
+  font-size: max(min(4vw, 40px), 30px);
+}
+h3 {
+  font-size: max(min(3.5vw, 35px), 25px);
+}
+p {
+  font-size: max(min(2vw, 20px), 14px);
+}
+label {
+  font-size: max(min(1vw, 17px), 15px);
+  padding: 2px;
+}
+
 /* doesn't work rn */
 /* .popup-programs {
   border-radius: 2rem;

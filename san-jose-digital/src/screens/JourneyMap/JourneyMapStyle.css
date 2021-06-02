@@ -8,19 +8,23 @@
   background-color: rgb(255, 255, 255);
 }
 
+img {
+  width: max(min(20vw, 250px), 150px);
+  border-radius: 0.7rem;
+}
+
+img:hover {
+  transform: scale(0.995);
+  filter: opacity(95%);
+}
+
 .header {
   padding: 25px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  color: white;
 }
 
-.header-title {
-  color: white;
+.header-title{
   margin-bottom: 0;
-}
-
-.header-subtitle {
-  color: white;
 }
 
 .welcome {
@@ -133,14 +137,4 @@
 .link {
   text-decoration: inherit;
   color: inherit;
-}
-
-img {
-  width: max(min(30vw, 300px), 100px);
-  border-radius: 1rem;
-}
-
-img:hover {
-  transform: scale(0.995);
-  filter: opacity(95%);
 }

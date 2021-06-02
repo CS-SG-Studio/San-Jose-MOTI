@@ -1,19 +1,21 @@
 function Step2(props) {
   if (props.currentStep !== 2) {
-    return null
-  } 
+    return null;
+  }
   return (
-    <container>
-      <h1>Step 2</h1>
+    <>
+      <h3 className="popup-title">Step 2</h3>
       <div className="myProgress">
         <div className="myBar second"></div>
       </div>
-      <br />
       <div className="form-group">
-        <p>
-          Do you currently qualify for any of the following programs? Please
-          check any that apply.
-        </p>
+        <label>
+          {/* <b> */}
+          Do you currently qualify for any of the following programs? Please check any
+          that apply.
+          {/* </b> */}
+        </label>
+        <br />
         <input
           className="form-control"
           id="program1"
@@ -36,9 +38,7 @@ function Step2(props) {
           value={props.program2}
           onChange={props.onChangeProgram2}
         />
-        <label htmlFor="program2">
-          CalFresh (food stamps)
-        </label>
+        <label htmlFor="program2">CalFresh (food stamps)</label>
         <br />
         <input
           className="form-control"
@@ -49,9 +49,7 @@ function Step2(props) {
           value={props.program3}
           onChange={props.onChangeProgram3}
         />
-        <label htmlFor="program3">
-          Supplemental Security Income (SSI)  
-        </label>
+        <label htmlFor="program3">Supplemental Security Income (SSI)</label>
         <br />
         <input
           className="form-control"
@@ -84,9 +82,7 @@ function Step2(props) {
           value={props.program6}
           onChange={props.onChangeProgram6}
         />
-        <label htmlFor="program6">
-          Supplemental Nutrition Assistance Program (SNAP) 
-        </label>
+        <label htmlFor="program6">Supplemental Nutrition Assistance Program (SNAP)</label>
         <br />
         <input
           className="form-control"
@@ -97,14 +93,12 @@ function Step2(props) {
           value={props.program7}
           onChange={props.onChangeProgram7}
         />
-        <label htmlFor="program7">
-          Social Security Disability Insurance (SSDI) 
-        </label>
+        <label htmlFor="program7">Social Security Disability Insurance (SSDI)</label>
       </div>
       <div className="form-group">
         <label htmlFor="device">
-          Do you have a working computing device (such as a desktop, laptop, or
-          tablet) at home?
+          Do you have a working computing device (such as a desktop, laptop, or tablet) at
+          home?
         </label>
         <select
           className="form-control"
@@ -118,10 +112,10 @@ function Step2(props) {
         </select>
       </div>
       <div className="form-group">
-        <p >
-          If you answered yes to the previous question, what kind of device(s)
-          do you own?
-        </p>
+        <label>
+          If you answered yes to the previous question, what kind of device(s) do you own?
+        </label>
+        <br />
         <input
           className="form-control"
           id="desktop"
@@ -154,9 +148,7 @@ function Step2(props) {
         <label htmlFor="tablet">Tablet</label>
       </div>
       <div class="form-group">
-        <label htmlFor="deviceAmount">
-          How many devices do you have in your home?
-        </label>
+        <label htmlFor="deviceAmount">How many devices do you have in your home?</label>
         <select
           className="form-control"
           id="deviceAmount"
@@ -184,7 +176,7 @@ function Step2(props) {
           <option name="no">No</option>
         </select>
       </div>
-      <p className="form-group">If you answered yes to the previous question:</p>
+      <label className="form-group">If you answered yes to the previous question:</label>
       <div class="form-group">
         <label htmlFor="connectsToInternet">
           Do you use your smartphone to connect to the internet?
@@ -231,8 +223,8 @@ function Step2(props) {
       </div>
       <div class="form-group">
         <label htmlFor="hotspot">
-          Do you ever use your smartphone as a “hotspot” to connect another
-          device to the Internet?
+          Do you ever use your smartphone as a “hotspot” to connect another device to the
+          Internet?
         </label>
         <select
           className="form-control"
@@ -246,7 +238,7 @@ function Step2(props) {
           <option name="no">No</option>
         </select>
       </div>
-    </container>
+    </>
   );
 }
 export default Step2;

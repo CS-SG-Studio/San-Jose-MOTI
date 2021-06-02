@@ -1,5 +1,6 @@
 /* @import "../styles.css"; */
 
+/* popup container */
 .popup.programs {
   display: flex;
   flex-direction: column;
@@ -24,27 +25,25 @@
 
 .circle-heading {
   margin: 0px;
-  font-size: max(min(2vw, 18px), 10px);
+  font-size: max(min(2vw, 15px), 10px);
 }
 
 .circle-program {
   display: flex;
   align-items: center;
   padding: 1rem;
-  width: max(min(20vw, 170px), 90px);
-  height: max(min(20vw, 170px), 90px);
+  width: max(min(20vw, 150px), 90px);
+  height: max(min(20vw, 150px), 90px);
   background: #d5f0f8;
-  border-radius: 225px;
+  border-radius: 50%;
 }
 
-.circle:hover {
-  background: #cae4ec;
+.circle-program:hover {
+  background: lightblue;
 }
 
 .description {
-  position: center;
-  display: flex;
-  font-size: max(min(2vw, 18px), 9px);
+  font-size: max(min(2vw, 15px), 9px);
 }
 
 .footer {
