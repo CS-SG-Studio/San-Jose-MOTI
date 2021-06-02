@@ -59,20 +59,19 @@ function JourneyMap() {
           spy={true}
           smooth={true}
         />
-      {/* <div className="welcome">
+        {/* <div className="welcome">
         {openWelcomePage && <WelcomePage
           setContactForm={setContactForm}
           handleClose={welcomeStep}
         />} */}
       </div>
-      <div>
-        <h1 className="title">
-          YOUR JOURNEY
-          <h6 className="subtitle">
-            WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
-          </h6>
-        </h1>
-      </div>
+      <hr id="scroll" className="line" ></hr>
+      <h1 className="title">
+        YOUR JOURNEY
+        <h6 className="subtitle">
+          WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
+        </h6>
+      </h1>
       <div className="page">
         <div className="stack">
           <div className="on-right">
