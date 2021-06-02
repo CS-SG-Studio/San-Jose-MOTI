@@ -68,7 +68,7 @@ function JourneyMap() {
         <div className="stack">
           <div className="on-right">
             <div className="circles" onClick={togglePopup}>
-              <span className="instruction" id="step1" onClick={togglePopup}>
+              <span className="instruction" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
