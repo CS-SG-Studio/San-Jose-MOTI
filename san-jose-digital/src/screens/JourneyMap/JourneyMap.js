@@ -57,15 +57,6 @@ function JourneyMap() {
           setPoppup={setOpenPoppup}
         />
       </div>
-      <div className="line-divider"></div>
-      <div>
-        <h1 className="title">
-          YOUR JOURNEY
-          <h6 className="subtitle">
-            WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
-          </h6>
-        </h1>
-      </div>
       <hr className="line" id="step1" ></hr>
       <h1 className="title">
         YOUR JOURNEY
