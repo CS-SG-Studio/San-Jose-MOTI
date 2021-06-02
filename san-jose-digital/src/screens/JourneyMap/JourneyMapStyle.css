@@ -2,6 +2,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .title {
   color: rgba(255, 255, 255, 1);
   margin-top: 0%;
