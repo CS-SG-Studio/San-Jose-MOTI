@@ -1,5 +1,6 @@
 import React from "react";
 import "./welcomePage.css";
+import { Link } from "react-scroll";
 
 const WelcomePage = (props) => {
   return (

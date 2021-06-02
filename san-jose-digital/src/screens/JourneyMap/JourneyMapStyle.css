@@ -6,10 +6,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.line{
+  margin-top: 1%;
+  border: 1px solid lightblue;
+  width: 70%;
+}
+
 .title {
   color: rgba(255, 255, 255, 1);
   margin-top: 0%;
   font-weight: Bold;
+  margin-top: 5%;
   padding: 25px;
   font-size: min(6vw, 60px);
 }

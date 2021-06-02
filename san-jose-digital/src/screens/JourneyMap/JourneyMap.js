@@ -11,6 +11,7 @@ import logo from "../../../src/sjdi-logo.png";
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
   const togglePopup = () => {
+    // welcomeStep();
     setOpenPoppup(!openPoppup);
   };
 
@@ -18,16 +19,19 @@ function JourneyMap() {
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
     setCongratulationsPage(false);
+    // welcomeStep();
     // togglePopup();
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
   const congratulationsStep = () => {
+    // welcomeStep();
     setCongratulationsPage(!openCongratulationsPage);
   };
 
   const [openContactForm, setContactForm] = useState(false);
   const contactStep = () => {
+    // welcomeStep();
     setContactForm(!openContactForm);
   };
 
@@ -62,6 +66,13 @@ function JourneyMap() {
           </h6>
         </h1>
       </div>
+      <hr className="line" id="step1" ></hr>
+      <h1 className="title">
+        YOUR JOURNEY
+        <h6 className="subtitle">
+          WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
+        </h6>
+      </h1>
       <div className="page">
         <div className="stack">
           <div className="on-right">
