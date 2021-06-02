@@ -63,7 +63,7 @@ html {
   width: min(max(30vw, 130px), 200px);
   height: min(max(30vw, 130px), 200px);
   border-radius: 50%;
-  background: lightblue;
+  background: #d5f0f8;
 }
 
 .welcomedescription {
