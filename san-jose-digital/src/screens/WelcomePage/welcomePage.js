@@ -38,7 +38,6 @@ const WelcomePage = (props) => {
               <p style={{ margin: "0" }}>START YOUR JOURNEY AND FOLLOW THE STEPS</p>
             </a>
           </button>
-          {/* </a> */}
         </h2>
         <h2 className="welcometitle two">
           NO? Scroll down to{" "}

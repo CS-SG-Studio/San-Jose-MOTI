@@ -67,7 +67,6 @@ function Step3(props) {
           onChange={props.handleChange}
         />
       </div>
-
       <div className="form-group">
         <label>
           <b>

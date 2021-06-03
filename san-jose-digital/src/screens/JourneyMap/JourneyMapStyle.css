@@ -12,6 +12,7 @@
   background-color: rgb(255, 255, 255);
 }
 
+
 img {
   width: max(min(20vw, 250px), 150px);
   border-radius: 0.7rem;
@@ -26,6 +27,18 @@ img:hover {
   padding: 25px;
   color: white;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.line{
+  margin-top: 1%;
+  border: 1px solid lightblue;
+  width: 70%;
+}
+
+ 
 
 .header-title {
   margin-bottom: 0;
@@ -137,3 +150,8 @@ img:hover {
   cursor: pointer;
   color: rgb(68, 68, 68);
 }
+
+.line-divider {
+  border-bottom: 3px solid lightblue;
+}
+

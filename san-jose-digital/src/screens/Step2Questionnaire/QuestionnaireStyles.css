@@ -1,9 +1,5 @@
 @import "../styles.css"; /* imports form styling */
 
-* {
-  /* border: 0.1px solid red; */
-}
-
 /* progress bar */
 /* TODO: see if we can make it dynamic */
 .myProgress {
@@ -30,4 +26,3 @@
 .myBar.third {
   width: 67%;
 }
-

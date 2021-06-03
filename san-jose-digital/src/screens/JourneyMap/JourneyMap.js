@@ -10,7 +10,7 @@ import "./JourneyMapStyle.css";
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
   const togglePopup = () => {
-    welcomeStep();
+    // welcomeStep();
     setOpenPoppup(!openPoppup);
   };
 
@@ -18,27 +18,27 @@ function JourneyMap() {
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
     setCongratulationsPage(false);
-    welcomeStep();
+    // welcomeStep();
     // togglePopup();
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
   const congratulationsStep = () => {
-    welcomeStep();
+    // welcomeStep();
     setCongratulationsPage(!openCongratulationsPage);
   };
 
   const [openContactForm, setContactForm] = useState(false);
   const contactStep = () => {
-    welcomeStep();
+    // welcomeStep();
     setContactForm(!openContactForm);
   };
 
-  const [openWelcomePage, setOpenWelcomePage] = useState(true);
-  const welcomeStep = () => {
-    setOpenWelcomePage(false);
-  };
-
+  // const [openWelcomePage, setOpenWelcomePage] = useState(true);
+  // const welcomeStep = () => {
+  //   setOpenWelcomePage(false);
+  // }
+  
   return (
     <>
       <div className="menu">
@@ -46,22 +46,26 @@ function JourneyMap() {
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
       </div>
-      {openWelcomePage && (
-        <div className="welcome">
-          <WelcomePage setContactForm={setContactForm} handleClose={welcomeStep} />
-        </div>
-      )}
+
+      <div className="welcome">
+        <WelcomePage
+          setContactForm={setContactForm}
+          setPoppup={setOpenPoppup}
+        />
+
+      </div>
+      <hr className="line" id="step1" ></hr>
       <div className="header">
         <h1 className="header-title">YOUR JOURNEY</h1>
         <h2 className="header-subtitle">
           WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
         </h2>
-      </div>
+      </h1>
       <div className="page">
         <div className="stack">
           <div className="on-right">
             <div className="circles" onClick={togglePopup}>
-              <span className="instruction" onClick={togglePopup}>
+              <span className="instruction" id="step1" onClick={togglePopup}>
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
@@ -77,7 +81,7 @@ function JourneyMap() {
           <div className="on-right">
             <div className="circles" onClick={questionnaireStep}>
               <span className="instruction" onClick={questionnaireStep}>
-                SEE WHAT YOU ARE ELIGIBLE FOR
+                FILL OUT ELIGIBILITY QUESTIONNAIRE
               </span>
             </div>
             {openQuestionnaire && (
@@ -110,7 +114,7 @@ function JourneyMap() {
           <div className="on-right">
             <div className="circles" onClick={contactStep}>
               <span className="instruction" id="step4" onClick={contactStep}>
-                ANY QUESTIONS?
+                GET IN TOUCH WITH US
               </span>
             </div>
             {openContactForm && (

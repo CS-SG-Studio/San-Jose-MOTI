@@ -4,16 +4,10 @@ import "./programStyles.css";
 const Step1 = () => {
   return (
     <div className="popup">
-      {/* <span className="close-icon2" onClick={props.handleClose}>
-        &times;
-      </span> */}
       <h3 className="popup-title">Our Programs</h3>
       <p>
-        You will gain access to job,
-        <br />
-        education, healthcare, and service opportunities!
-        <br />
-        The following are included in our bundle package:
+        Our bundle package includes low-cose internet packages, digital literacy classes, and access
+            to free devices. <br/>Click on the circles below for more information!
       </p>
       <div className="main">
         {/*Access Programs*/}
@@ -28,7 +22,7 @@ const Step1 = () => {
               style={{ textDecoration: "none" }}
             >
               <p className="description">
-                Click here to get information on a low-cost internet package!
+                Low-cost internet packages
               </p>
             </a>
           </div>
@@ -45,11 +39,7 @@ const Step1 = () => {
               style={{ textDecoration: "none" }}
             >
               <p className="description">
-                Learn
-                <br />
-                how to use a computer and explore the
-                <br />
-                internet!
+                Computer classes and digital literacy trainings
               </p>
             </a>
           </div>
@@ -66,14 +56,12 @@ const Step1 = () => {
               style={{ textDecoration: "none" }}
             >
               <p className="description">
-                Free access
-                <br />
-                to computers, laptops, phones, tablets, and other devices.*
+                Free access to computers, phones, and other devices.*
               </p>
             </a>
           </div>
         </div>
-      </div>
+    </div>
       <h5 className="footer">
         *Access to devices are not guaranteed. We operate on a first-come first-serve
         basis.

@@ -168,7 +168,6 @@ function Step2(props) {
             onChange={props.handleChange}
           >
             <option name="blank"> </option>
-
             <option name="one">1</option>
             <option name="two">2</option>
             <option name="three">3</option>
@@ -189,7 +188,6 @@ function Step2(props) {
           onChange={props.handleChange}
         >
           <option name="blank"> </option>
-
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>

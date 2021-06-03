@@ -44,14 +44,3 @@
   flex-direction: column;
   font-size: max(min(1.8vw, 18px), 9px);
 }
-
-/* .popup-title {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
-}
-
-.popup-subtitle {
-  display: flex;
-  flex-direction: column;
-} */
