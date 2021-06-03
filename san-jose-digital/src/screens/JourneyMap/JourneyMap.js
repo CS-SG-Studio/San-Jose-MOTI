@@ -60,7 +60,7 @@ function JourneyMap() {
         <h2 className="header-subtitle">
           WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
         </h2>
-      </h1>
+      </div>
       <div className="page">
         <div className="stack">
           <div className="on-right">
