@@ -4,7 +4,7 @@ import "./CongratulationStyles.css";
 function Congratulations() {
   return (
     <div className="popup">
-      <h3 className="popup-title">CONGRATULATIONS!</h3>
+      <h3 className="popup-title">Congratulations!</h3>
       <p>
         Thank you for filling out the questionnaire!
         <br />

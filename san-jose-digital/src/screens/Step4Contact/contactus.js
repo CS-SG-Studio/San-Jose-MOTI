@@ -103,7 +103,7 @@ const ContactForm = () => {
             rows={5}
             name="message"
             className="form-control formInput"
-            placeholder="     Message"
+            placeholder="Message"
             id="message"
             required
           ></textarea>

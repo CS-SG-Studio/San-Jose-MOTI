@@ -16,14 +16,14 @@ const WelcomePage = (props) => {
         <br />
         <div className="threecircles">
           <div className="welcomecircle">
-            <h1 className="welcomedescription">LOW-COST INTERNET PACKAGES?</h1>
+            <h1 className="welcomedescription">Low-cost internet packages?</h1>
           </div>
 
           <div className="welcomecircle">
-            <h1 className="welcomedescription">COMPUTER AND INTERNET LESSONS?</h1>
+            <h1 className="welcomedescription">Computer and internet lessons?</h1>
           </div>
           <div className="welcomecircle">
-            <h1 className="welcomedescription">FREE ACCESS TO DIGITAL DEVICES?</h1>
+            <h1 className="welcomedescription">Free access to digital devices?</h1>
           </div>
         </div>
         <br />
@@ -35,7 +35,7 @@ const WelcomePage = (props) => {
               rel="noreferrer"
               style={{ textDecoration: "none", color: "black" }}
             >
-              <p style={{ margin: "0" }}>START YOUR JOURNEY AND FOLLOW THE STEPS</p>
+              <p style={{ margin: "0", fontSize: "1.5rem" }}>CLICK HERE TO START YOUR JOURNEY</p>
             </a>
           </button>
         </h2>
@@ -49,7 +49,7 @@ const WelcomePage = (props) => {
           >
             Step 4
           </a>{" "}
-          and reach out to us!
+          to reach out to us with any questions!
         </h2>
       </div>
     </div>
