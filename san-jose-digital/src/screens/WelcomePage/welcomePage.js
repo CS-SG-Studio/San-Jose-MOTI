@@ -20,7 +20,7 @@ const WelcomePage = (props) => {
           </div>
 
           <div className="welcomecircle">
-            <h1 className="welcomedescription">Computer and Internet Lessons?</h1>
+            <h1 className="welcomedescription">Computer <br/> and Internet Lessons?</h1>
           </div>
           <div className="welcomecircle">
             <h1 className="welcomedescription">Free Access to Digital Devices?</h1>
