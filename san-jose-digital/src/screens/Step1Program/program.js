@@ -1,14 +1,14 @@
 import React from "react";
 import "./programStyles.css";
 
-const Step1 = (props) => {
+const Step1 = () => {
   return (
-    <div className="popup programs">
+    <div className="popup">
       {/* <span className="close-icon2" onClick={props.handleClose}>
         &times;
       </span> */}
       <h3 className="popup-title">Our Programs</h3>
-      <p className="popup-subtitle">
+      <p>
         You will gain access to job,
         <br />
         education, healthcare, and service opportunities!

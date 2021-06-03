@@ -1,12 +1,11 @@
 import React, { useState } from "react";
+import logo from "../../sjdi-logo.png";
+import WelcomePage from "../WelcomePage/welcomePage";
+import Step1 from "../Step1Program/program";
+import Questionnaire from "../Step2Questionnaire/Questionnaire";
+import Congratulations from "../Step3Congrats/Congratulations";
 import ContactForm from "../Step4Contact/contactus";
 import "./JourneyMapStyle.css";
-// import { BrowserRouter as Router } from "react-router-dom";
-import Step1 from "../Step1Program/program";
-import Congratulations from "../Step3Congrats/Congratulations";
-import Questionnaire from "../Step2Questionnaire/Questionnaire";
-import WelcomePage from "../WelcomePage/welcomePage";
-import logo from "../../../src/sjdi-logo.png";
 
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
@@ -20,7 +19,7 @@ function JourneyMap() {
     setQuestionnaire(!openQuestionnaire);
     setCongratulationsPage(false);
     welcomeStep();
-    togglePopup();
+    // togglePopup();
   };
 
   const [openCongratulationsPage, setCongratulationsPage] = useState(false);
@@ -47,11 +46,11 @@ function JourneyMap() {
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
       </div>
-      <div className="welcome">
-        {openWelcomePage && (
+      {openWelcomePage && (
+        <div className="welcome">
           <WelcomePage setContactForm={setContactForm} handleClose={welcomeStep} />
-        )}
-      </div>
+        </div>
+      )}
       <div className="header">
         <h1 className="header-title">YOUR JOURNEY</h1>
         <h2 className="header-subtitle">
@@ -66,7 +65,11 @@ function JourneyMap() {
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
-            <div className="pop">{openPoppup && <Step1 handleClose={togglePopup} />}</div>
+            {openPoppup && (
+              <div className="pop">
+                <Step1 handleClose={togglePopup} />
+              </div>
+            )}
           </div>
         </div>
 
@@ -77,14 +80,14 @@ function JourneyMap() {
                 SEE WHAT YOU ARE ELIGIBLE FOR
               </span>
             </div>
-            <div className="pop">
-              {openQuestionnaire && (
+            {openQuestionnaire && (
+              <div className="pop">
                 <Questionnaire
                   setQuestionnaire={setQuestionnaire}
                   setCongratulationsPage={setCongratulationsPage}
                 />
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -95,7 +98,11 @@ function JourneyMap() {
                 LEARN MORE ABOUT THE GRANTEES
               </span>
             </div>
-            <div className="pop">{openCongratulationsPage && <Congratulations />}</div>
+            {openCongratulationsPage && (
+              <div className="pop">
+                <Congratulations />
+              </div>
+            )}
           </div>
         </div>
 

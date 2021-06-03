@@ -25,7 +25,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="popup ContactForm">
+    <div className="popup">
+      <h3 className="popup-title">Contact Us</h3>
       <p>
         Are you looking for funding, mentorship, collaboration, and volunteering
         opportunities, or ways to donate to impactful digital inclusion programs? <br />
@@ -39,47 +40,48 @@ const ContactForm = () => {
           CLICK HERE TO VISIT THE SAN JOSÉ DIGITAL INCLUSION FUND WEBSITE!
         </a>
       </p>
+      <p>
+        Questions or comments? We’d love to hear from you! <br /> Fill out the form below
+        to get in touch with our Program Director, Charlene Tatis!
+      </p>
       <form id="contact-form" noValidate onSubmit={handleSubmit}>
         {/* Row 1 of form */}
-        <p>
-          Questions or comments? We’d love to hear from you! <br /> Fill out the form
-          below to get in touch with our Program Director, Charlene Tatis!
-        </p>
+
         {/* <div className="row formRow"> */}
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              className="form-control formInput"
-              placeholder="Enter name"
-              input
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              className="form-control formInput"
-              placeholder="Enter email"
-              id="email"
-              required
-              input
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="phone">Phone number</label>
-            <input
-              type="number"
-              name="Phone Number"
-              className="form-control formInput"
-              placeholder="Enter phone number"
-              required
-              id="phone"
-              input
-            />
-          </div>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            className="form-control formInput"
+            placeholder="Enter name"
+            input
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            className="form-control formInput"
+            placeholder="Enter email"
+            id="email"
+            required
+            input
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="phone">Phone number</label>
+          <input
+            type="number"
+            name="Phone Number"
+            className="form-control formInput"
+            placeholder="Enter phone number"
+            required
+            id="phone"
+            input
+          />
+        </div>
         {/* </div> */}
         {/* Row 2 of form */}
         <div className="form-group">
@@ -109,10 +111,12 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
+      </form>
+      <div>
         <button className="submit-btn" type="submit">
           {status}
         </button>
-      </form>
+      </div>
       {/* TODO: add a "Thank you for contacting us!" page that will appear after they click submit */}
       {/* TODO: connect this to SJDIF email */}
     </div>

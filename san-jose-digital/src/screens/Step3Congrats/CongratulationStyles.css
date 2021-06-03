@@ -13,19 +13,3 @@
   font-weight: normal;
 }
 
-/* .link {
-  text-decoration: inherit;
-  color: inherit;
-  background-color: lightblue;
-  border: none;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  border-radius: 4px;
-  padding-right: 6px;
-  padding-left: 6px;
-} */
-
-.link:hover {
-  background-color: rgb(186, 224, 236);
-}

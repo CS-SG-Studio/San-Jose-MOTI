@@ -1,13 +1,4 @@
-/* @import "../styles.css"; */
-
-/* popup container */
-.popup.programs {
-  display: flex;
-  flex-direction: column;
-  border-radius: 2rem;
-  padding: 0.5rem;
-  background: white;
-}
+@import "../styles.css";
 
 /* styling for the body */
 .main {
@@ -21,10 +12,12 @@
   flex-direction: column;
   padding: 0.2rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .circle-heading {
   margin: 0px;
+  display: flex;
   font-size: max(min(2vw, 15px), 10px);
 }
 

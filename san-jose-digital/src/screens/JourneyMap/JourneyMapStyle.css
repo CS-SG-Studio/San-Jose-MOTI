@@ -1,10 +1,14 @@
+/* @import "../styles.css"; */
+
 .menu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   width: 100%;
   position: fixed;
   z-index: 1;
   /* TODO: maybe try and find the bug so we don't have to hard code position */
   left: 0;
-  top: 0;
   background-color: rgb(255, 255, 255);
 }
 
@@ -23,7 +27,7 @@ img:hover {
   color: white;
 }
 
-.header-title{
+.header-title {
   margin-bottom: 0;
 }
 
@@ -132,9 +136,4 @@ img:hover {
 .instruction:hover {
   cursor: pointer;
   color: rgb(68, 68, 68);
-}
-
-.link {
-  text-decoration: inherit;
-  color: inherit;
 }

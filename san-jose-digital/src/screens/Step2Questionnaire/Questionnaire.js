@@ -288,8 +288,10 @@ const Questionnaire = (props) => {
             interestedInFreeClasses={interestedInFreeClasses}
             anyOtherComments={anyOtherComments}
           />
-          {previousButton()}
-          {nextButton()}
+          <div>
+            {previousButton()}
+            {nextButton()}
+          </div>
         </form>
       {/* </React.Fragment> */}
     </div>
