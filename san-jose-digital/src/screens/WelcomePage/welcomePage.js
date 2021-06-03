@@ -16,14 +16,14 @@ const WelcomePage = (props) => {
         <br />
         <div className="threecircles">
           <div className="welcomecircle">
-            <h1 className="welcomedescription">Low-cost internet packages?</h1>
+            <h1 className="welcomedescription">Low-Cost Internet Packages?</h1>
           </div>
 
           <div className="welcomecircle">
-            <h1 className="welcomedescription">Computer and internet lessons?</h1>
+            <h1 className="welcomedescription">Computer and Internet Lessons?</h1>
           </div>
           <div className="welcomecircle">
-            <h1 className="welcomedescription">Free access to digital devices?</h1>
+            <h1 className="welcomedescription">Free Access to Digital Devices?</h1>
           </div>
         </div>
         <br />
