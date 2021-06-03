@@ -1,12 +1,11 @@
 import React, { useState } from "react";
+import logo from "../../sjdi-logo.png";
+import WelcomePage from "../WelcomePage/welcomePage";
+import Step1 from "../Step1Program/program";
+import Questionnaire from "../Step2Questionnaire/Questionnaire";
+import Congratulations from "../Step3Congrats/Congratulations";
 import ContactForm from "../Step4Contact/contactus";
 import "./JourneyMapStyle.css";
-// import { BrowserRouter as Router } from "react-router-dom";
-import Step1 from "../Step1Program/program";
-import Congratulations from "../Step3Congrats/Congratulations";
-import Questionnaire from "../Step2Questionnaire/Questionnaire";
-import WelcomePage from "../WelcomePage/welcomePage";
-import logo from "../../../src/sjdi-logo.png";
 
 function JourneyMap() {
   const [openPoppup, setOpenPoppup] = useState(false);
@@ -39,30 +38,28 @@ function JourneyMap() {
   // const welcomeStep = () => {
   //   setOpenWelcomePage(false);
   // }
-
+  
   return (
-    <div>
+    <>
       <div className="menu">
-        <a
-          href="https://www.sjdigitalinclusion.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
           <img src={logo} alt="san jose digital inclusion logo" />
         </a>
       </div>
+
       <div className="welcome">
         <WelcomePage
           setContactForm={setContactForm}
           setPoppup={setOpenPoppup}
         />
+
       </div>
       <hr className="line" id="step1" ></hr>
-      <h1 className="title">
-        YOUR JOURNEY
-        <h6 className="subtitle">
+      <div className="header">
+        <h1 className="header-title">YOUR JOURNEY</h1>
+        <h2 className="header-subtitle">
           WHERE ARE YOU ON THE PATH TO DIGITAL INCLUSION?
-        </h6>
+        </h2>
       </h1>
       <div className="page">
         <div className="stack">
@@ -72,9 +69,11 @@ function JourneyMap() {
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
-            <div className="popups">
-              {openPoppup && <Step1 handleClose={togglePopup} />}
-            </div>
+            {openPoppup && (
+              <div className="pop">
+                <Step1 handleClose={togglePopup} />
+              </div>
+            )}
           </div>
         </div>
 
@@ -85,14 +84,14 @@ function JourneyMap() {
                 FILL OUT ELIGIBILITY QUESTIONNAIRE
               </span>
             </div>
-            <div className="popups">
-              {openQuestionnaire && (
+            {openQuestionnaire && (
+              <div className="pop">
                 <Questionnaire
                   setQuestionnaire={setQuestionnaire}
                   setCongratulationsPage={setCongratulationsPage}
                 />
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -103,9 +102,11 @@ function JourneyMap() {
                 LEARN MORE ABOUT THE GRANTEES
               </span>
             </div>
-            <div className="popups">
-              {openCongratulationsPage && <Congratulations />}
-            </div>
+            {openCongratulationsPage && (
+              <div className="pop">
+                <Congratulations />
+              </div>
+            )}
           </div>
         </div>
 
@@ -117,15 +118,14 @@ function JourneyMap() {
               </span>
             </div>
             {openContactForm && (
-              <div className="popups">
+              <div className="pop">
                 <ContactForm />
               </div>
             )}
           </div>
         </div>
       </div>
-      {/* <div>{openPoppup && <Step1 handleClose={togglePopup} />}</div> */}
-    </div>
+    </>
   );
 }
 export default JourneyMap;

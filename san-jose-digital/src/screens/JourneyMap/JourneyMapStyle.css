@@ -1,5 +1,31 @@
-* {
-  font-family: "Roboto", sans-serif;
+/* @import "../styles.css"; */
+
+.menu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  /* TODO: maybe try and find the bug so we don't have to hard code position */
+  left: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+
+img {
+  width: max(min(20vw, 250px), 150px);
+  border-radius: 0.7rem;
+}
+
+img:hover {
+  transform: scale(0.995);
+  filter: opacity(95%);
+}
+
+.header {
+  padding: 25px;
+  color: white;
 }
 
 html {
@@ -12,26 +38,15 @@ html {
   width: 70%;
 }
 
-.title {
-  color: rgba(255, 255, 255, 1);
-  margin-top: 0%;
-  font-weight: Bold;
-  margin-top: 5%;
-  padding: 25px;
-  font-size: min(6vw, 60px);
-}
+ 
 
-.subtitle {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding: 10px;
-  font-size: 0.47em;
+.header-title {
+  margin-bottom: 0;
 }
 
 .welcome {
   display: flex;
   flex-direction: column;
-  background: #2d2c2c;
 }
 
 .page {
@@ -40,7 +55,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center; /*or center*/
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 .stack {
@@ -61,7 +76,7 @@ html {
   flex: 1;
 }
 
-.popups {
+.pop {
   display: flex;
   margin-top: 60px;
   margin-bottom: 55px;
@@ -69,7 +84,7 @@ html {
 }
 
 /* connector only appears for last circle if popup is opened */
-.stack:last-child .popups {
+.stack:last-child .pop {
   display: flex;
   border: 5px solid lightblue;
   border-bottom: 0px;
@@ -136,34 +151,7 @@ html {
   color: rgb(68, 68, 68);
 }
 
-.link {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-.menu {
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  /* align-items: flex-start; */
-  background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid #2d2c2c;
-}
-
 .line-divider {
   border-bottom: 3px solid lightblue;
 }
 
-img {
-  width: max(min(30vw, 300px), 300px);
-  border-radius: 1rem;
-  /* margin-bottom: 100px; */
-  /* margin-top: 100px; */
-}
-
-img:hover {
-  transform: scale(0.995);
-  filter: opacity(95%);
-}

@@ -1,32 +1,18 @@
-* {
-  scroll-behavior: smooth;
-  font-family: "Roboto", sans-serif;
-}
+@import "../styles.css"; /* imports form styling */
 
-.step0-title {
-  /* font-size: 2rem; */
-  font-size: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-}
-
-.step0-details {
-  display: flex;
-  font-size: 0.55em;
-  font-weight: normal;
-}
-
+/* progress bar */
+/* TODO: see if we can make it dynamic */
 .myProgress {
-  margin-left: 5%;
-  width: 90%;
+  display: flex;
+  border-radius: 100px;
+  overflow: hidden;
+  margin: 15px 10px 30px 10px;
   background-color: rgb(236, 236, 236);
+  height: 15px;
 }
 
 .myBar {
-  height: 17px;
-  background-color: #9fd2e1;
+  background-color: lightblue;
 }
 
 .myBar.first {
@@ -39,115 +25,4 @@
 
 .myBar.third {
   width: 67%;
-}
-
-.form-styling {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 40px;
-  width: max(min(70vw, 800px), 500px);
-  background: rgba(255, 255, 255, 1);
-  border-radius: 2rem;
-}
-
-.form-group {
-  text-align: left;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.header {
-  font-size: 2rem;
-  color: rgb(0, 0, 0);
-  font-weight: Bold;
-}
-
-.subheader {
-  font-size: 1.5rem;
-  color: rgb(0, 0, 0);
-  position: static;
-  font-weight: Bold;
-}
-
-.form {
-  padding: 0;
-  flex-grow: 1;
-  border-radius: 5px;
-  background-color: #9fd2e1;
-  padding: 20px;
-}
-
-.form-control {
-  font-size: 0.9rem;
-  color: rgba(45, 44, 44, 1);
-  padding: 2px;
-}
-
-input[type="text"],
-input[type="textarea"],
-input[type="number"],
-input[type="email"],
-textarea select {
-  padding: 5px 20px;
-  margin: 4px 0;
-  display: flex;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-input[type="text"]:focus,
-input[type="textarea"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-textarea select {
-  -moz-box-shadow: 0 0 8px #88d5e9;
-  -webkit-box-shadow: 0 0 8px #88d5e9;
-  box-shadow: 0 0 8px #88d5e9;
-  border: 1px solid #88d5e9;
-}
-
-/* input[type="text"]:focus {
-  border: 3px solid #555;
-} */
-
-textarea {
-  margin: 4px 0;
-}
-
-input[type="radio"],
-select {
-  position: relative;
-  align-self: top;
-  background-color: #eee;
-  border-radius: 4px;
-}
-
-label {
-  padding: 6px 6px 6px 6px;
-  display: inline-block;
-}
-
-button,
-input[type="submit"] {
-  background-color: #9fd2e1;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 10px 28px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-  border-radius: 4px;
-  font-family: "Roboto", sans-serif;
-  margin: 20px;
-  margin-bottom: 0px;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  cursor: pointer;
-  background-color: #87b7c5; /* Green */
 }

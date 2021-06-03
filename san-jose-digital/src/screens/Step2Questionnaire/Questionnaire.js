@@ -5,7 +5,7 @@ import Step2 from './step2';
 import Step3 from './step3';
 import './QuestionnaireStyles.css';
 
-// INSTRUCTIONS FOR ADDING QUETSIONS - 
+// INSTRUCTIONS FOR ADDING QUESTIONS -
 // PART 1: 
 // There are 4 "ADD SPOT"s that have been marked on this document. Follow the 
 // directions on each of the ADD SPOT's to add the question variable to the
@@ -17,7 +17,7 @@ import './QuestionnaireStyles.css';
 // 
 // PART 2: 
 // Navigate to step3.js and follow instructions to add a question there, 
-// using the quetsion variable you have just initialized.
+// using the question variable you have just initialized.
 // 
 // NOTE: Checkbox questions are slightly more complicated and require
 // their own additional functions and variables, so please
@@ -225,8 +225,8 @@ const Questionnaire = (props) => {
   };
 
   return (
-    <div className="form-styling">
-      <React.Fragment>
+    <div className="popup form-styling">
+      {/* <React.Fragment> */}
         <form onSubmit={handleSubmit}>
           <Step0 currentStep={currentStep} />
           <Step1
@@ -288,10 +288,12 @@ const Questionnaire = (props) => {
             interestedInFreeClasses={interestedInFreeClasses}
             anyOtherComments={anyOtherComments}
           />
-          {previousButton()}
-          {nextButton()}
+          <div>
+            {previousButton()}
+            {nextButton()}
+          </div>
         </form>
-      </React.Fragment>
+      {/* </React.Fragment> */}
     </div>
   );
 };
