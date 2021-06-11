@@ -1,4 +1,4 @@
-@import "../styles.css";
+/* @import "../styles.css"; */
 
 /* styling for the body */
 .main {
@@ -16,7 +16,7 @@
 }
 
 .circle-heading {
-  margin: 0px;
+  margin: 0;
   display: flex;
   font-size: max(min(2vw, 15px), 10px);
 }
@@ -35,7 +35,7 @@
   background: lightblue;
 }
 
-.description {
+.circle-description {
   font-size: max(min(2vw, 15px), 9px);
 }
 

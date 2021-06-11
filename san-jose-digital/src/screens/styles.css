@@ -1,7 +1,10 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  /* border: 0.1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /********************************/
@@ -22,9 +25,11 @@ a {
 }
 h1 {
   font-size: max(min(7vw, 70px), 50px);
+  color: white;
 }
 h2 {
   font-size: max(min(4vw, 40px), 30px);
+  color: white;
 }
 h3 {
   font-size: max(min(3.5vw, 35px), 25px);
@@ -74,6 +79,7 @@ label {
   padding: 1.5px 8px;
   color: #2d2c2c;
   background: #d5f0f8;
+  margin: 0 8px 0 8px;
 }
 
 .link:hover {

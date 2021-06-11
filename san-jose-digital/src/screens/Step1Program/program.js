@@ -15,13 +15,12 @@ const Step1 = () => {
           <h4 className="circle-heading">ACCESS PROGRAMS</h4>
           <div className="circle-program">
             <a
-              className="description"
               href="https://www.everyoneon.org"
               target="_blank"
               rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <p className="description">
+              <p className="circle-description">
                 Low-cost internet packages
               </p>
             </a>
@@ -38,7 +37,7 @@ const Step1 = () => {
               rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <p className="description">
+              <p className="circle-description">
                 Computer classes and digital literacy trainings
               </p>
             </a>
@@ -55,7 +54,7 @@ const Step1 = () => {
               rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <p className="description">
+              <p className="circle-description">
                 Free access to computers, phones, and other devices.*
               </p>
             </a>
