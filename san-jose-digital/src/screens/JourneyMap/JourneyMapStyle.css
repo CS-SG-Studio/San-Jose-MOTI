@@ -28,17 +28,13 @@ img:hover {
   color: white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 .line{
   margin-top: 1%;
   border: 1px solid lightblue;
   width: 70%;
 }
-
- 
 
 .header-title {
   margin-bottom: 0;
@@ -96,7 +92,7 @@ html {
 /* make last connector disappear */
 .stack:last-child .on-right {
   background-color: inherit;
-  border: 0;
+  border: 0; 
 }
 
 .circles {
