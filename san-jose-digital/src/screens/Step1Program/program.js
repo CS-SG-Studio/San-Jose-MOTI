@@ -18,7 +18,6 @@ const Step1 = () => {
               href="https://www.everyoneon.org"
               target="_blank"
               rel="noreferrer"
-              style={{ textDecoration: "none" }}
             >
               <p className="circle-description">
                 Low-cost internet packages
@@ -35,7 +34,6 @@ const Step1 = () => {
               href="https://www.google.com" /* not sure what website we want here */
               target="_blank"
               rel="noreferrer"
-              style={{ textDecoration: "none" }}
             >
               <p className="circle-description">
                 Computer classes and digital literacy trainings
@@ -52,7 +50,6 @@ const Step1 = () => {
               href="https://www.google.com" /* not sure what website we want here */
               target="_blank"
               rel="noreferrer"
-              style={{ textDecoration: "none" }}
             >
               <p className="circle-description">
                 Free access to computers, phones, and other devices.*

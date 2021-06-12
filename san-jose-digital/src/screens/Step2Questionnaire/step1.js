@@ -89,7 +89,7 @@ function Step1(props) {
           className="form-control"
           id="language"
           name="language"
-          value={props.langauge}
+          value={props.language}
           onChange={props.handleChange}
         >
           <option name="english">English</option>

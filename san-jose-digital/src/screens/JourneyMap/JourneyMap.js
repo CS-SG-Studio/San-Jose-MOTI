@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import logo from "../../sjdi-logo.png";
-import WelcomePage from "../WelcomePage/welcomePage";
-import Step1 from "../Step1Program/program";
-import Questionnaire from "../Step2Questionnaire/Questionnaire";
-import Congratulations from "../Step3Congrats/Congratulations";
-import ContactForm from "../Step4Contact/contactus";
+import WelcomePage from "../WelcomePage/welcome";
+import Program from "../Step1Program/program";
+import Questionnaire from "../Step2Questionnaire/questionnaire";
+import Congratulations from "../Step3Congrats/congrats";
+import ContactForm from "../Step4Contact/contact";
 import "./JourneyMapStyle.css";
 
 function JourneyMap() {
-  const [openPoppup, setOpenPoppup] = useState(false);
+  const [openPopup, setOpenPopup] = useState(false);
   const togglePopup = () => {
     // welcomeStep();
-    setOpenPoppup(!openPoppup);
+    setOpenPopup(!openPopup);
   };
 
   const [openQuestionnaire, setQuestionnaire] = useState(false);
@@ -38,7 +38,7 @@ function JourneyMap() {
   // const welcomeStep = () => {
   //   setOpenWelcomePage(false);
   // }
-  
+
   return (
     <>
       <div className="menu">
@@ -48,13 +48,9 @@ function JourneyMap() {
       </div>
 
       <div className="welcome">
-        <WelcomePage
-          setContactForm={setContactForm}
-          setPoppup={setOpenPoppup}
-        />
-
+        <WelcomePage setContactForm={setContactForm} setPopup={setOpenPopup} />
       </div>
-      <hr className="line" id="step1" ></hr>
+      <hr className="line" id="step1" />
       <div className="header">
         <h1 className="header-title">YOUR JOURNEY</h1>
         <h2 className="header-subtitle">
@@ -69,9 +65,9 @@ function JourneyMap() {
                 EXPLORE OUR PROGRAMS
               </span>
             </div>
-            {openPoppup && (
+            {openPopup && (
               <div className="pop">
-                <Step1 handleClose={togglePopup} />
+                <Program handleClose={togglePopup} />
               </div>
             )}
           </div>

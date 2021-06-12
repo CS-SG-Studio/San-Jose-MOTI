@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./contactus.css";
+import "./contactStyles.css"; //empty
 
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
@@ -116,7 +116,7 @@ const ContactForm = () => {
 
       </div>
       {/* TODO: add a "Thank you for contacting us!" page that will appear after they click submit */}
-      {/* TODO: connect this to SJDIF email */}
+      {/* TODO: connect this to san jose email */}
     </div>
   );
 };
