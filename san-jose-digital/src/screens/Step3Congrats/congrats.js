@@ -1,5 +1,5 @@
 import React from "react";
-import "./CongratulationStyles.css";
+import "./congratsStyles.css"; // empty
 
 function Congratulations() {
   return (
@@ -13,10 +13,10 @@ function Congratulations() {
       <p>
         In the meantime, please click
         <a
+          className="link"
           href="https://www.sjdigitalinclusion.org/grantees"
           rel="noreferrer"
           target="_blank"
-          className="link"
         >
           here
         </a>

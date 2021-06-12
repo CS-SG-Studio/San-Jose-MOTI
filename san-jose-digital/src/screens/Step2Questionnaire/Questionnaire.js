@@ -3,7 +3,7 @@ import Step0 from './step0';
 import Step1 from './step1';
 import Step2 from './step2';
 import Step3 from './step3';
-import './QuestionnaireStyles.css';
+import './questionnaireStyles.css';
 
 // INSTRUCTIONS FOR ADDING QUESTIONS -
 // PART 1: 
@@ -89,7 +89,7 @@ const Questionnaire = (props) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
-  // Code for checking/unchecking the checkbox questions
+  // Code for (un)checking the checkbox questions
   const onChangeProgram1 = () => {
     setData({ ...data, program1: !program1 });
   };
@@ -226,7 +226,6 @@ const Questionnaire = (props) => {
 
   return (
     <div className="popup form-styling">
-      {/* <React.Fragment> */}
         <form onSubmit={handleSubmit}>
           <Step0 currentStep={currentStep} />
           <Step1
@@ -293,7 +292,6 @@ const Questionnaire = (props) => {
             {nextButton()}
           </div>
         </form>
-      {/* </React.Fragment> */}
     </div>
   );
 };

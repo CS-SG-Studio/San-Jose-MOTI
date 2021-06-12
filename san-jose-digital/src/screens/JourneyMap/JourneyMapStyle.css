@@ -1,5 +1,3 @@
-/* @import "../styles.css"; */
-
 .menu {
   display: flex;
   align-items: flex-end;
@@ -7,11 +5,9 @@
   width: 100%;
   position: fixed;
   z-index: 1;
-  /* TODO: maybe try and find the bug so we don't have to hard code position */
-  left: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%), 0 3px 3px rgb(0 0 0 / 15%);
 }
-
 
 img {
   width: max(min(20vw, 250px), 150px);
@@ -19,7 +15,7 @@ img {
 }
 
 img:hover {
-  transform: scale(0.995);
+  transform: scale(0.991);
   filter: opacity(95%);
 }
 
@@ -28,12 +24,10 @@ img:hover {
   color: white;
 }
 
-
-
-.line{
+.line {
   margin-top: 1%;
-  border: 1px solid lightblue;
-  width: 70%;
+  border: 2px solid lightblue;
+  background-color: lightblue;
 }
 
 .header-title {
@@ -92,7 +86,7 @@ img:hover {
 /* make last connector disappear */
 .stack:last-child .on-right {
   background-color: inherit;
-  border: 0; 
+  border: 0;
 }
 
 .circles {
@@ -150,4 +144,3 @@ img:hover {
 .line-divider {
   border-bottom: 3px solid lightblue;
 }
-
