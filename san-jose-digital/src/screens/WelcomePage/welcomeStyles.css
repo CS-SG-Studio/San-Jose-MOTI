@@ -1,9 +1,13 @@
 @import "../styles.css";
 
+/* * {
+  border: 1px solid red;
+} */
+
 .welcomePopup {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   padding: 2rem;
 }
 
@@ -48,4 +52,44 @@
 
 .button {
   padding: 10px 15px;
+}
+
+/* #2 */
+.welcome-subtitle {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  font-size: max(min(2.5vw, 28px), 20px);
+}
+
+.choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1000px;
+}
+.yes {
+  border: 4px solid lightblue;
+  margin: 0 10px 0 0;
+}
+
+.yes-text {
+  font-size: max(min(2.5vw, 20px), 14px);
+  color: black;
+}
+
+.no {
+  color: black;
+  background: none;
+  border: 4px solid white;
+  margin: 0 0 0 10px;
+}
+
+.no:hover {
+  background: dimgray;
+}
+
+.no-text {
+  color: white;
+  font-size: max(min(2.5vw, 20px), 14px);
 }
