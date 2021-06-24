@@ -113,7 +113,6 @@ const ContactForm = () => {
         <button className="submit-btn" type="submit">
           {status}
         </button>
-
       </div>
       {/* TODO: add a "Thank you for contacting us!" page that will appear after they click submit */}
       {/* TODO: connect this to san jose email */}
