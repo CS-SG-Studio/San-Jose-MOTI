@@ -34,16 +34,11 @@ function JourneyMap() {
     setContactForm(!openContactForm);
   };
 
-  // const [openWelcomePage, setOpenWelcomePage] = useState(true);
-  // const welcomeStep = () => {
-  //   setOpenWelcomePage(false);
-  // }
-
   return (
     <>
-      <div className="menu">
-        <a href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
-          <img src={logo} alt="san jose digital inclusion logo" />
+      <div id="header">
+        <a className="img" href="https://www.sjdigitalinclusion.org/" target="_blank" rel="noreferrer">
+          <img id="logo" src={logo} alt="san jose digital inclusion logo" />
         </a>
       </div>
 
