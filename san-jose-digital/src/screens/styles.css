@@ -1,11 +1,11 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%
 }
 
 /********************************/

@@ -1,22 +1,22 @@
-.menu {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+#header {
   width: 100%;
+  top: 0;
   position: fixed;
   z-index: 1;
   background-color: white;
   box-shadow: 0 0 10px rgb(0 0 0 / 15%), 0 3px 3px rgb(0 0 0 / 15%);
+  transition: 0.5s;
 }
 
 img {
-  width: max(min(20vw, 250px), 150px);
   border-radius: 0.7rem;
+  padding: 5px 0;
+  width: max(min(20vw, 300px), 150px);
 }
 
 img:hover {
-  transform: scale(0.991);
-  filter: opacity(95%);
+  transform: scale(0.97);
+  filter: opacity(80%);
 }
 
 .header {
@@ -107,10 +107,6 @@ img:hover {
   cursor: pointer;
 }
 
-* {
-  /* border: 1px solid red; */
-}
-
 /* numbering on the page */
 .circles::before {
   content: counter(listCounter);
@@ -123,15 +119,6 @@ img:hover {
   font-size: min(max(15vw, 115px), 140px);
   height: inherit;
 }
-
-/* .digit {
-  border: 3px dashed white;
-  position: absolute;
-  right: 250px;
-  font-size: 12rem;
-  color: rgba(213, 240, 248, 1);
-  font-weight: Bold;
-} */
 
 /* styling for the instructions/text */
 .instruction {
