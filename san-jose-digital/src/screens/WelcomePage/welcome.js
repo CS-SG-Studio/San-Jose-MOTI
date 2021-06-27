@@ -6,29 +6,23 @@ const WelcomePage = (props) => {
     <div className="welcomePopup">
       <h2>
         ARE YOU LOOKING FOR...
-        <h3 className="welcome-subtitle">
+        <p className="welcome-subtitle">
           Low-Cost Internet Packages, Computer and Internet Lessons, or Free Access to
           Digital Devices?
-        </h3>
+        </p>
       </h2>
+
       <div className="choice">
-        <a
-          href="#step1"
-          rel="noreferrer"
-        >
+        <a href="#step1" rel="noreferrer">
           <button className="yes-button">
-            <h3 className="yes-text">YES? CLICK HERE TO START YOUR JOURNEY</h3>
+            <p className="yes-text">YES? Click here to start your journey</p>
           </button>
         </a>
-        <a
-          href="#step4"
-          rel="noreferrer"
-          onClick={props.setContactForm}
-        >
+        <a href="#step4" rel="noreferrer" onClick={props.setContactForm}>
           <button className="no-button">
-            <h3 className="no-text">
+            <p className="no-text">
               NO? Click here to reach out to us with any questions
-            </h3>
+            </p>
           </button>
         </a>
       </div>
