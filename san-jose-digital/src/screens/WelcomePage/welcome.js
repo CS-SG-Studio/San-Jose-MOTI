@@ -14,8 +14,8 @@ const WelcomePage = (props) => {
 
       <div className="choice">
         <a href="#step1" rel="noreferrer">
-          <button className="yes-button">
-            <p className="yes-text">YES? Click here to start your journey</p>
+          <button className="">
+            <p className="yes-button yes-text">YES? Click here to start your journey</p>
           </button>
         </a>
         <a href="#step4" rel="noreferrer" onClick={props.setContactForm}>
