@@ -8,10 +8,10 @@
 }
 
 .welcome-subtitle {
-  display: flex;
-  flex-direction: column;
   max-width: 1000px;
-  font-size: max(min(2.5vw, 28px), 20px);
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
 }
 
 .choice {
@@ -29,12 +29,6 @@
   padding: 10px;
 }
 
-.yes-text {
-  font-size: max(min(2.5vw, 20px), 14px);
-  color: black;
-  margin: 0;
-}
-
 .no-button {
   color: black;
   background: none;
@@ -48,7 +42,13 @@
   background: dimgray;
 }
 
+.yes-text,
+.no-text {
+  font-weight: bold;
+}
+.yes-text {
+  color: black;
+}
 .no-text {
   color: white;
-  font-size: max(min(2.5vw, 20px), 14px);
 }

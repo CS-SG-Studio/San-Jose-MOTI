@@ -43,9 +43,6 @@ img:hover {
   counter-reset: listCounter;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; /*or center*/
-  /* margin-bottom: 100px; */
 }
 
 .stack {
@@ -69,8 +66,7 @@ img:hover {
 
 .pop {
   display: flex;
-  margin-top: 60px;
-  margin-bottom: 55px;
+  margin: 60px 0;
   justify-content: center;
 }
 
