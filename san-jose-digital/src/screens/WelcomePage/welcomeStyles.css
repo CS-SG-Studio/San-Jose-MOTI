@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10rem 2rem 8rem 2rem;
+  padding-top: max(min(10vw, 220px), 100px);
 }
 
 .welcome-subtitle {
@@ -16,26 +17,29 @@
 
 .choice {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  max-width: 1000px;
+  width: 75%;
+  max-width: 450px;
+}
+
+* {
+  border: 1px solid red
+}
+
+
+.yes-button, .no-button {
+  margin: 7px;
+  width: 100%
 }
 
 .yes-button {
   border: 4px solid lightblue;
-  margin: 0;
-  height: 100%;
-  white-space: nowrap;
-  padding: 10px;
 }
 
 .no-button {
-  color: black;
   background: none;
   border: 4px solid white;
-  margin: 0 0 0 7px;
-  padding: 5px;
-  height: 100%;
 }
 
 .no-button:hover {
@@ -51,4 +55,28 @@
 }
 .no-text {
   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .choice {
+    flex-direction: row;
+    max-width: 1000px;
+  }
+  .yes-button {
+  border: 4px solid lightblue;
+  margin: 0;
+  height: 100%;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.no-button {
+  color: black;
+  background: none;
+  border: 4px solid white;
+  margin: 0 0 0 7px;
+  padding: 5px;
+  height: 100%;
+}
 }
