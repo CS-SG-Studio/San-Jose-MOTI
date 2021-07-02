@@ -194,7 +194,7 @@ select:hover {
 }
 
 @media only screen and (min-width: 768px) {
-  /* For desktop: */
+  /* widths greater than ipad portrait: */
   * {
     /* background-color: lightblue; */
   }

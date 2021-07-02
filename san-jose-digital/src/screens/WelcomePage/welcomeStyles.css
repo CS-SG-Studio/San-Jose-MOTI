@@ -23,11 +23,6 @@
   max-width: 450px;
 }
 
-* {
-  border: 1px solid red
-}
-
-
 .yes-button, .no-button {
   margin: 7px;
   width: 100%
