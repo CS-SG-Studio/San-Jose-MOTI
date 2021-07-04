@@ -28,21 +28,20 @@ const ContactForm = () => {
     <div className="popup">
       <h3 className="popup-title">Contact Us</h3>
       <p>
-       Are you looking for ways to get involved with our digital inclusion
-        programs?  
-    <br />
+        Are you looking for ways to get involved with our digital inclusion programs?
+        <br />
         <br />
         <a
           href="https://www.sjdigitalinclusion.org/"
           rel="noreferrer"
           target="_blank"
-          className="link"
-        >
+          className="link">
           VISIT THE SAN JOSÉ DIGITAL INCLUSION FUND WEBSITE!
         </a>
       </p>
       <p>
-        You can also fill out the form below to get in touch with our Program Director, Charlene Tatis!
+        You can also fill out the form below to get in touch with our Program Director,
+        Charlene Tatis!
       </p>
       <form id="contact-form" noValidate onSubmit={handleSubmit}>
         {/* Row 1 of form */}
@@ -105,8 +104,7 @@ const ContactForm = () => {
             className="form-control formInput"
             placeholder="Message"
             id="message"
-            required
-          ></textarea>
+            required></textarea>
         </div>
       </form>
       <div>

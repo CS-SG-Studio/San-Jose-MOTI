@@ -13,7 +13,7 @@ const WelcomePage = (props) => {
       </h2>
 
       <div className="choice">
-        <a href="#step1" rel="noreferrer">
+        <a href="#begin-journey" rel="noreferrer">
           <button className="yes-button">
             <p className="yes-text">YES? Click here to start your journey</p>
           </button>
