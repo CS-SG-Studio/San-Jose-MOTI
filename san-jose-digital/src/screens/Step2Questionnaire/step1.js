@@ -1,5 +1,4 @@
 function Step1(props) {
-  console.log(props.currentStep);
   if (props.currentStep !== 1) {
     return null;
   }

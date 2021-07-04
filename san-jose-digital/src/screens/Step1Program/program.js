@@ -6,22 +6,17 @@ const Step1 = () => {
     <div className="popup">
       <h3 className="popup-title">Our Programs</h3>
       <p>
-        Our bundle package includes low-cose internet packages, digital literacy classes, and access
-            to free devices. <br/>Click on the circles below for more information!
-      </p>
+        Our bundle package includes low-cose internet packages, digital literacy classes,
+        and access to free devices. <br />
+        Click on the circles below for more information!
+      </p> 
       <div className="main">
         {/*Access Programs*/}
         <div className="program">
           <h4 className="circle-heading">ACCESS PROGRAMS</h4>
           <div className="circle-program">
-            <a
-              href="https://www.everyoneon.org"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p className="circle-description">
-                Low-cost internet packages
-              </p>
+            <a href="https://www.everyoneon.org" target="_blank" rel="noreferrer">
+              <p className="circle-description">Low-cost internet packages</p>
             </a>
           </div>
         </div>
@@ -33,8 +28,7 @@ const Step1 = () => {
             <a
               href="https://www.google.com" /* not sure what website we want here */
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               <p className="circle-description">
                 Computer classes and digital literacy trainings
               </p>
@@ -49,15 +43,14 @@ const Step1 = () => {
             <a
               href="https://www.google.com" /* not sure what website we want here */
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               <p className="circle-description">
                 Free access to computers, phones, and other devices.*
               </p>
             </a>
           </div>
         </div>
-    </div>
+      </div>
       <h5 className="footer">
         *Access to devices are not guaranteed. We operate on a first-come first-serve
         basis.
