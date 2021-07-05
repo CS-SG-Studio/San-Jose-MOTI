@@ -1,6 +1,6 @@
 import "./App.css";
 
-import JourneyMap from "./screens/JourneyMap/JourneyMap";
+import JourneyMap from "./screens/JourneyMap/JourneyMap2";
 
 function App() {
   return (
