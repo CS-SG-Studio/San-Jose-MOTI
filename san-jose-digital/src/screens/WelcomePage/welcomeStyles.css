@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rem 2rem 8rem 2rem;
+  padding: 10rem 0.5rem 8rem 0.5rem;
   padding-top: max(min(10vw, 220px), 100px);
 }
 
@@ -13,19 +13,25 @@
   font-size: 0.75em;
   font-weight: bold;
   color: white;
+  min-width: 240px;
 }
 
 .choice {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 75%;
-  max-width: 450px;
+  width: 100%;
+  max-width: 400px;
 }
 
-.yes-button, .no-button {
+.button-link-center {
+  display: flex;
+}
+
+.yes-button,
+.no-button {
   margin: 7px;
-  width: 100%
+  width: 100%;
 }
 
 .yes-button {
@@ -54,24 +60,26 @@
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
+  .welcomePopup {
+    padding: 10rem 2rem 8rem 2rem;
+    padding-top: max(min(10vw, 220px), 100px);
+  }
   .choice {
     flex-direction: row;
     max-width: 1000px;
   }
-  .yes-button {
-  border: 4px solid lightblue;
-  margin: 0;
-  height: 100%;
-  white-space: nowrap;
-  padding: 10px;
-}
 
-.no-button {
-  color: black;
-  background: none;
-  border: 4px solid white;
-  margin: 0 0 0 7px;
-  padding: 5px;
-  height: 100%;
-}
+  .yes-button,
+  .no-button {
+    height: 100%;
+  }
+  .yes-button {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .no-button {
+    color: black;
+    margin: 0 0 0 7px;
+  }
 }

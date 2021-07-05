@@ -8,7 +8,7 @@ const Step1 = () => {
       <p>
         Our bundle package includes low-cose internet packages, digital literacy classes,
         and access to free devices. <br />
-        Click on the circles below for more information!
+        Click on the items below for more information!
       </p> 
       <div className="main">
         {/*Access Programs*/}

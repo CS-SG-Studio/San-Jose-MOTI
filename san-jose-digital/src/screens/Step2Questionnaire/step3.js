@@ -74,7 +74,7 @@ function Step3(props) {
           </b>
         </label>
       </div>
-      <div style={{ padding: "0 0 0 20px" }}>
+      <div className="inner-form-group">
         <div className="form-group">
           <label htmlFor="schoolDevice">
             Does the school provide a computing device for your child/children in class?
@@ -84,8 +84,7 @@ function Step3(props) {
             id="schoolDevice"
             name="schoolDevice"
             value={props.schoolDevice}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="yes">Yes</option>
             <option name="no">No</option>
@@ -101,8 +100,7 @@ function Step3(props) {
             id="bringDeviceHome"
             name="bringDeviceHome"
             value={props.bringDeviceHome}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="yes">Yes</option>
             <option name="no">No</option>
@@ -115,8 +113,7 @@ function Step3(props) {
             id="homeInternet"
             name="homeInternet"
             value={props.homeInternet}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="yes">Yes</option>
             <option name="no">No</option>
@@ -130,7 +127,7 @@ function Step3(props) {
           </b>
         </label>
       </div>
-      <div style={{ padding: "0 0 0 20px" }}>
+      <div className="inner-form-group">
         <div className="form-group">
           <label htmlFor="costOfInternet">
             What is the monthly cost of your internet service?
@@ -140,8 +137,7 @@ function Step3(props) {
             id="costOfInternet"
             name="costOfInternet"
             value={props.costOfInternet}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="1">$9.99 or less</option>
             <option name="2">$10-14.99</option>
@@ -170,7 +166,7 @@ function Step3(props) {
           </b>
         </label>
       </div>
-      <div style={{ padding: "0 0 0 20px" }}>
+      <div className="inner-form-group">
         <div className="form-group">
           <label htmlFor="whereInternetIsAccessed">
             Do you primarily access internet at
@@ -180,8 +176,7 @@ function Step3(props) {
             id="whereInternetIsAccessed"
             name="whereInternetIsAccessed"
             value={props.whereInternetIsAccessed}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="work">Work</option>
             <option name="library">Library</option>
@@ -198,8 +193,7 @@ function Step3(props) {
             id="interestedInHomeInternet"
             name="interestedInHomeInternet"
             value={props.interestedInHomeInternet}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="yes">Yes</option>
             <option name="no">No</option>
@@ -216,15 +210,14 @@ function Step3(props) {
           id="experienceUsingComputer"
           name="experienceUsingComputer"
           value={props.experienceUsingComputer}
-          onChange={props.handleChange}
-        >
+          onChange={props.handleChange}>
           <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
       </div>
       <div className="form-group">
-        <div style={{ padding: "0 0 0 20px" }}>
+        <div className="inner-form-group">
           <label htmlFor="amountOfExperience">
             If you have experience using a computing device, do you consider yourself to
             be a:
@@ -234,8 +227,7 @@ function Step3(props) {
             id="amountOfExperience"
             name="amountOfExperience"
             value={props.amountOfExperience}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="beginner">Beginner User</option>
             <option name="intermediate">Intermediate User</option>
             <option name="advanced">Advanced User</option>
@@ -251,8 +243,7 @@ function Step3(props) {
           id="interestedInFreeClasses"
           name="interestedInFreeClasses"
           value={props.interestedInFreeClasses}
-          onChange={props.handleChange}
-        >
+          onChange={props.handleChange}>
           <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
@@ -260,10 +251,8 @@ function Step3(props) {
       </div>
       <div className="form-group">
         <label htmlFor="anyOtherComments">
-          <b>
             Do you have other questions or comments for the grantees? Please list them
             here!
-          </b>
         </label>
         <textarea
           className="form-control"

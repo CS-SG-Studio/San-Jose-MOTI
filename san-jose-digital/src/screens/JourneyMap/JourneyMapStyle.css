@@ -20,7 +20,7 @@ img:hover {
 }
 
 .header {
-  padding: 25px;
+  padding: 15px;
   color: white;
 }
 
@@ -46,7 +46,6 @@ img:hover {
 }
 
 .stack {
-  counter-increment: listCounter;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,9 +87,10 @@ img:hover {
 }
 
 .circles {
+  counter-increment: listCounter;
   background: lightblue;
-  width: min(max(30vw, 130px), 180px);
-  height: min(max(30vw, 130px), 180px);
+  width: max(min(30vw, 180px), 130px);
+  height: max(min(30vw, 180px), 130px);
   border-radius: 50%;
   opacity: 1;
   display: flex;
@@ -111,8 +111,8 @@ img:hover {
   color: rgba(213, 240, 248, 1);
   font-weight: bold;
   /* distance of number from circle step */
-  right: min(max(20vw, 100px), 170px);
-  font-size: min(max(15vw, 115px), 140px);
+  right: max(min(20vw, 170px), 80px);
+  font-size: max(min(23.1vw, 140px), 98px);
   height: inherit;
 }
 
@@ -120,7 +120,7 @@ img:hover {
 .instruction {
   color: rgba(0, 0, 0, 1);
   font-weight: Bold;
-  font-size: min(max(3.5vw, 14px), 20px);
+  font-size: max(min(3.3vw, 20px), 14px);
   display: flex;
   align-items: center;
 }
@@ -132,4 +132,11 @@ img:hover {
 
 .line-divider {
   border-bottom: 3px solid lightblue;
+}
+
+@media only screen and (min-width: 768px) {
+  /* widths greater than ipad portrait: */
+  .header {
+    padding: 25px;
+  }
 }
