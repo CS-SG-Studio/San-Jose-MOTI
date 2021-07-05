@@ -135,7 +135,7 @@ img:hover {
 }
 
 @media only screen and (min-width: 768px) {
-  /* widths greater than ipad portrait: */
+  /* widths greater than iPad portrait: */
   .header {
     padding: 25px;
   }

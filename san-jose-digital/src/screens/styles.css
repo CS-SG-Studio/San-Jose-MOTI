@@ -212,11 +212,11 @@ select:hover {
 
 /* copy/paste these lines of code to change style based on device width*/
 @media only screen and (min-width: 768px) {
-  /* widths greater than ipad portrait: */
+  /* widths greater than iPad portrait: */
 }
 
 @media only screen and (min-width: 768px) {
-  /* widths greater than ipad portrait: */
+  /* widths greater than iPad portrait: */
 
   button,
   input[type="submit"] {
