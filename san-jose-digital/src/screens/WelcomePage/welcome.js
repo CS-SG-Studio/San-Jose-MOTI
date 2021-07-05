@@ -13,12 +13,16 @@ const WelcomePage = (props) => {
       </h2>
 
       <div className="choice">
-        <a href="#begin-journey" rel="noreferrer">
+        <a className="button-link-center" href="#begin-journey" rel="noreferrer">
           <button className="yes-button">
             <p className="yes-text">YES? Click here to start your journey</p>
           </button>
         </a>
-        <a href="#step4" rel="noreferrer" onClick={props.setContactForm}>
+        <a
+          className="button-link-center"
+          href="#step4"
+          rel="noreferrer"
+          onClick={props.setContactForm}>
           <button className="no-button">
             <p className="no-text">
               NO? Click here to reach out to us with any questions

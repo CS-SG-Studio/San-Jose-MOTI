@@ -106,15 +106,14 @@ function Step2(props) {
           id="device"
           name="device"
           value={props.device}
-          onChange={props.handleChange}
-        >
+          onChange={props.handleChange}>
           <option name="blank"> </option>
 
           <option name="y">Yes</option>
           <option name="n">No</option>
         </select>
       </div>
-      <div style={{ padding: "0 0 0 20px" }}>
+      <div className="inner-form-group">
         <div className="form-group">
           <label>
             <b>
@@ -165,8 +164,7 @@ function Step2(props) {
             id="deviceAmount"
             name="deviceAmount"
             value={props.deviceAmount}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="one">1</option>
             <option name="two">2</option>
@@ -185,14 +183,13 @@ function Step2(props) {
           id="smartphone"
           name="smartphone"
           value={props.smartphone}
-          onChange={props.handleChange}
-        >
+          onChange={props.handleChange}>
           <option name="blank"> </option>
           <option name="yes">Yes</option>
           <option name="no">No</option>
         </select>
       </div>
-      <div style={{ padding: "0 0 0 20px" }}>
+      <div className="inner-form-group">
         <div className="form-group">
           <label>
             <b>
@@ -209,8 +206,7 @@ function Step2(props) {
             id="connectsToInternet"
             name="connectsToInternet"
             value={props.connectsToInternet}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="yes">Yes</option>
             <option name="no">No</option>
@@ -237,8 +233,7 @@ function Step2(props) {
             id="deviceAmount"
             name="deviceAmount"
             value={props.deviceAmount}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="yes">Yes</option>
             <option name="no">No</option>
@@ -254,8 +249,7 @@ function Step2(props) {
             id="hotspot"
             name="hotspot"
             value={props.hotspot}
-            onChange={props.handleChange}
-          >
+            onChange={props.handleChange}>
             <option name="blank"> </option>
             <option name="yes">Yes</option>
             <option name="no">No</option>
