@@ -37,11 +37,11 @@ const Step1 = () => {
         </div>
 
         {/*Device Programs*/}
-        <div className="program">
+        {/* <div className="program">
           <h4 className="circle-heading">DEVICE PROGRAMS</h4>
           <div className="circle-program">
             <a
-              href="https://www.google.com" /* not sure what website we want here */
+              href="https://www.google.com" 
               target="_blank"
               rel="noreferrer">
               <p className="circle-description">
@@ -49,7 +49,7 @@ const Step1 = () => {
               </p>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       <h5 className="footer">
         *Access to devices are not guaranteed. We operate on a first-come first-serve

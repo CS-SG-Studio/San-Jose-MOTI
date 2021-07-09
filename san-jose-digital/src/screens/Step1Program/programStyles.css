@@ -4,19 +4,20 @@
   flex-direction: column;
 }
 
-/* styling for each of the 3 programs */
 .program {
   display: flex;
   flex-direction: column;
   padding: 0.2rem;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .circle-heading {
   margin: 0;
   display: flex;
   font-size: max(min(2vw, 15px), 10px);
+  margin-bottom: 1rem;
 }
 
 .circle-program {

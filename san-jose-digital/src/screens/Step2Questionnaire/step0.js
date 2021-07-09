@@ -1,4 +1,4 @@
-import "./questionnaireStyles.css";
+import "./QuestionnaireStyles.css";
 
 function Step0(props) {
   if (props.currentStep !== 0) {
