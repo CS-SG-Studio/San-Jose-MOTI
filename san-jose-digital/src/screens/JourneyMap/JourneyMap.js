@@ -20,7 +20,7 @@ function JourneyMap() {
     setContactForm(!openContactForm);
   };
 
-  // Questionnaire - close congratulations page everytime step2 is clicked
+  // Questionnaire - close congratulations page every time step2 is clicked
   const [openQuestionnaire, setQuestionnaire] = useState(false);
   const questionnaireStep = () => {
     setQuestionnaire(!openQuestionnaire);
