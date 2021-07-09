@@ -11,7 +11,7 @@ import Step2Questionnaire from "../Step2Questionnaire/questionnaire";
 import Step3Congrats from "../Step3Congrats/congrats";
 import Step4Contact from "../Step4Contact/contact";
 // 1. add import row
-// import Step5Name from "../Step5Name/name"
+// import Step5Name from "../Step5Name/name" 
 
 import "./JourneyMapStyle.css";
 
