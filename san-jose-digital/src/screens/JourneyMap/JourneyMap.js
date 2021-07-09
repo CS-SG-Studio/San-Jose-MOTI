@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../sjdi-logo.png";
 import Welcome from "../WelcomePage/welcome";
 import Program from "../Step1Program/program";
-import Questionnaire from "../Step2Questionnaire/questionnaire";
+import Questionnaire from "../Step2Questionnaire/Questionnaire";
 import Congratulations from "../Step3Congrats/congrats";
 import ContactForm from "../Step4Contact/contact";
 import "./JourneyMapStyle.css";
