@@ -5,24 +5,28 @@ import Step2 from "./step2";
 import Step3 from "./step3";
 import "./questionnaireStyles.css";
 
-// INSTRUCTIONS FOR ADDING QUESTIONS -
-// PART 1:
-// There are 4 "ADD SPOT"s that have been marked on this document. Follow the
-// directions on each of the ADD SPOT's to add the question variable to the
-// questionnaire variables. The easiest to locate all of the ADD SPOT's
-// is by searching for the term "ADD SPOT" in the file.
-// Once you have added the question variable to each of the
-// add spots, you should be able to look up the question variable and see
-// it appears in exactly FIVE spots.
-//
-// PART 2:
-// Navigate to step3.js and follow instructions to add a question there,
-// using the question variable you have just initialized.
-//
-// NOTE: Checkbox questions are slightly more complicated and require
-// their own additional functions and variables, so please
-// reach out to the Stanford team (Ricky, Habeeb, Senem, Rachel)
-// if you want to add a checkbox question.
+/* INSTRUCTIONS FOR ADDING QUESTIONS - */
+/*
+PART 1:
+There are 4 "ADD SPOT"s that have been marked on this document. Follow the
+directions on each of the ADD SPOT's to add the question variable to the
+questionnaire variables. The easiest way to locate all of the ADD SPOT's
+is by searching for the term "ADD SPOT" in the file.
+Once you have added the question variable to each of the
+add spots, you should be able to look up the question variable and see
+it appears in exactly FIVE spots.
+*/
+
+/* 
+PART 2:
+Navigate to step3.js and follow instructions to add a question there,
+using the question variable you have just initialized.
+
+NOTE: Checkbox questions are slightly more complicated and require
+their own additional functions and variables, so please
+reach out to the Stanford team (Ricky, Habeeb, Senem, Rachel)
+if you want to add a checkbox question.
+*/
 
 const Questionnaire = (props) => {
   const [data, setData] = useState({
@@ -117,6 +121,7 @@ const Questionnaire = (props) => {
     anyOtherComments,
   } = data;
 
+  // handles changing pages??
   const handleChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
@@ -162,6 +167,9 @@ const Questionnaire = (props) => {
     setData({ ...data, tablet: !tablet });
   };
 
+  /*
+   * the functions for our button
+   */
   const _next = () => {
     let newStep = currentStep;
     newStep = newStep >= 2 ? 3 : newStep + 1;
@@ -174,13 +182,10 @@ const Questionnaire = (props) => {
     setData({ ...data, currentStep: newStep });
   };
 
-  /*
-   * the functions for our button
-   */
   const previousButton = () => {
     if (currentStep !== 0) {
       return (
-        <button className="btn btn-secondary" type="button" onClick={_prev}>
+        <button type="button" onClick={_prev}>
           Previous
         </button>
       );
@@ -191,18 +196,18 @@ const Questionnaire = (props) => {
   const nextButton = () => {
     if (currentStep === 0) {
       return (
-        <button className="btn btn-primary float-right" type="button" onClick={_next}>
+        <button type="button" onClick={_next}>
           Start
         </button>
       );
     } else if (currentStep < 3) {
       return (
-        <button className="btn btn-primary float-right" type="button" onClick={_next}>
+        <button type="button" onClick={_next}>
           Next
         </button>
       );
     } else if (currentStep === 3) {
-      return <input className="btn btn-success btn-block" type="submit" value="Submit" />;
+      return <input type="submit" value="Submit" />;
     }
     return null;
   };
