@@ -121,67 +121,58 @@ const Questionnaire = (props) => {
     anyOtherComments,
   } = data;
 
-  // handles changing pages??
+  // handles all changes
   const handleChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
-  // Code for (un)checking the checkbox questions
+  /* Code for (un)checking the checkbox questions */
+
+  // programs
   const onChangeProgram1 = () => {
     setData({ ...data, program1: !program1 });
   };
-
   const onChangeProgram2 = () => {
     setData({ ...data, program2: !program2 });
   };
-
   const onChangeProgram3 = () => {
     setData({ ...data, program3: !program3 });
   };
-
   const onChangeProgram4 = () => {
     setData({ ...data, program4: !program4 });
   };
-
   const onChangeProgram5 = () => {
     setData({ ...data, program5: !program5 });
   };
-
   const onChangeProgram6 = () => {
     setData({ ...data, program6: !program6 });
   };
-
   const onChangeProgram7 = () => {
     setData({ ...data, program7: !program7 });
   };
 
+  // devices
   const onChangeDesktop = () => {
     setData({ ...data, desktop: !desktop });
   };
-
   const onChangeLaptop = () => {
     setData({ ...data, laptop: !laptop });
   };
-
   const onChangeTablet = () => {
     setData({ ...data, tablet: !tablet });
   };
 
-  /*
-   * the functions for our button
-   */
+  // functions for buttons & pages
   const _next = () => {
     let newStep = currentStep;
     newStep = newStep >= 2 ? 3 : newStep + 1;
     setData({ ...data, currentStep: newStep });
   };
-
   const _prev = () => {
     let newStep = currentStep;
     newStep = newStep <= 0 ? 1 : newStep - 1;
     setData({ ...data, currentStep: newStep });
   };
-
   const previousButton = () => {
     if (currentStep !== 0) {
       return (
@@ -192,7 +183,6 @@ const Questionnaire = (props) => {
     }
     return null;
   };
-
   const nextButton = () => {
     if (currentStep === 0) {
       return (
