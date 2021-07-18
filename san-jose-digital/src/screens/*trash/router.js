@@ -4,7 +4,7 @@ import {
   Route
 } 
 from 'react-router-dom';
-import Questionnaire from './Questionnaire';
+import Questionnaire from '../Step2Questionnaire/Questionnaire';
 import Questionnaire2 from './Questionnaire2';
 import Questionnaire3 from './Questionnaire3';
 import Congratulations from './Congratulations';

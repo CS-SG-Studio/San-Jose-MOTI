@@ -1,4 +1,5 @@
 function Step0(props) {
+  // only show when current step = 0
   if (props.currentStep !== 0) {
     return null;
   }

@@ -157,7 +157,7 @@ function Step2(props) {
           />
           <label htmlFor="tablet">Tablet</label>
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label htmlFor="deviceAmount">How many devices do you have in your home?</label>
           <select
             className="form-control"
@@ -174,7 +174,7 @@ function Step2(props) {
           </select>
         </div>
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label htmlFor="smartphone">
           <b>Do you have a smartphone?</b>
         </label>
@@ -197,7 +197,7 @@ function Step2(props) {
             </b>
           </label>
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label htmlFor="connectsToInternet">
             Do you use your smartphone to connect to the internet?
           </label>
@@ -212,7 +212,7 @@ function Step2(props) {
             <option name="no">No</option>
           </select>
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label htmlFor="carrier">Who is your smartphone carrier?</label>
           <input
             className="form-control"
@@ -224,7 +224,7 @@ function Step2(props) {
             onChange={props.handleChange}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label htmlFor="deviceAmount">
             Do you periodically buy data plans for your smartphone?
           </label>
@@ -239,7 +239,7 @@ function Step2(props) {
             <option name="no">No</option>
           </select>
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label htmlFor="hotspot">
             Do you ever use your smartphone as a “hotspot” to connect another device to
             the Internet?
