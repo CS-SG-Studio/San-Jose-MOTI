@@ -1,4 +1,5 @@
-/* This file contains common styles that 
+/* Styles.css
+This file contains common styles that 
 effects multiple parts of this code file 
 
 TABLE OF CONTENTS:
@@ -29,6 +30,12 @@ https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 html {
   scroll-behavior: smooth;
   height: 100%;
+  background: white;
+}
+
+html,
+body {
+  overscroll-behavior-x: none;
 }
 
 /********************************/
