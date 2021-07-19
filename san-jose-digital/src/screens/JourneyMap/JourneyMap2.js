@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import logo from "../../sjdi-logo.png";
 import Welcome from "../WelcomePage/welcome";
 import Step1Program from "../Step1Program/program";
-import Step2Questionnaire from "../Step2Questionnaire/questtionnaire";
+import Step2Questionnaire from "../Step2Questionnaire/Questionnaire";
 import Step3Congrats from "../Step3Congrats/congrats";
 import Step4Contact from "../Step4Contact/contact";
 // 1. add import row
